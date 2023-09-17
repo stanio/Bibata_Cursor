@@ -10,19 +10,19 @@
       <g transform="scale(0.8)">
         <g transform="translate(-50 -50)">
           <g transform="rotate(0 50 50)">
-            <animateTransform attributeName="transform" type="rotate" repeatCount="4" values="0 50 50;360 50 50" keyTimes="0;1" dur="0.7575757575757576s"/>
+            <animateTransform attributeName="transform" type="rotate" repeatCount="4" values="0 50 50;360 50 50" keyTimes="0;1" dur="0.75s"/>
             <path fill-opacity="0.8" fill="#f05125" d="M50 50L50 0A50 50 0 0 1 100 50Z"/>
           </g>
           <g transform="rotate(0 50 50)">
-            <animateTransform attributeName="transform" type="rotate" repeatCount="3" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.0101010101010102s"/>
+            <animateTransform attributeName="transform" type="rotate" repeatCount="3" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.0s"/>
             <path fill-opacity="0.8" fill="#fdb813" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(90 50 50)"/>
           </g>
           <g transform="rotate(0 50 50)">
-            <animateTransform attributeName="transform" type="rotate" repeatCount="2" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.5151515151515151s"/>
+            <animateTransform attributeName="transform" type="rotate" repeatCount="2" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.5s"/>
             <path fill-opacity="0.8" fill="#7fbb42" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(180 50 50)"/>
           </g>
           <g transform="rotate(0 50 50)">
-            <animateTransform attributeName="transform" type="rotate" repeatCount="1" values="0 50 50;360 50 50" keyTimes="0;1" dur="3.0303030303030303s"/>
+            <animateTransform attributeName="transform" type="rotate" repeatCount="1" values="0 50 50;360 50 50" keyTimes="0;1" dur="3.0s"/>
             <path fill-opacity="0.8" fill="#32a0da" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(270 50 50)"/>
           </g>
         </g>
