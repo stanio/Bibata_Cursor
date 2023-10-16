@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <circle id="cursor-hotspot" cx="43.52" cy="44.8" r="3" fill="magenta" opacity=".6" display="none"/>
   <g filter="url(#filter0_d_2652_48)">
     <path d="M43.52 213.12V44.1599H213.12" stroke="#0000FF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
   </g>

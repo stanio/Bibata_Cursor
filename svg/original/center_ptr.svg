@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <circle id="cursor-hotspot" cx="125.439995" cy="16.64" r="3" fill="magenta" opacity=".6" display="none"/>
   <g filter="url(#filter0_d_2652_210)">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M127.372 5.41467L34.3813 231.676L127.833 194.573L223.095 231.152L127.372 5.41467Z" fill="#0000FF"/>
   </g>

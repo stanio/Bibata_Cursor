@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <circle id="cursor-hotspot" cx="211.2" cy="122.88" r="3" fill="magenta" opacity=".6" display="none"/>
   <g filter="url(#filter0_d_2652_33)">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M212.8 224.32C216.335 224.32 219.2 221.455 219.2 217.92V30.4C219.2 26.8654 216.335 24 212.8 24C209.265 24 206.4 26.8654 206.4 30.4V117.76H40C36.4653 117.76 33.6 120.625 33.6 124.16C33.6 127.695 36.4653 130.56 40 130.56H206.4V217.92C206.4 221.455 209.265 224.32 212.8 224.32Z" fill="#0000FF"/>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M212.8 224.32C216.335 224.32 219.2 221.455 219.2 217.92V30.4C219.2 26.8654 216.335 24 212.8 24C209.265 24 206.4 26.8654 206.4 30.4V117.76H40C36.4653 117.76 33.6 120.625 33.6 124.16C33.6 127.695 36.4653 130.56 40 130.56H206.4V217.92C206.4 221.455 209.265 224.32 212.8 224.32Z" stroke="#0000FF" stroke-width="19.2" stroke-linecap="round" stroke-linejoin="round"/>
