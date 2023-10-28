@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path id="align-anchor" d="m39.679899 16.610088h26l-26 36z" fill="cyan" opacity=".9" display="none"/>
+  <path id="align-anchor" d="m54.5068 31.47092h26l-26 36z" fill="cyan" opacity=".9" display="none"/>
   <circle id="cursor-hotspot" cx="53.76" cy="19.199999" r="3" fill="magenta" opacity=".6" display="none"/>
 
   <use id="shape-shadow" xlink:href="#pointer-shape" filter="url(#drop-shadow)" opacity=".5" fill="black" stroke="black" stroke-width="23.253802"/>
