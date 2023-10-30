@@ -4,7 +4,8 @@
   <circle id="cursor-hotspot" cx="125.439995" cy="122.88" r="3" fill="magenta" opacity=".6" display="none"/>
 
   <use id="shape-shadow" xlink:href="#cross-shape" filter="url(#drop-shadow)" opacity=".5" fill="black" stroke="black" stroke-width="14.08"/>
-  <use id="shape-outline" xlink:href="#cross-shape" fill="#0000FF" stroke="#0000FF" stroke-width="20.48"/>
+  <!--use id="shape-outline" xlink:href="#cross-shape" fill="#0000FF" stroke="#0000FF" stroke-width="20.48"/-->
+  <path id="shape-outline" d="m127.03906 12.800781c-10.83607 0-19.83984 9.003899-19.83984 19.839844V104.64063H35.199219c-10.835941-1e-5-19.839844 9.0039-19.839844 19.83984 0 10.83594 9.003903 19.83984 19.839844 19.83984h72.000001v72c0 10.83594 9.0039 19.83985 19.83984 19.83985 10.83594 0 19.8418-9.00391 19.8418-19.83985v-72h72c10.83594 0 19.83984-9.0039 19.83984-19.83984 0-10.83594-9.0039-19.83984-19.83984-19.83984h-72V32.640625c0-10.835945-9.00573-19.839844-19.8418-19.839844z" fill="#0000FF"/>
   <use id="shape-fill" xlink:href="#cross-shape" fill="#00FF00"/>
 
   <defs>
