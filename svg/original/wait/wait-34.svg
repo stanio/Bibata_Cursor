@@ -1,5 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_3519_2722)">
+<g>
 <path d="M218 128C218 177.706 177.706 218 128 218C78.2944 218 38 177.706 38 128C38 78.2944 78.2944 38 128 38C177.706 38 218 78.2944 218 128Z" fill="#FF0000"/>
 <path d="M128 226.5C182.4 226.5 226.5 182.4 226.5 128C226.5 73.6 182.4 29.5 128 29.5C73.6 29.5 29.5 73.6 29.5 128C29.5 182.4 73.6 226.5 128 226.5Z" stroke="#0000FF" stroke-width="17"/>
 </g>
@@ -7,16 +7,4 @@
 <path d="M180.452 178.653L128 128L178.652 75.5477C185.541 82.1995 191.051 90.1429 194.869 98.9244C198.688 107.706 200.739 117.154 200.906 126.728C201.073 136.302 199.353 145.815 195.843 154.725C192.333 163.634 187.103 171.765 180.451 178.653L180.452 178.653Z" fill="#FCB813" fill-opacity="0.8"/>
 <path d="M55.1271 130.544L128 128L125.456 55.1274C115.886 55.4615 106.476 57.6772 97.7622 61.648C89.0487 65.6189 81.2026 71.2671 74.672 78.2702C68.1414 85.2734 63.0541 93.4942 59.7006 102.463C56.3471 111.433 54.7929 120.975 55.1271 130.544Z" fill="#7EBA41" fill-opacity="0.8"/>
 <path d="M75.1076 178.193L128 128L178.192 180.892C171.246 187.484 163.07 192.642 154.131 196.074C145.191 199.505 135.663 201.143 126.091 200.892C116.519 200.641 107.089 198.508 98.3416 194.613C89.5939 190.718 81.699 185.138 75.1076 178.193Z" fill="#32A0DA" fill-opacity="0.8"/>
-<defs>
-<filter id="filter0_d_3519_2722" x="17" y="21" width="222" height="222" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3519_2722"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3519_2722" result="shape"/>
-</filter>
-</defs>
 </svg>

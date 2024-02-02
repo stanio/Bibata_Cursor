@@ -1,5 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_3519_2434)">
+<g>
 <path d="M218 128C218 177.706 177.706 218 128 218C78.2944 218 38 177.706 38 128C38 78.2944 78.2944 38 128 38C177.706 38 218 78.2944 218 128Z" fill="#FF0000"/>
 <path d="M128 226.5C182.4 226.5 226.5 182.4 226.5 128C226.5 73.6 182.4 29.5 128 29.5C73.6 29.5 29.5 73.6 29.5 128C29.5 182.4 73.6 226.5 128 226.5Z" stroke="#0000FF" stroke-width="17"/>
 </g>
@@ -7,16 +7,4 @@
 <path d="M170.86 186.992L128 128L186.992 85.1404C192.62 92.8873 196.668 101.667 198.903 110.978C201.139 120.289 201.518 129.95 200.02 139.408C198.522 148.865 195.176 157.936 190.172 166.1C185.169 174.265 178.606 181.364 170.859 186.992L170.86 186.992Z" fill="#FCB813" fill-opacity="0.8"/>
 <path d="M156.49 195.12L128 127.998L60.8787 156.489C64.6201 165.303 70.0609 173.295 76.8907 180.006C83.7205 186.718 91.8054 192.019 100.684 195.606C109.562 199.194 119.06 200.997 128.636 200.913C138.211 200.83 147.676 198.861 156.49 195.12Z" fill="#7EBA41" fill-opacity="0.8"/>
 <path d="M112.218 56.8118L128 128L56.8118 143.782C54.7393 134.433 54.5284 124.768 56.1912 115.338C57.854 105.908 61.3579 96.8977 66.5029 88.8218C71.6478 80.7458 78.3331 73.7624 86.1769 68.2701C94.0208 62.7778 102.87 58.8843 112.218 56.8118Z" fill="#32A0DA" fill-opacity="0.8"/>
-<defs>
-<filter id="filter0_d_3519_2434" x="17" y="21" width="222" height="222" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3519_2434"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3519_2434" result="shape"/>
-</filter>
-</defs>
 </svg>

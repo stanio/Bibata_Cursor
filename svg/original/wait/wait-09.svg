@@ -1,5 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_3519_3122)">
+<g>
 <path d="M219 128C219 177.706 178.706 218 129 218C79.2944 218 39 177.706 39 128C39 78.2944 79.2944 38 129 38C178.706 38 219 78.2944 219 128Z" fill="#FF0000"/>
 <path d="M129 226.5C183.4 226.5 227.5 182.4 227.5 128C227.5 73.6 183.4 29.5 129 29.5C74.6 29.5 30.5 73.6 30.5 128C30.5 182.4 74.6 226.5 129 226.5Z" stroke="#0000FF" stroke-width="17"/>
 </g>
@@ -7,16 +7,4 @@
 <path d="M106.468 58.652L129 128L59.652 150.532C56.6931 141.425 55.5568 131.825 56.3081 122.279C57.0594 112.733 59.6837 103.428 64.0309 94.8962C68.3782 86.3643 74.3633 78.7724 81.6447 72.5536C88.926 66.3348 97.361 61.611 106.468 58.652Z" fill="#FCB813" fill-opacity="0.8"/>
 <path d="M58.9081 107.901L129 128L149.099 57.908C139.894 55.2686 130.26 54.4681 120.746 55.552C111.232 56.636 102.024 59.5833 93.6494 64.2256C85.2745 68.868 77.8959 75.1144 71.935 82.6083C65.974 90.1022 61.5475 98.6969 58.9081 107.901Z" fill="#7EBA41" fill-opacity="0.8"/>
 <path d="M184.031 80.1626L129 128L81.1624 72.9692C88.3891 66.6871 96.7825 61.8899 105.863 58.8515C114.944 55.8132 124.534 54.5931 134.086 55.261C143.639 55.929 152.966 58.472 161.535 62.7446C170.105 67.0172 177.749 72.9358 184.031 80.1626Z" fill="#32A0DA" fill-opacity="0.8"/>
-<defs>
-<filter id="filter0_d_3519_3122" x="18" y="21" width="222" height="222" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3519_3122"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3519_3122" result="shape"/>
-</filter>
-</defs>
 </svg>
