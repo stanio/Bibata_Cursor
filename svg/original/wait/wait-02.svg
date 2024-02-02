@@ -1,10 +1,13 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g>
-<path d="M219 128C219 177.706 178.706 218 129 218C79.2944 218 39 177.706 39 128C39 78.2944 79.2944 38 129 38C178.706 38 219 78.2944 219 128Z" fill="#FF0000"/>
-<path d="M129 226.5C183.4 226.5 227.5 182.4 227.5 128C227.5 73.6 183.4 29.5 129 29.5C74.6 29.5 30.5 73.6 30.5 128C30.5 182.4 74.6 226.5 129 226.5Z" stroke="#0000FF" stroke-width="16"/>
+<circle cx="128" cy="128" r="96" fill="#FF0000" stroke="#0000FF" stroke-width="16"/>
+<g transform="translate(128 128) scale(1.44)">
+<path d="M0 0L0 -50A50 50 0 0 1 50 0Z" fill="#F05024" fill-opacity="0.8" transform="rotate(26.666666)"/>
+  <!--animateTransform attributeName="transform" type="rotate" repeatCount="4" values="0;360" keyTimes="0;1" dur="0.75s"/></path-->
+<path d="M0 0L50 0A50 50 0 0 1 0 50Z" fill="#FCB813" fill-opacity="0.8" transform="rotate(20)"/>
+  <!--animateTransform attributeName="transform" type="rotate" repeatCount="3" values="0;360" keyTimes="0;1" dur="1.0s"/></path-->
+<path d="M0 0L0 50A50 50 0 0 1 -50 0Z" fill="#7EBA41" fill-opacity="0.8" transform="rotate(13.333333)"/>
+  <!--animateTransform attributeName="transform" type="rotate" repeatCount="2" values="0;360" keyTimes="0;1" dur="1.5s"/></path-->
+<path d="M0 0L-50 0A50 50 0 0 1 0 -50Z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(6.666667)"/>
+  <!--animateTransform attributeName="transform" type="rotate" repeatCount="1" values="0;360" keyTimes="0;1" dur="3.0s"/></path-->
 </g>
-<path d="M163.232 63.6185L129 128L193.382 162.232C197.877 153.778 200.663 144.52 201.581 134.989C202.499 125.457 201.53 115.838 198.73 106.681C195.931 97.5241 191.355 89.008 185.264 81.6193C179.173 74.2306 171.687 68.114 163.232 63.6185Z" fill="#F05024" fill-opacity="0.8"/>
-<path d="M105.261 196.944L129 128L197.944 151.739C194.827 160.793 189.956 169.144 183.611 176.316C177.266 183.488 169.571 189.34 160.965 193.537C152.358 197.735 143.009 200.196 133.451 200.781C123.894 201.365 114.314 200.062 105.261 196.944Z" fill="#FCB813" fill-opacity="0.8"/>
-<path d="M113.84 199.323L129 128L57.6768 112.84C55.6859 122.206 55.5594 131.873 57.3044 141.288C59.0494 150.703 62.6318 159.683 67.847 167.713C73.0622 175.744 79.8081 182.669 87.6996 188.092C95.5911 193.516 104.474 197.332 113.84 199.323Z" fill="#7EBA41" fill-opacity="0.8"/>
-<path d="M136.622 55.4829L129 128L56.4828 120.378C57.4837 110.855 60.3505 101.622 64.9196 93.2073C69.4886 84.7921 75.6704 77.3593 83.112 71.3332C90.5536 65.3071 99.1093 60.8057 108.291 58.0861C117.472 55.3665 127.099 54.482 136.622 55.4829Z" fill="#32A0DA" fill-opacity="0.8"/>
 </svg>

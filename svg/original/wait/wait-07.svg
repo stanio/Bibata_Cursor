@@ -1,10 +1,13 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g>
-<path d="M218 128C218 177.706 177.706 218 128 218C78.2944 218 38 177.706 38 128C38 78.2944 78.2944 38 128 38C177.706 38 218 78.2944 218 128Z" fill="#FF0000"/>
-<path d="M128 226.5C182.4 226.5 226.5 182.4 226.5 128C226.5 73.6 182.4 29.5 128 29.5C73.6 29.5 29.5 73.6 29.5 128C29.5 182.4 73.6 226.5 128 226.5Z" stroke="#0000FF" stroke-width="16"/>
+<circle cx="128" cy="128" r="96" fill="#FF0000" stroke="#0000FF" stroke-width="16"/>
+<g transform="translate(128 128) scale(1.44)">
+<path d="M0 0L0 -50A50 50 0 0 1 50 0Z" fill="#F05024" fill-opacity="0.8" transform="rotate(160)"/>
+  <!--animateTransform attributeName="transform" type="rotate" repeatCount="4" values="0;360" keyTimes="0;1" dur="0.75s"/></path-->
+<path d="M0 0L50 0A50 50 0 0 1 0 50Z" fill="#FCB813" fill-opacity="0.8" transform="rotate(120)"/>
+  <!--animateTransform attributeName="transform" type="rotate" repeatCount="3" values="0;360" keyTimes="0;1" dur="1.0s"/></path-->
+<path d="M0 0L0 50A50 50 0 0 1 -50 0Z" fill="#7EBA41" fill-opacity="0.8" transform="rotate(80)"/>
+  <!--animateTransform attributeName="transform" type="rotate" repeatCount="2" values="0;360" keyTimes="0;1" dur="1.5s"/></path-->
+<path d="M0 0L-50 0A50 50 0 0 1 0 -50Z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(40)"/>
+  <!--animateTransform attributeName="transform" type="rotate" repeatCount="1" values="0;360" keyTimes="0;1" dur="3.0s"/></path-->
 </g>
-<path d="M148.098 198.092L128 128L57.908 148.098C63.2383 166.688 75.7351 182.398 92.649 191.774C109.563 201.15 129.509 203.422 148.098 198.092Z" fill="#F05024" fill-opacity="0.8"/>
-<path d="M65.4985 90.445L128 128L90.4449 190.502C82.2371 185.57 75.0811 179.07 69.3853 171.372C63.6896 163.675 59.5657 154.931 57.2492 145.64C54.9327 136.349 54.4689 126.692 55.8843 117.222C57.2997 107.752 60.5666 98.6528 65.4985 90.445Z" fill="#FCB813" fill-opacity="0.8"/>
-<path d="M55.7931 138.148L128 128L117.852 55.793C108.37 57.1257 99.2427 60.313 90.9922 65.173C82.7416 70.0329 75.5291 76.4703 69.7663 84.1177C64.0036 91.7651 59.8036 100.473 57.4061 109.743C55.0085 119.014 54.4605 128.666 55.7931 138.148Z" fill="#7EBA41" fill-opacity="0.8"/>
-<path d="M172.892 70.5411L128 128L70.5409 83.1081C76.4362 75.5625 83.76 69.2519 92.0941 64.5366C100.428 59.8214 109.61 56.7939 119.114 55.6269C128.618 54.46 138.259 55.1764 147.486 57.7354C156.713 60.2944 165.346 64.6458 172.892 70.5411Z" fill="#32A0DA" fill-opacity="0.8"/>
 </svg>
