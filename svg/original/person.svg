@@ -1,4 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle id="cursor-hotspot" cx="55" cy="17" r="3" fill="magenta" opacity=".6" display="none"/>
 <path d="M72.7113 37.7047L58.4991 24.8108L58.5 44.0004L58.5055 164L58.5061 176.678L70.2338 171.863L115.08 153.451L115.282 153.368L115.48 153.274L159.629 132.431L171.135 126.999L161.711 118.449L72.7113 37.7047Z" fill="#00FF00" stroke="#0000FF" stroke-width="16"/>
 <g>
 <circle cx="118" cy="162" r="70.5" fill="#2C2C2C" stroke="#0000FF" stroke-width="16"/>
