@@ -1,0 +1,3 @@
+[submodule "stanio-misc"]
+	path = stanio-misc
+	url = https://github.com/stanio/stanio-misc.git
