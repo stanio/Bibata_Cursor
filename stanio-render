@@ -1,0 +1,5 @@
+#!/bin/sh
+# Usual options include: --standard-sizes --windows-cursors
+# Use --help for more
+args=$@ # Why is this necessary?
+stanio-misc/gradlew -p stanio-misc -q bibata:run --args="render ../.. $args"
