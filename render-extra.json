@@ -1,0 +1,76 @@
+{
+  "Bibata-Modern-DarkRed": {
+    "dir": "svg/modern",
+    "out": "bitmaps/Bibata-Modern-DarkRed",
+    "colors": [
+      { "match": "#00FF00", "replace": "#B20000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+  "Bibata-Modern-DodgerBlue": {
+    "dir": "svg/modern",
+    "out": "bitmaps/Bibata-Modern-DodgerBlue",
+    "colors": [
+      { "match": "#00FF00", "replace": "#5848FF" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+  "Bibata-Modern-Turquoise": {
+    "dir": "svg/modern",
+    "out": "bitmaps/Bibata-Modern-Turquoise",
+    "colors": [
+      { "match": "#00FF00", "replace": "#00F0B7" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  },
+  "Bibata-Modern-Pink": {
+    "dir": "svg/modern",
+    "out": "bitmaps/Bibata-Modern-Pink",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FE009E" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+
+  "Bibata-Original-DarkRed": {
+    "dir": "svg/original",
+    "out": "bitmaps/Bibata-Original-DarkRed",
+    "colors": [
+      { "match": "#00FF00", "replace": "#B20000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+  "Bibata-Original-DodgerBlue": {
+    "dir": "svg/original",
+    "out": "bitmaps/Bibata-Original-DodgerBlue",
+    "colors": [
+      { "match": "#00FF00", "replace": "#5848FF" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+  "Bibata-Original-Turquoise": {
+    "dir": "svg/original",
+    "out": "bitmaps/Bibata-Original-Turquoise",
+    "colors": [
+      { "match": "#00FF00", "replace": "#00F0B7" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  },
+  "Bibata-Original-Pink": {
+    "dir": "svg/original",
+    "out": "bitmaps/Bibata-Original-Pink",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FE009E" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  }
+}
+

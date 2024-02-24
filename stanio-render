@@ -2,4 +2,6 @@
 # Usual options include: --standard-sizes --windows-cursors
 # Use --help for more
 args=$@ # Why is this necessary?
-stanio-misc/gradlew -p stanio-misc -q bibata:run --args="render ../.. $args"
+stanio-misc/gradlew -p stanio-misc -q bibata:run \
+	-PbibataJvmArgs="$RENDER_JOPTS" \
+	--args="render ../../$RENDER_CFG $args"
