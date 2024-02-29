@@ -1,0 +1,41 @@
+{
+  "Bibata-Modern-Thin-Classic": {
+    "dir": "svg/modern-thin",
+    "out": "bitmaps/Bibata-Modern-Thin-Classic",
+    "colors": [
+      { "match": "#00FF00", "replace": "#000000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+
+  "Bibata-Modern-Thin-Ice": {
+    "dir": "svg/modern-thin",
+    "out": "bitmaps/Bibata-Modern-Thin-Ice",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FFFFFF" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  },
+
+  "Bibata-Original-Thin-Classic": {
+    "dir": "svg/original-thin",
+    "out": "bitmaps/Bibata-Original-Thin-Classic",
+    "colors": [
+      { "match": "#00FF00", "replace": "#000000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+
+  "Bibata-Original-Thin-Ice": {
+    "dir": "svg/original-thin",
+    "out": "bitmaps/Bibata-Original-Thin-Ice",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FFFFFF" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  }
+}
