@@ -1,18 +1,18 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
 <path id="align-anchor" d="m70.499 157.683v32l32-32z" fill="cyan" opacity=".9" display="none"/>
 <circle id="cursor-hotspot" cx="55" cy="17" r="3" fill="magenta" opacity=".6" display="none"/>
 <g transform="translate(4.0002 9.3332)">
 <path d="M72.7113 37.7047L58.4991 24.8108L58.5 44.0004L58.5055 164L58.5061 176.678L70.2338 171.863L115.08 153.451L115.282 153.368L115.48 153.274L159.629 132.431L171.135 126.999L161.711 118.449L72.7113 37.7047Z" fill="#00FF00" stroke="#0000FF" stroke-width="16"/>
 <circle cx="118" cy="162" r="70.5" fill="#FF0000" stroke="#0000FF" stroke-width="16"/>
 <g transform="translate(118 162) scale(0.98)">
-<path d="M0 0L0 -50A50 50 0 0 1 50 0Z" fill="#F05024" fill-opacity="0.8" transform="rotate(560)"/>
-  <!--animateTransform attributeName="transform" type="rotate" repeatCount="4" values="0;360" keyTimes="0;1" dur="0.75s"/></path-->
-<path d="M0 0L50 0A50 50 0 0 1 0 50Z" fill="#FCB813" fill-opacity="0.8" transform="rotate(420)"/>
-  <!--animateTransform attributeName="transform" type="rotate" repeatCount="3" values="0;360" keyTimes="0;1" dur="1.0s"/></path-->
-<path d="M0 0L0 50A50 50 0 0 1 -50 0Z" fill="#7EBA41" fill-opacity="0.8" transform="rotate(280)"/>
-  <!--animateTransform attributeName="transform" type="rotate" repeatCount="2" values="0;360" keyTimes="0;1" dur="1.5s"/></path-->
-<path d="M0 0L-50 0A50 50 0 0 1 0 -50Z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(140)"/>
-  <!--animateTransform attributeName="transform" type="rotate" repeatCount="1" values="0;360" keyTimes="0;1" dur="3.0s"/></path-->
+<path d="M 0,0 L 0,-50 A 50,50 0 0 1 50,0 Z" fill="#F05024" fill-opacity="0.8" transform="rotate(840)">
+  <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="4" dur="0.75s" ?></path>
+<path d="M 0,0 L 50,0 A 50,50 0 0 1 0,50 Z" fill="#FCB813" fill-opacity="0.8" transform="rotate(630)">
+  <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="3" dur="1.0s" ?></path>
+<path d="M 0,0 L 0,50 A 50,50 0 0 1 -50,0 Z" fill="#7EBA41" fill-opacity="0.8" transform="rotate(420)">
+  <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="2" dur="1.5s" ?></path>
+<path d="M 0,0 L -50,0 A 50,50 0 0 1 0,-50 Z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(210)">
+  <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="1" dur="3.0s" ?></path>
 </g>
 </g>
 </svg>
