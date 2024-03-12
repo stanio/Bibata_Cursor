@@ -1,0 +1,169 @@
+{
+  "Bibata-Modern-Amber": {
+    "dir": "svg/modern",
+    "out": "themes/linux/Bibata-Modern-Amber",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FF8300" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#001524" }
+    ]
+  },
+  "Bibata-Modern-Amber-Thin": {
+    "dir": "svg/modern",
+    "out": "themes/linux/Bibata-Modern-Amber-Thin",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FF8300" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#001524" }
+    ]
+  },
+  "Bibata-Modern-Amber-Right": {
+    "dir": "svg/modern-right",
+    "out": "themes/linux/Bibata-Modern-Amber-Right",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FF8300" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#001524" }
+    ]
+  },
+
+  "Bibata-Modern-Classic": {
+    "dir": "svg/modern",
+    "out": "themes/linux/Bibata-Modern-Classic",
+    "colors": [
+      { "match": "#00FF00", "replace": "#000000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+  "Bibata-Modern-Classic-Thin": {
+    "dir": "svg/modern-thin",
+    "out": "themes/linux/Bibata-Modern-Classic-Thin",
+    "colors": [
+      { "match": "#00FF00", "replace": "#000000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+  "Bibata-Modern-Classic-Right": {
+    "dir": "svg/modern-right",
+    "out": "themes/linux/Bibata-Modern-Classic-Right",
+    "colors": [
+      { "match": "#00FF00", "replace": "#000000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+
+  "Bibata-Modern-Ice": {
+    "dir": "svg/modern",
+    "out": "themes/linux/Bibata-Modern-Ice",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FFFFFF" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  },
+  "Bibata-Modern-Ice-Thin": {
+    "dir": "svg/modern-thin",
+    "out": "themes/linux/Bibata-Modern-Ice-Thin",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FFFFFF" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  },
+  "Bibata-Modern-Ice-Right": {
+    "dir": "svg/modern-right",
+    "out": "themes/linux/Bibata-Modern-Ice-Right",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FFFFFF" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  },
+
+  "Bibata-Original-Amber": {
+    "dir": "svg/original",
+    "out": "themes/linux/Bibata-Original-Amber",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FF8300" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#001524" }
+    ]
+  },
+  "Bibata-Original-Amber-Thin": {
+    "dir": "svg/original",
+    "out": "themes/linux/Bibata-Original-Amber-Thin",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FF8300" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#001524" }
+    ]
+  },
+  "Bibata-Original-Amber-Right": {
+    "dir": "svg/original-right",
+    "out": "themes/linux/Bibata-Original-Amber-Right",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FF8300" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#001524" }
+    ]
+  },
+
+  "Bibata-Original-Classic": {
+    "dir": "svg/original",
+    "out": "themes/linux/Bibata-Original-Classic",
+    "colors": [
+      { "match": "#00FF00", "replace": "#000000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+  "Bibata-Original-Classic-Thin": {
+    "dir": "svg/original-thin",
+    "out": "themes/linux/Bibata-Original-Classic-Thin",
+    "colors": [
+      { "match": "#00FF00", "replace": "#000000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+  "Bibata-Original-Classic-Right": {
+    "dir": "svg/original-right",
+    "out": "themes/linux/Bibata-Original-Classic-Right",
+    "colors": [
+      { "match": "#00FF00", "replace": "#000000" },
+      { "match": "#0000FF", "replace": "#FFFFFF" },
+      { "match": "#FF0000", "replace": "#000000" }
+    ]
+  },
+
+  "Bibata-Original-Ice": {
+    "dir": "svg/original",
+    "out": "themes/linux/Bibata-Original-Ice",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FFFFFF" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  },
+  "Bibata-Original-Ice-Thin": {
+    "dir": "svg/original-thin",
+    "out": "themes/linux/Bibata-Original-Ice-Thin",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FFFFFF" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  },
+  "Bibata-Original-Ice-Right": {
+    "dir": "svg/original-right",
+    "out": "themes/linux/Bibata-Original-Ice-Right",
+    "colors": [
+      { "match": "#00FF00", "replace": "#FFFFFF" },
+      { "match": "#0000FF", "replace": "#000000" },
+      { "match": "#FF0000", "replace": "#FFFFFF" }
+    ]
+  }
+}
