@@ -15,7 +15,7 @@ set RENDER_ARGS=^
 
 :: The default opacity=0.5 appears too dark (less translucent).
 ::set SHADOW_ARG=--pointer-shadow=3,21,9
-set SHADOW_ARG=--pointer-shadow=3,21,9,0.25
+set SHADOW_ARG=--pointer-shadow=6,18,6,0.3
 
 set RENDER_CONFIG=render-windows.json
 set RENDER_JOPTS=-Dbibata.maxAnimSize=96
@@ -23,14 +23,14 @@ set RENDER_JOPTS=-Dbibata.maxAnimSize=96
 set RENDER_SCRIPT="%~dp0stanio-render"
 
 echo === Regular and Large
-call %RENDER_SCRIPT% %RENDER_ARGS% -s R,L || exit /b
+call %RENDER_SCRIPT% %RENDER_ARGS% -s R,L %* || exit /b
 
 echo:
 echo === Regular and Large with Shadow
-call %RENDER_SCRIPT% %RENDER_ARGS% -s R,L %SHADOW_ARG% || exit /b
+call %RENDER_SCRIPT% %RENDER_ARGS% -s R,L %SHADOW_ARG% %* || exit /b
 
 echo:
 echo === Extra-Large
 set RENDER_JOPTS=-Dbibata.maxAnimSize=64
-%RENDER_SCRIPT% %RENDER_ARGS% -s XL
+%RENDER_SCRIPT% %RENDER_ARGS% -s XL %*
 :: No Extra-Large with Shadow
