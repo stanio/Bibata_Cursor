@@ -1,5 +1,5 @@
 @echo off
-setlocal
+setlocal EnableDelayedExpansion
 
 set RENDER_ARGS=^
     -t Bibata-Modern-Classic ^
@@ -21,7 +21,7 @@ set RENDER_ARGS=^
 set SHADOW_ARG=--pointer-shadow=6,18,6,0.3
 
 set RENDER_CONFIG=render-linux.json
-set RENDER_JOPTS=-Dbibata.maxAnimSize=192
+set RENDER_JOPTS=-Dbibata.maxAnimSize=120
 
 set RENDER_SCRIPT="%~dp0stanio-render"
 
@@ -30,4 +30,17 @@ call %RENDER_SCRIPT% %RENDER_ARGS% %* || exit /b
 
 echo:
 echo === w/ Shadow
-%RENDER_SCRIPT% %RENDER_ARGS% %SHADOW_ARG% %*
+call %RENDER_SCRIPT% %RENDER_ARGS% %SHADOW_ARG% %*
+
+:: Create symlinks and theme files
+set RELDIR=%~dp0
+set RELDIR=!RELDIR:%CD%\=!
+set BUILD_SCRIPT="%RELDIR%stanio-misc\gradlew" -p "%RELDIR%stanio-misc" -q
+
+echo:
+call %BUILD_SCRIPT% x11Symlinks --args=../../themes/linux
+echo:
+call %BUILD_SCRIPT% cleanLinuxThemeFiles ^
+	linuxThemeFiles -PthemeColors=Classic,Ice
+xcopy "%RELDIR%stanio-misc\bibata\build\linux-themes\*" ^
+	"%RELDIR%themes\linux" /s /i /y
