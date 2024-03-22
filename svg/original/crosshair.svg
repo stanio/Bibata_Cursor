@@ -1,8 +1,10 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path id="align-anchor" d="m114.5 114.5h-32l32-32z" fill="cyan" opacity=".9" display="none"/>
-<path d="M148.5 34.5C148.5 22.902 139.098 13.5 127.5 13.5C115.902 13.5 106.5 22.902 106.5 34.5V106.5H34.5C22.902 106.5 13.5 115.902 13.5 127.5C13.5 139.098 22.902 148.5 34.5 148.5H106.5V221.5C106.5 233.098 115.902 242.5 127.5 242.5C139.098 242.5 148.5 233.098 148.5 221.5V148.5H221.5C233.098 148.5 242.5 139.098 242.5 127.5C242.5 115.902 233.098 106.5 221.5 106.5H148.5V34.5Z" fill="#00FF00" stroke="#0000FF" stroke-width="16" stroke-linecap="round" clip-path="url(#center-hole)"/>
-<clipPath id="center-hole">
-<path d="M0 0H256V256H0Z M128 151C140.703 151 151 140.703 151 128C151 115.297 140.703 105 128 105C115.297 105 105 115.297 105 128C105 140.703 115.297 151 128 151Z"/>
-</clipPath>
-<circle cx="128.12" cy="128.12" r="5.12" fill="#FE0000"/>
+  <path id="align-anchor" d="m 116,116 v -32 l -32,32 z" fill="cyan" opacity=".8" display="none"/>
+  <g id="center-canvas" transform="translate(4,4)" clip-path="url(#center-hole)">
+    <path d="m 112,30 a 12,12 0 0 1 24,0 v 82 h 82 a 12,12 0 0 1 0,24 h -82 v 82 a 12,12 0 0 1 -24,0 V 136 H 30 a 12,12 0 0 1 0,-24 h 82 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  </g>
+  <clipPath id="center-hole">
+    <path d="m -4,-4 h 256 v 256 h -256 z m 128,151 a 23,23 0 0 0 0,-46 a 23,23 0 0 0 0,46 z"/>
+  </clipPath>
+  <circle cx="128" cy="128" r="6" fill="#FE0000"/>
 </svg>

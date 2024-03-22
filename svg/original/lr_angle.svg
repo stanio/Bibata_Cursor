@@ -1,5 +1,8 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path id="align-anchor" d="m 205.7,205.46 h -32 l 32,-32 z" fill="cyan" opacity=".9" display="none"/>
-<circle id="cursor-hotspot" cx="224" cy="230" r="3" fill="magenta" opacity=".6" display="none"/>
-<path d="M212.6 28.5C204.371 28.5 197.7 35.1709 197.7 43.4V197.46H43.0001C34.7711 197.46 28.1001 204.131 28.1001 212.36C28.1001 220.589 34.7711 227.26 43.0001 227.26H212.6C220.829 227.26 227.5 220.589 227.5 212.36V43.4C227.5 35.171 220.829 28.5 212.6 28.5Z" fill="#00FF00" stroke="#0000FF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="align-anchor" d="m 200,200 h -32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" cx="205" cy="205" r="3" fill="magenta" opacity=".6" display="none"/>
+  <g id="center-canvas" transform="rotate(180,104,104)">
+    <path id="angle-stroke" d="m 0,167 v -167 h 167" stroke="#0000FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"/>
+    <path id="angle-fill" d="m -8,0 a 8,8 0 0 1 8,-8 h 167 a 8,8 0 0 1 0,16 h -151 a 8,8 0 0 0 -8,8 v 151 a 8,8 0 0 1 -16,0 z" fill="#00FF00"/>
+  </g>
 </svg>
