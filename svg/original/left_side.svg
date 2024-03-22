@@ -7,6 +7,6 @@
   </g>
   <g transform="translate(40,55.39)">
     <path id="side-stroke" d="m 0,0 v 147" stroke="#0000FF" stroke-linecap="round" stroke-width="48"/>
-    <path id="side-fill" d="m 0,0 v 147" stroke="#00FF00" stroke-linecap="round" stroke-width="16"/>
+    <path id="side-fill" class="fixed-width-stroke" d="m 0,0 v 147" stroke="#00FF00" stroke-linecap="round" stroke-width="16"/>
   </g>
 </svg>
