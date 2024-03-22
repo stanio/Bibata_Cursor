@@ -1,15 +1,7 @@
 @echo off
-setlocal EnableDelayedExpansion
+setlocal
 
 set RENDER_ARGS=^
-    -t Bibata-Modern-Classic ^
-    -t Bibata-Modern-Classic-Thin ^
-    -t Bibata-Modern-Ice ^
-    -t Bibata-Modern-Ice-Thin ^
-    -t Bibata-Original-Classic ^
-    -t Bibata-Original-Classic-Thin ^
-    -t Bibata-Original-Ice ^
-    -t Bibata-Original-Ice-Thin ^
     --windows-cursors ^
     -r 32,48,64,96,128
 
@@ -26,22 +18,33 @@ echo === Normal and Large
 call %RENDER_SCRIPT% %RENDER_ARGS% -s N,L %* || exit /b
 
 echo:
+echo === Normal and Large, Thin outline
+call %RENDER_SCRIPT% %RENDER_ARGS% -s N,L --thin-stroke %* || exit /b
+
+echo:
 echo === Normal and Large with Shadow
 call %RENDER_SCRIPT% %RENDER_ARGS% -s N,L %SHADOW_ARG% %* || exit /b
+
+echo:
+echo === Normal and Large, Thin outline with Shadow
+call %RENDER_SCRIPT% %RENDER_ARGS% -s N,L --thin-stroke %SHADOW_ARG% %* || exit /b
 
 echo:
 echo === Extra-Large
 set RENDER_JOPTS=-Dbibata.maxAnimSize=64
 call %RENDER_SCRIPT% %RENDER_ARGS% -s XL %*
+
+echo:
+echo === Extra-Large, Thin outline
+call %RENDER_SCRIPT% %RENDER_ARGS% -s XL --thin-stroke %*
 :: No Extra-Large with Shadow
 
 :: Create setup scripts
 set RELDIR=%~dp0
-set RELDIR=!RELDIR:%CD%\=!
+call set RELDIR=%%RELDIR:%CD%\=%%
 set BUILD_SCRIPT="%RELDIR%stanio-misc\gradlew" -p "%RELDIR%stanio-misc" -q
 
 echo:
-call %BUILD_SCRIPT% cleanWindowsInstallScripts ^
-	windowsInstallScripts -PthemeColors=Classic,Ice
+call %BUILD_SCRIPT% cleanWindowsInstallScripts windowsInstallScripts
 xcopy "%RELDIR%stanio-misc\bibata\build\windows-scripts\*" ^
 	"%RELDIR%themes\windows\Bibata" /s /i /y

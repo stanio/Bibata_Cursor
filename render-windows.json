@@ -8,28 +8,10 @@
       { "match": "#FF0000", "replace": "#001524" }
     ]
   },
-  "Bibata-Modern-Amber-Thin": {
-    "dir": "svg/modern.win",
-    "out": "themes/windows/Bibata/Modern-Amber-Thin",
-    "colors": [
-      { "match": "#00FF00", "replace": "#FF8300" },
-      { "match": "#0000FF", "replace": "#FFFFFF" },
-      { "match": "#FF0000", "replace": "#001524" }
-    ]
-  },
 
   "Bibata-Modern-Classic": {
     "dir": "svg/modern.win",
     "out": "themes/windows/Bibata/Modern-Classic",
-    "colors": [
-      { "match": "#00FF00", "replace": "#000000" },
-      { "match": "#0000FF", "replace": "#FFFFFF" },
-      { "match": "#FF0000", "replace": "#000000" }
-    ]
-  },
-  "Bibata-Modern-Classic-Thin": {
-    "dir": "svg/modern-thin.win",
-    "out": "themes/windows/Bibata/Modern-Classic-Thin",
     "colors": [
       { "match": "#00FF00", "replace": "#000000" },
       { "match": "#0000FF", "replace": "#FFFFFF" },
@@ -46,28 +28,10 @@
       { "match": "#FF0000", "replace": "#FFFFFF" }
     ]
   },
-  "Bibata-Modern-Ice-Thin": {
-    "dir": "svg/modern-thin.win",
-    "out": "themes/windows/Bibata/Modern-Ice-Thin",
-    "colors": [
-      { "match": "#00FF00", "replace": "#FFFFFF" },
-      { "match": "#0000FF", "replace": "#000000" },
-      { "match": "#FF0000", "replace": "#FFFFFF" }
-    ]
-  },
 
   "Bibata-Original-Amber": {
     "dir": "svg/original.win",
     "out": "themes/windows/Bibata/Original-Amber",
-    "colors": [
-      { "match": "#00FF00", "replace": "#FF8300" },
-      { "match": "#0000FF", "replace": "#FFFFFF" },
-      { "match": "#FF0000", "replace": "#001524" }
-    ]
-  },
-  "Bibata-Original-Amber-Thin": {
-    "dir": "svg/original.win",
-    "out": "themes/windows/Bibata/Original-Amber-Thin",
     "colors": [
       { "match": "#00FF00", "replace": "#FF8300" },
       { "match": "#0000FF", "replace": "#FFFFFF" },
@@ -84,28 +48,10 @@
       { "match": "#FF0000", "replace": "#000000" }
     ]
   },
-  "Bibata-Original-Classic-Thin": {
-    "dir": "svg/original-thin.win",
-    "out": "themes/windows/Bibata/Original-Classic-Thin",
-    "colors": [
-      { "match": "#00FF00", "replace": "#000000" },
-      { "match": "#0000FF", "replace": "#FFFFFF" },
-      { "match": "#FF0000", "replace": "#000000" }
-    ]
-  },
 
   "Bibata-Original-Ice": {
     "dir": "svg/original.win",
     "out": "themes/windows/Bibata/Original-Ice",
-    "colors": [
-      { "match": "#00FF00", "replace": "#FFFFFF" },
-      { "match": "#0000FF", "replace": "#000000" },
-      { "match": "#FF0000", "replace": "#FFFFFF" }
-    ]
-  },
-  "Bibata-Original-Ice-Thin": {
-    "dir": "svg/original-thin.win",
-    "out": "themes/windows/Bibata/Original-Ice-Thin",
     "colors": [
       { "match": "#00FF00", "replace": "#FFFFFF" },
       { "match": "#0000FF", "replace": "#000000" },

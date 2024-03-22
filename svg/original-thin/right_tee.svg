@@ -1,4 +1,0 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle id="cursor-hotspot" cx="29" cy="128" r="3" fill="magenta" opacity=".6" display="none"/>
-<path d="M40.0001 232.82C31.77114 232.82 25.10015 226.149 25.10015 217.92V30.4C25.10015 22.171 31.77114 15.5 40.0001 15.5C48.229 15.5 54.9 22.171 54.9 30.4V109.26H212.8C221.029 109.26 227.72 115.931 227.72 124.16C227.72 132.389 221.029 139.06 212.8 139.06H54.9V217.92C54.9 226.149 48.229 232.822 40.0001 232.822Z" fill="#00FF00" stroke="#0000FF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
