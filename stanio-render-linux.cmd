@@ -3,6 +3,8 @@ setlocal
 
 set RENDER_ARGS=^
     --linux-cursors ^
+    --all-variants ^
+    --thin-stroke ^
     -s /1.25:x4/5 -r 30,40,60,80,100,120
 ::       -r 24,32,48,64,80,96
 ::  -s R -r 24,30,33,36,42,48,60,72,84,96,120,144
@@ -17,20 +19,7 @@ set RENDER_JOPTS=-Dbibata.maxAnimSize=100 -Dxcur.cropToContent=true
 
 set RENDER_SCRIPT="%~dp0stanio-render"
 
-echo === Plain (no Shadow)
-call %RENDER_SCRIPT% %RENDER_ARGS% %* || exit /b
-
-echo:
-echo === Thin outline
-call %RENDER_SCRIPT% %RENDER_ARGS% --thin-stroke %* || exit /b
-
-echo:
-echo === w/ Shadow
 call %RENDER_SCRIPT% %RENDER_ARGS% %SHADOW_ARG% %*
-
-echo:
-echo === Thin outline w/ Shadow
-call %RENDER_SCRIPT% %RENDER_ARGS% --thin-stroke %SHADOW_ARG% %*
 
 :: Create symlinks and theme files
 set RELDIR=%~dp0

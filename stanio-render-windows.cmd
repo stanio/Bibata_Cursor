@@ -3,6 +3,8 @@ setlocal
 
 set RENDER_ARGS=^
     --windows-cursors ^
+    --all-variants ^
+    --thin-stroke ^
     -r 32,48,64,96,128
 
 :: The default opacity=0.5 appears too dark (less translucent).
@@ -15,28 +17,12 @@ set RENDER_JOPTS=-Dbibata.maxAnimSize=96
 set RENDER_SCRIPT="%~dp0stanio-render"
 
 echo === Normal and Large
-call %RENDER_SCRIPT% %RENDER_ARGS% -s N,L %* || exit /b
-
-echo:
-echo === Normal and Large, Thin outline
-call %RENDER_SCRIPT% %RENDER_ARGS% -s N,L --thin-stroke %* || exit /b
-
-echo:
-echo === Normal and Large with Shadow
 call %RENDER_SCRIPT% %RENDER_ARGS% -s N,L %SHADOW_ARG% %* || exit /b
-
-echo:
-echo === Normal and Large, Thin outline with Shadow
-call %RENDER_SCRIPT% %RENDER_ARGS% -s N,L --thin-stroke %SHADOW_ARG% %* || exit /b
 
 echo:
 echo === Extra-Large
 set RENDER_JOPTS=-Dbibata.maxAnimSize=64
 call %RENDER_SCRIPT% %RENDER_ARGS% -s XL %*
-
-echo:
-echo === Extra-Large, Thin outline
-call %RENDER_SCRIPT% %RENDER_ARGS% -s XL --thin-stroke %*
 :: No Extra-Large with Shadow
 
 :: Create setup scripts
