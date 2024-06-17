@@ -1,3 +1,14 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M31.5312 121.993L23.7886 128.5L31.5312 135.007L78.5312 174.507L92.5 186.247V168V153.5H165.5V168V186.503L179.537 174.449L225.537 134.949L233.047 128.5L225.537 122.051L179.537 82.5513L165.5 70.4973V89V103.5H92.5V89V70.7532L78.5312 82.4929L31.5312 121.993Z" fill="#00FF00" stroke="#0000FF" stroke-width="17"/>
+<path id="align-anchor" d="m 83.5,112 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+<g id="blueprint" transform="translate(128,128)" opacity=".5" display="none">
+  <marker id="triangle-1" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+    <path d="M 68.5,0 0,57.5 V -57.5 z" fill="context-stroke" />
+  </marker>
+  <marker id="triangle-2" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+    <path d="M 48.058594,0 L 0,40.341797 V -40.341797 z" fill="context-stroke" />
+  </marker>
+  <path id="fill-middle" d="M -36.5,0 h 73" stroke="#ff0000" stroke-width="48" marker-start="url(#triangle-1)" marker-end="url(#triangle-1)" />
+  <path id="fill-inner" d="M -44.5,0 h 89" stroke="#ff0000" stroke-width="32" marker-start="url(#triangle-2)" marker-end="url(#triangle-2)" />
+</g>
+<path d="M 83.5,87.658 35.441,128 83.5,168.342 V 144 H 172.5 V 168.342 L 220.559,128 172.5,87.658 V 112 H 83.5 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
 </svg>

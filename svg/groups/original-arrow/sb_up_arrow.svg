@@ -1,3 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M82.5513 80.4625L70.4973 94.5H89H103.5V216V224.5H112H145H153.5V216V94.5H168H186.503L174.449 80.4625L134.949 34.4625L128.5 26.9526L122.051 34.4625L82.5513 80.4625Z" fill="#00FF00" stroke="#0000FF" stroke-width="17"/>
+<path id="align-anchor" d="m 112,83.5 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+<circle id="cursor-hotspot" cx="128" cy="15" r="3" fill="magenta" opacity=".6" display="none"/>
+<path d="M 83.5,87.658 35.441,128 83.5,168.342 V 144 H 211.5 V 112 H 83.5 z" transform="rotate(90,128,128)" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
 </svg>
