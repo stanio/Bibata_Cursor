@@ -1,3 +1,8 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M58.3 43.4C58.3 35.171 51.629 28.5 43.4 28.5C35.171 28.5 28.5 35.171 28.5 43.4V212.36C28.5 220.589 35.1709 227.26 43.4 227.26H213C221.229 227.26 227.9 220.589 227.9 212.36C227.9 204.131 221.229 197.46 213 197.46H58.3V43.4Z" fill="#00FF00" stroke="#0000FF" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="align-anchor" d="m 32,200 v -32 l 32,32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" cx="40" cy="208" r="3" fill="magenta" opacity=".6" display="none"/>
+  <g transform="matrix(1,0,0,-1,40,208)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path id="angle-stroke" d="M 0,168 V 0 h 168" stroke="#0000FF" stroke-width="48"/>
+    <path id="angle-fill" d="M 0,168 V 0 h 168 M 0,16 A 16,16 0 0 1 16,0" stroke="#00FF00" stroke-width="16" class="fixed-width-stroke"/>
+  </g>
 </svg>
