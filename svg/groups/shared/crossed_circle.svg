@@ -1,4 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M127.32 226.14C181.344 226.14 225.14 182.344 225.14 128.32C225.14 74.2955 181.344 30.5 127.32 30.5C73.2955 30.5 29.5 74.2955 29.5 128.32C29.5 182.344 73.2955 226.14 127.32 226.14Z" fill="#FE0000" stroke="#0000FF" stroke-width="17"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M113.149 129.398L82.4062 98.6557L96.0697 84.9922L126.812 115.735L157.555 84.9922L171.219 98.6556L140.476 129.398L171.219 160.141L157.555 173.805L126.812 143.062L96.0697 173.805L82.4063 160.141L113.149 129.398Z" fill="white"/>
+  <path id="align-anchor" d="m 128,128 h 32 l -32,32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle cx="128" cy="128" r="89.32" fill="#FE0000" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <path d="M -53.1385,0 h 106.277 M 0,-53.1385 v 106.277" transform="translate(128,128) rotate(45)" stroke="white" stroke-width="19.324" class="fixed-width-stroke"/>
 </svg>
