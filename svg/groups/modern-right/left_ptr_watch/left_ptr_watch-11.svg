@@ -1,8 +1,16 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M114.731 109.497L93.8696 110.056L108.404 95.0801L173.724 27.7773C185.296 15.8542 205.5 24.0464 205.5 40.6618L205.5 134.895L205.5 160.434L190.195 139.989L166.335 108.115L114.731 109.497Z" fill="#00FF00" stroke="#0000FF" stroke-width="17"/>
-<circle cx="62" cy="62" r="70.5" transform="matrix(-1 0 0 1 200 100)" fill="#FF0000" stroke="#0000FF" stroke-width="17"/>
-<path d="M90.2822 152.724L138 162L147.276 114.282C141.009 113.064 134.564 113.092 128.309 114.365C122.053 115.637 116.11 118.13 110.817 121.699C105.525 125.269 100.988 129.846 97.4642 135.169C93.9407 140.493 91.5003 146.458 90.2822 152.724Z" fill="#F05024" fill-opacity="0.8"/>
-<path d="M163.037 120.332L138 162L96.3325 136.963C99.6204 131.491 103.954 126.721 109.085 122.923C114.217 119.126 120.046 116.377 126.24 114.833C132.435 113.288 138.872 112.979 145.186 113.923C151.499 114.866 157.565 117.044 163.037 120.332Z" fill="#FCB813" fill-opacity="0.8"/>
-<path d="M108.745 123.177L138 162L176.822 132.745C172.981 127.647 168.172 123.355 162.672 120.115C157.172 116.875 151.087 114.751 144.765 113.862C138.444 112.974 132.009 113.339 125.829 114.937C119.648 116.536 113.843 119.336 108.745 123.177Z" fill="#7EBA41" fill-opacity="0.8"/>
-<path d="M183.963 146.174L138 162L122.174 116.037C128.21 113.959 134.596 113.09 140.968 113.48C147.34 113.869 153.572 115.51 159.31 118.309C165.047 121.107 170.178 125.008 174.408 129.79C178.638 134.571 181.884 140.138 183.963 146.174Z" fill="#32A0DA" fill-opacity="0.8"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <path id="align-anchor" d="m 197,30.558928 h -26 l 26,36 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" class="bias-top" cx="200" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path d="M 179.824,33.697 C 182.364,31.08 185.21,30.27 188,30.646 C 188.93,30.772 189.854,31.028 190.758,31.395 C 194.372,32.86 197,35.8 197,40.662 V 147.271 L 108.4,107.289 L 114.504,101 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <circle cx="138" cy="162" r="62" fill="#FF0000" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <g transform="translate(138,162) scale(0.97222)">
+    <path d="M 0,0 L 0,-50 A 50,50 0 0,1 50,0 z" fill="#F05024" fill-opacity="0.8" transform="rotate(400)">
+      <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="4" dur="0.75s" ?></path>
+    <path d="M 0,0 L 50,0 A 50,50 0 0,1 0,50 z" fill="#FCB813" fill-opacity="0.8" transform="rotate(300)">
+      <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="3" dur="1.0s" ?></path>
+    <path d="M 0,0 L 0,50 A 50,50 0 0,1 -50,0 z" fill="#7EBA41" fill-opacity="0.8" transform="rotate(200)">
+      <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="2" dur="1.5s" ?></path>
+    <path d="M 0,0 L -50,0 A 50,50 0 0,1 0,-50 z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(100)">
+      <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="1" dur="3.0s" ?></path>
+  </g>
 </svg>
