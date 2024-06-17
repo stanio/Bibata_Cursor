@@ -1,8 +1,16 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M141.269 109.497L162.131 110.056L147.596 95.0801L82.2757 27.7773C70.7038 15.8542 50.5002 24.0464 50.5002 40.6618L50.5001 134.895L50.5 160.434L65.8047 139.989L89.6654 108.115L141.269 109.497Z" fill="#00FF00" stroke="#0000FF" stroke-width="17"/>
-<circle cx="118" cy="162" r="70.5" fill="#FF0000" stroke="#0000FF" stroke-width="17"/>
-<path d="M151.768 127.032L118 162L152.968 195.768C157.402 191.176 160.889 185.756 163.229 179.816C165.568 173.877 166.715 167.535 166.604 161.152C166.492 154.769 165.125 148.471 162.579 142.616C160.034 136.762 156.36 131.467 151.768 127.032Z" fill="#F05024" fill-opacity="0.8"/>
-<path d="M92.2401 203.225L118 162L159.225 187.76C155.842 193.174 151.426 197.868 146.229 201.575C141.032 205.282 135.155 207.929 128.935 209.365C122.715 210.801 116.273 210.998 109.977 209.945C103.681 208.891 97.6538 206.607 92.2401 203.225Z" fill="#FCB813" fill-opacity="0.8"/>
-<path d="M102.174 207.963L118 162L72.0373 146.174C69.959 152.21 69.0899 158.596 69.4796 164.968C69.8693 171.34 71.5102 177.572 74.3087 183.31C77.1071 189.047 81.0082 194.178 85.7893 198.408C90.5704 202.638 96.1379 205.884 102.174 207.963Z" fill="#7EBA41" fill-opacity="0.8"/>
-<path d="M124.765 113.862L118 162L69.862 155.235C70.7504 148.913 72.8753 142.828 76.1153 137.328C79.3552 131.828 83.6469 127.019 88.7451 123.178C93.8434 119.336 99.6484 116.536 105.829 114.937C112.009 113.339 118.444 112.974 124.765 113.862Z" fill="#32A0DA" fill-opacity="0.8"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <path id="align-anchor" d="m 59,30.558928 h 26 l -26,36 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" class="bias-top" cx="55" cy="17" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path d="M 68,30.646 C 70.79,30.27,73.636,31.08,76.176,33.697 L 141.496,101 L 147.598,107.289 L 59,147.271 V 134.895 V 40.662 C 59,35.8,61.628,32.86,65.242,31.395 C 66.146,31.028,67.07,30.772,68,30.646 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <circle cx="118" cy="162" r="62" fill="#FF0000" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <g transform="translate(118 162) scale(0.97222)">
+    <path d="M 0,0 L 0,-50 A 50,50 0 0 1 50,0 Z" fill="#F05024" fill-opacity="0.8" transform="rotate(80)">
+      <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="4" dur="0.75s" ?></path>
+    <path d="M 0,0 L 50,0 A 50,50 0 0 1 0,50 Z" fill="#FCB813" fill-opacity="0.8" transform="rotate(60)">
+      <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="3" dur="1.0s" ?></path>
+    <path d="M 0,0 L 0,50 A 50,50 0 0 1 -50,0 Z" fill="#7EBA41" fill-opacity="0.8" transform="rotate(40)">
+      <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="2" dur="1.5s" ?></path>
+    <path d="M 0,0 L -50,0 A 50,50 0 0 1 0,-50 Z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(20)">
+      <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="1" dur="3.0s" ?></path>
+  </g>
 </svg>
