@@ -1,0 +1,10 @@
+#!/bin/sh
+# Usual options include: --standard-sizes --windows-cursors
+# Use --help for more
+
+BASEDIR=$(dirname $(realpath "$0"))
+
+args=$@ # Why is this necessary?
+"$BASEDIR/stanio-misc/gradlew" -p "$BASEDIR/stanio-misc" \
+	-q bibata:run -PbibataJvmArgs="$RENDER_JOPTS" \
+	--args="render ../../$RENDER_CONFIG $args"

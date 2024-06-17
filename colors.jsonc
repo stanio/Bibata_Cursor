@@ -1,0 +1,48 @@
+{
+  "Amber": {
+    "#00FF00": "#FF8300",
+    "#0000FF": "#FFFFFF",
+    "#FF0000": "#001524"
+  },
+  "Classic": {
+    "#00FF00": "#000000",
+    //"#96C865": "#000000", // bottom_left_corner
+    //"#FDBE2A": "#000000", // bottom_right_corner
+    //"#4FADDF": "#000000", // top_left_corner
+    //"#F1613A": "#000000", // top_right_corner
+    "#0000FF": "#FFFFFF",
+    "#FF0000": "#000000"
+  },
+  "Ice": {
+    "#00FF00": "#FFFFFF",
+    //"#96C865": "#FFFFFF", // bottom_left_corner
+    //"#FDBE2A": "#FFFFFF", // bottom_right_corner
+    //"#4FADDF": "#FFFFFF", // top_left_corner
+    //"#F1613A": "#FFFFFF", // top_right_corner
+    "#0000FF": "#000000",
+    "#FF0000": "#FFFFFF"
+  },
+  "Source": {},
+
+  "DarkRed": {
+    "#00FF00": "#B20000",
+    "#0000FF": "#FFFFFF",
+    "#FF0000": "#000000"
+  },
+  "DodgerBlue": {
+    "#00FF00": "#5848FF",
+    "#0000FF": "#FFFFFF",
+    "#FF0000": "#000000"
+  },
+  "Turquoise": {
+    "#00FF00": "#00F0B7",
+    "#0000FF": "#000000",
+    "#FF0000": "#FFFFFF"
+  },
+  "Pink": {
+    "#00FF00": "#FE009E",
+    "#0000FF": "#FFFFFF",
+    "#FF0000": "#000000"
+  }
+}
+

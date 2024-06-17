@@ -1,0 +1,28 @@
+{
+  "bd_double_arrow": "Dgn1",
+  "circle": "Unavailable",
+  "crosshair": "Cross",
+  "fd_double_arrow": "Dgn2",
+  "grabbing": "Grabbing",
+  "hand1": "Pan",
+  "hand2": "Link",
+  "left_ptr": "Pointer",
+  "left_ptr_watch": "Work",
+  "move": "Move",
+  "pencil": "Handwriting",
+  "question_arrow": "Help",
+  "right_ptr": "Alternate",
+  "sb_h_double_arrow": "Horz",
+  "sb_v_double_arrow": "Vert",
+  "wait": "Busy",
+  "xterm": "Text",
+  "zoom-in": "Zoom-in",
+  "zoom-out": "Zoom-out",
+  "person": "Person",
+  "pin": "Pin",
+
+  "center_ptr": "Alternate_2",
+  "sb_up_arrow": "Alternate_3",
+  "cross": "Cross_2",
+  "crossed_circle": "Unavailable_2"
+}
