@@ -1,3 +1,10 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M76.6287 46.6308L62.4993 34.144L62.5 53.0003L62.5058 208L62.5066 229.287L77.1681 213.855L122.261 166.392L188.193 164.895L209.894 164.403L193.629 150.028L76.6287 46.6308Z" fill="#00FF00" stroke="#0000FF" stroke-width="17"/>
+  <path id="align-anchor" d="m 67,148.1855 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" class="bias-top-left" cx="55" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
+  <g id="blueprint" transform="translate(62.4993,34.144)" display="none">
+    <path d="M 0,156.125 V 0 l 116.93071,103.45156 h -70.32918 z" transform="translate(8,17.759766)"
+        fill="#00FF00" stroke="#0000FF" stroke-width="24" paint-order="stroke fill"/>
+    <path d="M 0,195 V 0 l 146.04637,129.21091 h -87.84109 z" fill="#00FF00" stroke="#0000FF" stroke-width="16"/>
+  </g>
+  <path d="M 67,44 184,147.39648 114.5332,148.97461 67,199 Z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
 </svg>

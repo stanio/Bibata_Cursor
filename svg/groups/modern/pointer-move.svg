@@ -1,18 +1,10 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M201.163 133.54L201.149 133.528L201.134 133.515L91.6856 36.4935C86.5146 31.7659 81.427 27.9549 76.5422 25.525C71.7672 23.1497 66.0863 21.5569 60.4134 23.1213C54.3119 24.8039 50.4876 29.4674 48.364 34.759C46.3123 39.8715 45.5 46.2787 45.5 53.5383L45.5 200.431V200.493L45.5009 200.555C45.6219 208.862 50.428 217.843 55.9964 223.894C58.8935 227.043 62.5164 229.986 66.6706 231.742C70.9174 233.537 76.2171 234.254 81.4692 231.884C85.7537 229.951 89.6756 226.055 92.8566 222.651C94.6842 220.695 96.8337 218.252 99.0356 215.749C100.71 213.847 102.414 211.91 104.03 210.126C112.189 201.122 121.347 192.286 132.161 187.407C143.013 182.511 155.809 181.375 167.963 181.146C170.959 181.089 173.85 181.087 176.65 181.085H176.663H176.686C179.447 181.083 182.164 181.081 184.662 181.019C189.231 180.906 194.643 180.609 198.777 178.88C208.711 174.723 210.972 163.838 210.753 156.445C210.521 148.596 207.57 139.272 201.163 133.54Z" fill="#00FF00" stroke="#0000FF" stroke-width="17"/>
-<g filter="url(#filter0_d_3519_40)">
-<rect x="107.5" y="15.5" width="113" height="113" rx="48.5" fill="#179DD8" stroke="#0000FF" stroke-width="17"/>
-<rect x="138" y="46" width="52" height="52" rx="20" fill="white"/>
-</g>
-<defs>
-<filter id="filter0_d_3519_40" x="93.88" y="7" width="140.24" height="140.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="5.12"/>
-<feGaussianBlur stdDeviation="2.56"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3519_40"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3519_40" result="shape"/>
-</filter>
-</defs>
+  <path id="align-anchor" d="m 54.5068,31.47092 h 26 l -26,36 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" class="bias-top" cx="55" cy="17" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path id="pointer-shape-v2.0.4" d="M 54.5068,54.0092 C 54.5068,26.9331 66.9694,25.4005 86.5042,43.281 L 196.003,140.346 C 204.265,147.738 205.77,167.422 196.003,171.509 C 186.235,175.596 154.198,168.84 129.173,180.13 C 104.147,191.42 88.6033,220.04 78.4806,224.607 C 68.3579,229.174 54.6677,211.949 54.5068,200.902 L 54.5068,54.0092 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <g>
+    <path class="align-anchor" d="m 116,24 h 32 l -32,32 z" fill="orange" opacity=".8" display="none"/>
+    <rect x="116" y="24" width="96" height="96" rx="40" fill="#179DD8" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+    <rect x="138" y="46" width="52" height="52" rx="20" fill="white"/>
+  </g>
 </svg>
