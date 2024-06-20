@@ -13,7 +13,7 @@ RENDER_ARGS="../../$RENDER_CONFIG \
     --source svg/original-right --name Left-Handed-Original \
     --color Classic,Ice \
     --all-variants --thin-stroke --pointer-shadow=6,18,6,0.25 \
-    -s N,L -r 32,40,48,60,64,72,80,96,128
+    -s N,L -r 32,48,64,72,96,128"
 
 USER_ARGS=$@ # Why is this necessary?
 $BUILD_SCRIPT bibata:run \
