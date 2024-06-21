@@ -13,9 +13,12 @@
   "bottom_side": [
     "s-resize"
   ],
+  "bottom_tee": [],
+  "center_ptr": [],
   "circle": [
     "forbidden"
   ],
+  "context-menu": [],
   "copy": [
     "1081e37283d90000800003c07f3ef6bf",
     "6407b0e94181790501fd1e167b474872",
@@ -29,12 +32,15 @@
     "03b6e0fcb3499374a867c041f52298f0",
     "not-allowed"
   ],
+  "crosshair": [],
+  "dnd-ask": [],
+  "dnd-copy": [],
+  "dnd-link": [
+    "alias"
+  ],
   "dnd_no_drop": [
     "no-drop",
     "dnd-no-drop"
-  ],
-  "dnd-link": [
-    "alias"
   ],
   "dotbox": [
     "dot_box_mask",
@@ -77,11 +83,14 @@
   "left_side": [
     "w-resize"
   ],
+  "left_tee": [],
   "link": [
     "3085a0e285430894940527032f8b26df",
     "640fb0e74195791501fd1ed57b41487f",
     "a2a266d0498c3104214a47bd64ab0fc8"
   ],
+  "ll_angle": [],
+  "lr_angle": [],
   "move": [
     "4498f0e0c1937ffe01fd06f973665830",
     "9081237383d90e509aa00f00170e968f",
@@ -95,6 +104,7 @@
   "plus": [
     "cell"
   ],
+  "pointer-move": [],
   "question_arrow": [
     "5c6cd98b3f3ebcb1f9c7f1c204630408",
     "d9ce0ab605698f320427677b458ad60b",
@@ -109,6 +119,7 @@
   "right_side": [
     "e-resize"
   ],
+  "right_tee": [],
   "sb_down_arrow": [
     "down-arrow"
   ],
@@ -154,9 +165,14 @@
   "top_side": [
     "n-resize"
   ],
+  "top_tee": [],
+  "ul_angle": [],
+  "ur_angle": [],
+  "vertical-text": [],
   "wait": [
     "watch"
   ],
+  "wayland-cursor": [],
   "X_cursor": [
     "pirate",
     "x-cursor"
@@ -164,5 +180,7 @@
   "xterm": [
     "ibeam",
     "text"
-  ]
+  ],
+  "zoom-in": [],
+  "zoom-out": []
 }
