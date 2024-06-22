@@ -1,0 +1,8 @@
+#!/bin/sh
+BASEDIR=$(dirname "$0")
+GRADLE_CMD=$BASEDIR/stanio-misc/gradlew
+GRADLE_ARGS="-p $BASEDIR/stanio-misc -q"
+
+USER_ARGS=$@ # Why is this necessary?
+$GRADLE_CMD $GRADLE_ARGS bibata:run -PbibataJvmArgs="$RENDER_JOPTS" \
+	--args="render ../../$RENDER_CONFIG $USER_ARGS"

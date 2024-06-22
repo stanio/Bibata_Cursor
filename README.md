@@ -1,3 +1,118 @@
+## Build (stanio)
+
+This fork uses alternative to the official Bibata_Cursor
+[build tools](https://github.com/stanio/stanio-misc/tree/HEAD/bibata) that
+should provide somewhat better quality results.  The build is Java-based and
+requires [JDK](https://adoptium.net/) 11 or later.  It should automatically
+download [Gradle](https://gradle.org/) and specific application dependencies,
+during the first run.  One day I may package it as a self-contained `mousegen`
+tool.
+
+A notable difference with the official Bibata_Cursor is this build requires
+the cursor hostpost embedded into the individual source SVG files, as seen in
+this fork, rather than maintained separately in `configs/**.build.toml` files:
+
+```xml
+  <circle id="cursor-hotstop" cx="..." cy="..." />
+```
+
+Better quality results are achieved by rasterizing the source SVGs at each
+individual resolution, and employing pixel-grid alignment hints embedded into
+the sources:
+
+```xml
+  <path id="align-anchor" d="m #,# ..." />
+
+  <g>
+    <path class="align-anchor" d="m #,# ..." />
+```
+
+For my releases I have two scripts with specific configurations:
+
+```
+$ ./build-stanio-windows
+$ ./build-stanio-linux
+```
+
+For building customized versions of the cursors see `render-stanio` further.
+
+### `render-stanio` – Basic options
+
+Get a rough overview of the available options:
+
+```sh
+$ ./render-stanio --help
+```
+
+The default output directory is `themes/`, and without options given, it would
+render just PNG bitmaps at their default size/resolution (256×256).  Customize
+the build output directory via `--build-dir <dir>`.
+
+To render either Linux (X) or Windows cursors specify `--linux-cursors` or
+`--windows-cursors` option:
+
+```sh
+$ ./render-stanio --windows-cursors
+$ ./render-stanio --linux-cursors
+```
+
+Both can't be effective at the same time, currently.
+
+### Customizing the resolutions/sizes
+
+The default resolutions currently are:
+
+-   Windows: 32, 48, 64, 72, 96, 128
+-   Linux: 24, 32, 48, 64, 72, 96
+
+Customize the output resolutions using `-r` option(s):
+
+```sh
+$ ./render-stanio -r 32,48,64
+```
+
+`--windows-cursors` also implies three (canvas) sizing-schemes: Normal, Large,
+and  Extra-Large (N, L, XL).  Customize the sizing schemes via `-s` option(s).
+The following will output only Normal and Large variants:
+
+```sh
+$ ./render-stanio -s N,L
+```
+
+To reset to just the original sizing use `-s SOURCE` – that's equivalent to
+Extra-Large but doesn't change the theme name to reflect that.
+
+### Customizing the color
+
+```sh
+$ ./render-stanio --color Ice,Turquoise
+```
+
+Find and customize the color mappings in `colors.jsonc`.
+
+### Customizing the pointer shadow
+
+The cursors don't have a shadow by default (I've also removed all shadows from
+the original sources).  To get cursors with shadow use `--pointer-shadow`:
+
+```sh
+$ ./render-stanio --pointer-shadow
+```
+
+The full syntax is:
+
+    --pointer-shadow[=<blur>[,<dx>[,<dy>[,<opacity>[,#<color>]]]]]
+
+The default values are:
+
+    --pointer-shadow=6,18,9,0.3,#000000
+
+To render both variants: with and without shadow, add `--all-variants`:
+
+    --pointer-shadow --all-variants
+
+---
+
 ## ⚠️ Notice: Final Major Version v2.x.x
 
 I've launched the successor to this project at https://www.github.com/ful1e5/bibata for **downloading and personalizing Bibata**, now the main source for new features. I recommend downloading from there. This repository is still maintained for [Linux packages](#packages).
