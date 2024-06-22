@@ -1,5 +1,5 @@
 #!/bin/sh
-VERSION=2.0.7-stanio-2
+VERSION=2.0.7-stanio-3-dev
 
 BASEDIR=$(dirname "$0")
 BUILD_SCRIPT="$BASEDIR/stanio-misc/gradlew -p $BASEDIR/stanio-misc -q"
