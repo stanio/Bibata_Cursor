@@ -3,6 +3,9 @@ BASEDIR=$(dirname "$0")
 GRADLE_CMD=$BASEDIR/stanio-misc/gradlew
 GRADLE_ARGS="-p $BASEDIR/stanio-misc -q"
 
+[ -z "$RENDER_JOPTS" ] && RENDER_JOPTS="-Dbibata.animRateGain=1.25"
+echo "Experimental options: $RENDER_JOPTS"
+echo
 USER_ARGS=$@ # Why is this necessary?
 $GRADLE_CMD $GRADLE_ARGS bibata:run -PbibataJvmArgs="$RENDER_JOPTS" \
 	--args="render ../../$RENDER_CONFIG $USER_ARGS"

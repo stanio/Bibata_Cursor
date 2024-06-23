@@ -17,7 +17,7 @@ RENDER_ARGS="../../$RENDER_CONFIG \
 
 USER_ARGS=$@ # Why is this necessary?
 $BUILD_SCRIPT bibata:run \
-	-PbibataJvmArgs="$RENDER_JOPTS -Dbibata.maxAnimSize=96" \
+	-PbibataJvmArgs="$RENDER_JOPTS -Dbibata.animRateGain=1.25 -Dbibata.maxAnimSize=96" \
 	--args="render $RENDER_ARGS $USER_ARGS" || exit
 
 # Create setup scripts

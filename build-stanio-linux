@@ -18,7 +18,7 @@ RENDER_ARGS="../../$RENDER_CONFIG \
 
 USER_ARGS=$@ # Why is this necessary?
 $BUILD_SCRIPT bibata:run \
-	-PbibataJvmArgs="$RENDER_JOPTS -Dbibata.maxAnimSize=120 -Dxcur.cropToContent=true" \
+	-PbibataJvmArgs="$RENDER_JOPTS -Dbibata.animRateGain=1.25 -Dxcur.cropToContent=true" \
 	--args="render $RENDER_ARGS $USER_ARGS" || exit
 
 # Create symlinks and theme files
