@@ -8,6 +8,18 @@ download [Gradle](https://gradle.org/) and specific application dependencies,
 during the first run.  One day I may package it as a self-contained `mousegen`
 tool.
 
+Make sure you clone this with `--recurse-submodules`:
+
+```sh
+$ git clone --recurse-submodules https://github.com/stanio/Bibata_Cursor.git
+```
+
+or checkout the `stanio-misc` submodule afterward:
+
+```sh
+$ git submodule update --init
+```
+
 A notable difference with the official Bibata_Cursor is this build requires
 the cursor hostpost embedded into the individual source SVG files, as seen in
 this fork, rather than maintained separately in `configs/**.build.toml` files:
