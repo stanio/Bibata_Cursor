@@ -1,10 +1,11 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" d="m 112,128 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" d="m 112,134 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" cx="128" cy="150" r="3" fill="magenta" opacity=".6" display="none"/>
   <g id="blueprint" display="none">
     <marker id="square-butt" markerUnits="userSpaceOnUse" overflow="visible">
       <rect x="-32" y="-32" width="64" height="64" rx="20" ry="20" transform="rotate(45)" fill="context-stroke"/>
     </marker>
-    <path id="arrow-arm" d="M 128,60 v 136" marker-start="url(#square-butt)" marker-end="url(#square-butt)" fill="none" stroke="yellow" stroke-width="32"/>
+    <path id="arrow-arm" d="M 128,60 v 180" marker-start="url(#square-butt)" marker-end="url(#square-butt)" fill="none" stroke="yellow" stroke-width="32"/>
   </g>
-  <path d="M 96.887,45.857 A 20,20 0 0,0 96.887,74.143 L 112,89.256 V 166.744 L 96.887,181.857 A 20,20 0 0,0 96.887,210.143 L 113.857,227.113 A 20,20 0 0,0 142.143,227.113 L 159.113,210.143 A 20,20 0 0,0 159.113,181.857 L 144,166.744 V 89.256 L 159.113,74.143 A 20,20 0 0,0 159.113,45.857 L 142.143,28.887 A 20,20 0 0,0 113.857,28.887 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <path d="M 142.143,28.887 A 20,20 0 0,0 113.857,28.887 L 96.887,45.857 A 20,20 0 0,0 96.887,74.143 L 112,89.256 V 210.744 L 96.887,225.857 A 20,20 0 0,0 96.887,254.143 L 113.857,271.113 A 20,20 0 0,0 142.143,271.113 L 159.113,254.143 A 20,20 0 0,0 159.113,225.857 L 144,210.744 V 89.256 L 159.113,74.143 A 20,20 0 0,0 159.113,45.857 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
 </svg>
