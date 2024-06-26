@@ -12,9 +12,10 @@ RENDER_ARGS="../../$RENDER_CONFIG \
     --source svg/modern-right --name Bibata-Left-Handed-Modern \
     --source svg/original-right --name Bibata-Left-Handed-Original \
     --color Classic,Ice \
-    --all-variants --thin-stroke --pointer-shadow=9,15,9,0.3 \
-    -s /1.25:x4/5 -r 30,40,50,60,80,90,120"
-#                 -r 24,32,40,48,64,72,96
+    --all-variants --pointer-shadow=9,15,9,0.3 \
+    --thin-stroke --stroke-width=6:Hairline \
+    --min-stroke-width=0.9 \
+    -s /1.25 -r 24,32,40,48,64,72,96"
 
 USER_ARGS=$@ # Why is this necessary?
 $BUILD_SCRIPT bibata:run \
