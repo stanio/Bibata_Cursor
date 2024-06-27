@@ -70,6 +70,30 @@ $ ./render-stanio --linux-cursors
 
 Both can't be effective at the same time, currently.
 
+### Filtering cursors to render
+
+To render a few selected cursors – specify them with `-f <cursor>` options:
+
+```sh
+$ ./render-stanio ... -f left_ptr -f left_ptr_watch -f xterm
+```
+
+The `<cursor>` name is the original file name without the `.svg` suffix.
+
+Note, the specified filter applies on top of `--windows-cursors` or
+`--linux-cursors` name mapping in effect:
+
+```sh
+$ ./render-stanio --windows-cursors -f left_side
+```
+
+will not render any cursor, unless you specify `--all-cursors` option:
+
+```sh
+$ ./render-stanio --windows-cursors --all-cursors -f left_side
+$ ./render-stanio --windows-cursors --all-cursors # render all
+```
+
 ### Customizing the resolutions/sizes
 
 The default resolutions currently are:
