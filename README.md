@@ -119,9 +119,41 @@ The default values are:
 
     --pointer-shadow=6,18,9,0.3,#000000
 
-To render both variants: with and without shadow, add `--all-variants`:
+To render both variants: with and without shadow, add `--no-shadow-also`:
 
-    --pointer-shadow --all-variants
+    --pointer-shadow --no-shadow-also
+
+## Customizing the stroke thickness
+
+    --thin-stroke
+    --stroke-width=12
+    --stroke-width=6:Hairline
+    --base-stroke-width=16
+    --min-stroke-width=1
+    --default-stroke-also
+
+## `--all-variants` shorthand
+
+Shorthand for `--default-stroke-also` and `--no-shadow-also`:
+
+    --thin-stroke --pointer-shadow --all-variants
+
+Note, if `--color` is specified `--all-variants` doesn't include a default
+(unchanged) color variant.  Have a _Default_ empty color map in `colors.json`:
+
+```jsonc
+{
+  "Default": {},
+  "White": {
+    ...
+  },
+  ...
+}
+```
+
+and specify it explicitly:
+
+    --color Default,White
 
 ---
 
