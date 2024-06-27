@@ -4,20 +4,7 @@
   <path id="pointer-shape-v2.0.4" d="M 54.5068,54.0092 C 54.5068,26.9331 66.9694,25.4005 86.5042,43.281 L 196.003,140.346 C 204.265,147.738 205.77,167.422 196.003,171.509 C 186.235,175.596 154.198,168.84 129.173,180.13 C 104.147,191.42 88.6033,220.04 78.4806,224.607 C 68.3579,229.174 54.6677,211.949 54.5068,200.902 L 54.5068,54.0092 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g>
     <path class="align-anchor" d="m 116,24 h 32 l -32,32 z" fill="orange" opacity=".8" display="none"/>
-    <use href="#badge" filter="url(#material-shadow)" mask="url(#pointer-mask)" />
-    <rect id="badge" x="116" y="24" width="96" height="96" rx="40" fill="#179DD8" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+    <rect x="116" y="24" width="96" height="96" rx="40" fill="#179DD8" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
     <rect x="138" y="46" width="52" height="52" rx="20" fill="white"/>
   </g>
-  <defs>
-    <filter id="material-shadow" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow in="SourceAlpha" dy="5.12" stdDeviation="2.56" flood-opacity="0.5" />
-    </filter>
-    <filter id="white-fill">
-      <feFlood flood-color="white" />
-      <feComposite in2="SourceAlpha" operator="in" />
-    </filter>
-    <mask id="pointer-mask" maskUnits="userSpaceOnUse">
-      <use href="#pointer-shape-v2.0.4" filter="url(#white-fill)"/>
-    </mask>
-  </defs>
 </svg>
