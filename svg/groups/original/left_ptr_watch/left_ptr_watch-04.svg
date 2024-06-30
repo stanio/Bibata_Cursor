@@ -1,9 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
-  <path id="align-anchor" d="m 67,148.1855 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" class="bias-top-left" cx="55" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path id="align-anchor" class="bias-bottom-left-reverse" d="m 67,148.1855 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" class="bias-left-t2218" cx="55" cy="17" r="3" fill="magenta" opacity=".6" display="none"/>
   <path d="M 67,44 156,124.744 67,164 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <circle cx="118" cy="162" r="62" fill="#FF0000" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
-  <g transform="translate(118 162) scale(0.97222)">
+  <g mask="url(#wheel-mask)">
+    <mask id="wheel-mask">
+      <circle cx="118" cy="162" r="78" fill="white" stroke="black" stroke-width="58.778" class="shrink-only-stroke"/>
+    </mask>
+  <g transform="translate(118 162) scale(1.56)">
     <path d="M 0,0 L 0,-50 A 50,50 0 0 1 50,0 Z" fill="#F05024" fill-opacity="0.8" transform="rotate(120)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="4" dur="0.75s" ?></path>
     <path d="M 0,0 L 50,0 A 50,50 0 0 1 0,50 Z" fill="#FCB813" fill-opacity="0.8" transform="rotate(90)">
@@ -12,5 +16,6 @@
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="2" dur="1.5s" ?></path>
     <path d="M 0,0 L -50,0 A 50,50 0 0 1 0,-50 Z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(30)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="1" dur="3.0s" ?></path>
+  </g>
   </g>
 </svg>
