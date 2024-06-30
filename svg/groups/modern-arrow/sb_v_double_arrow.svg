@@ -1,5 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" d="m 112,134 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" class="bias-left-reverse" d="m 112,134 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
   <circle id="cursor-hotspot" cx="128" cy="150" r="3" fill="magenta" opacity=".6" display="none"/>
   <g id="blueprint" display="none">
     <marker id="square-butt" markerUnits="userSpaceOnUse" overflow="visible">
