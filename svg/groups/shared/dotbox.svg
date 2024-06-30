@@ -1,8 +1,8 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" d="M 40,40 h 32 l -32,32 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" class="bias-top-left-reverse" d="M 40,40 h 32 l -32,32 z" fill="cyan" opacity=".8" display="none"/>
   <g transform="translate(128,128)">
     <path id="dotbox-shape" d="M 80,0 h -24 M 0,80 v -24 M -80,0 h 24 M 0,-80 v 24 M -80,-80 H 80 V 80 H -80 z" fill="none" stroke-linecap="square"/>
     <use href="#dotbox-shape" stroke="#0000FF" stroke-width="48"/>
-    <use href="#dotbox-shape" stroke="#00FF00" stroke-width="16" class="fixed-width-stroke"/>
+    <use href="#dotbox-shape" stroke="#00FF00" stroke-width="16" class="expand-fill-stroke"/>
   </g>
 </svg>

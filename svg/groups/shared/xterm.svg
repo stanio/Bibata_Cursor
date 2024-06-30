@@ -1,5 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" d="m 120,30 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" class="bias-top-left-reverse" d="m 120,30 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
   <g id="blueprint" transform="translate(128,38)" display="none">
     <path d="M -32,0 a 32,32 0 0 1 32,32 v 115 a 32,32 0 0 0 32,32 m -64,0 a 32,32 0 0 0 32,-32 M 0,32 a 32,32 0 0 1 32,-32" stroke="#00FF00" stroke-width="16" stroke-linecap="square"/>
   </g>

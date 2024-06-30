@@ -6,7 +6,7 @@
   </defs>
   <g id="position-on-canvas" transform="translate(117,115.7)">
     <use id="glass-stroke" href="#looking-glass" fill="#0000FF" stroke="#0000FF" stroke-width="44.8"/>
-    <use id="glass-fill" href="#looking-glass" stroke="#00FF00" stroke-width="12.8"/>
+    <use id="glass-fill" href="#looking-glass" stroke="#00FF00" stroke-width="12.8" class="expand-fill-stroke"/>
     <path id="plus" d="M -33.6,0 h 67.2 M 0,-33.6 v 67.2" fill="#00FF00" stroke="#00FF00" stroke-linecap="round" stroke-width="20.8"/>
   </g>
 </svg>

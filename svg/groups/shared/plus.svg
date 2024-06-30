@@ -2,5 +2,5 @@
   <path id="align-anchor" d="m 112,112 h -32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
   <path id="plus" d="M -72,0 h 144 M 0,-72 v 144" transform="translate(128,128)" fill="none" stroke-linecap="square"/>
   <use id="plus-outline" href="#plus" stroke="#0000FF" stroke-width="64"/>
-  <use id="plus-fill" href="#plus" stroke="#00FF00" stroke-width="32" class="fixed-width-stroke"/>
+  <use id="plus-fill" href="#plus" stroke="#00FF00" stroke-width="32" class="expand-fill-stroke"/>
 </svg>

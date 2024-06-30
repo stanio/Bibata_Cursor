@@ -1,8 +1,8 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" d="m 117,32 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" class="bias-top-left-reverse" d="m 117,32 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
   <circle id="cursor-hotspot" cx="125" cy="40" r="3" fill="magenta" opacity=".6" display="none"/>
   <g transform="translate(125,40)" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path id="T-stroke" d="M -93,0 H 93 M 0,0 v 171" stroke="#0000FF" stroke-width="48"/>
-    <path id="T-fill" d="M -93,0 H 93 M 0,0 v 171 M -16,0 A 16,16 0 0 1 0,16 16,16 0 0 1 16,0" stroke="#00FF00" stroke-width="16" class="fixed-width-stroke"/>
+    <path id="T-fill" d="M -93,0 H 93 M 0,0 v 171 M -16,0 A 16,16 0 0 1 0,16 16,16 0 0 1 16,0" stroke="#00FF00" stroke-width="16" class="expand-fill-stroke"/>
   </g>
 </svg>
