@@ -1,5 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" class="bias-top-reverse" d="m 134,112 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" cx="150" cy="128" r="3" fill="magenta" opacity=".6" display="none"/>
-  <path d="M 142.143,28.887 A 20,20 0 0,0 113.857,28.887 L 96.887,45.857 A 20,20 0 0,0 96.887,74.143 L 112,89.256 V 210.744 L 96.887,225.857 A 20,20 0 0,0 96.887,254.143 L 113.857,271.113 A 20,20 0 0,0 142.143,271.113 L 159.113,254.143 A 20,20 0 0,0 159.113,225.857 L 144,210.744 V 89.256 L 159.113,74.143 A 20,20 0 0,0 159.113,45.857 z" transform="rotate(-90,128,128)" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <path id="align-anchor" class="bias-top-reverse" d="m 23.028,112 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" cx="137.5" cy="128" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path d="M 142.143,28.887 A 20,20 0 0,0 113.857,28.887 L 96.887,45.857 A 20,20 0 0,0 96.887,74.143 L 112,89.256 V 185.744 L 96.887,200.857 A 20,20 0 0,0 96.887,229.143 L 113.857,246.113 A 20,20 0 0,0 142.143,246.113 L 159.113,229.143 A 20,20 0 0,0 159.113,200.857 L 144,185.744 V 89.256 L 159.113,74.143 A 20,20 0 0,0 159.113,45.857 z" transform="rotate(-90,128,128)" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
 </svg>
