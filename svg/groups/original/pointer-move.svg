@@ -3,7 +3,7 @@
   <circle id="cursor-hotspot" class="bias-top-left" cx="55" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
   <path d="M 67,44 156,124.744 67,164 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <circle cx="118" cy="162" r="62" fill="#179DD8" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+    <circle cx="118" cy="162" r="62" fill="#179DD8" stroke="#0000FF" stroke-width="32" paint-order="stroke fill" class="stroke-only"/>
     <rect x="95" y="139" width="46" height="46" rx="17" fill="white"/>
   </g>
 </svg>

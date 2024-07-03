@@ -3,7 +3,7 @@
   <circle id="cursor-hotspot" class="bias-top-left" cx="55" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
   <path d="M 67,44 156,124.744 67,164 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <circle cx="118" cy="162" r="62" fill="#5F3BE4" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+    <circle cx="118" cy="162" r="62" fill="#5F3BE4" stroke="#0000FF" stroke-width="32" paint-order="stroke fill" class="stroke-only"/>
     <path d="M118.118 128C124.234 128 129.21 132.816 129.21 138.735C129.21 144.654 124.234 149.47 118.118 149.47C112.001 149.47 107.025 144.654 107.025 138.735C107.025 132.816 112.001 128 118.118 128ZM132.236 196.312H104V190.457H110.05V161.18H104V155.325H126.185V190.457H132.236V196.312Z" fill="white"/>
   </g>
 </svg>
