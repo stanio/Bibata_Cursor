@@ -1,7 +1,7 @@
 #!/bin/sh
 BASEDIR=$(dirname "$0")
-GRADLE_CMD=$BASEDIR/stanio-misc/gradlew
-GRADLE_ARGS="-p $BASEDIR/stanio-misc -q"
+GRADLE_CMD=$BASEDIR/mousegen-tool/gradlew
+GRADLE_ARGS="-p $BASEDIR/mousegen-tool -q"
 
 [ -z "$RENDER_JOPTS" ] && RENDER_JOPTS="-Dbibata.animRateGain=1.25"
 echo "Experimental options: $RENDER_JOPTS"

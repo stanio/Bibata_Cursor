@@ -2,7 +2,7 @@
 VERSION=2.0.7-stanio-5-dev
 
 BASEDIR=$(dirname "$0")
-BUILD_SCRIPT="$BASEDIR/stanio-misc/gradlew -p $BASEDIR/stanio-misc -q"
+BUILD_SCRIPT="$BASEDIR/mousegen-tool/gradlew -p $BASEDIR/mousegen-tool -q"
 BUILD_DIR=themes/linux
 
 RENDER_ARGS="../../$RENDER_CONFIG \
@@ -31,7 +31,7 @@ echo
 echo
 $BUILD_SCRIPT cleanLinuxThemeFiles linuxThemeFiles \
 	-PcursorsVersion=$VERSION -PthemeColors=Classic,Ice || exit
-cp -r "$BASEDIR/stanio-misc/bibata/build/linux-themes"/* "$BASEDIR/$BUILD_DIR"
+cp -r "$BASEDIR/mousegen-tool/bibata/build/linux-themes"/* "$BASEDIR/$BUILD_DIR"
 $BUILD_SCRIPT x11Symlinks --args=../../$BUILD_DIR || exit
 
 # Create packages

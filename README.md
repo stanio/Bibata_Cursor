@@ -14,7 +14,7 @@ Make sure you clone this with `--recurse-submodules`:
 $ git clone --recurse-submodules https://github.com/stanio/Bibata_Cursor.git
 ```
 
-or checkout the `stanio-misc` submodule afterward:
+or checkout the `mousegen-tool` submodule afterward:
 
 ```sh
 $ git submodule update --init
@@ -42,18 +42,18 @@ the sources:
 For my releases I have two scripts with specific configurations:
 
 ```
-$ ./build-stanio-windows
-$ ./build-stanio-linux
+$ ./mousegen-windows
+$ ./mousegen-linux
 ```
 
-For building customized versions of the cursors see `render-stanio` further.
+For building customized versions of the cursors see `mousegen-render` further.
 
-### `render-stanio` – Basic options
+### `mousegen-render` – Basic options
 
 Get a rough overview of the available options:
 
 ```sh
-$ ./render-stanio --help
+$ ./mousegen-render --help
 ```
 
 The default output directory is `themes/`, and without options given, it would
@@ -64,8 +64,8 @@ To render either Linux (X) or Windows cursors specify `--linux-cursors` or
 `--windows-cursors` option:
 
 ```sh
-$ ./render-stanio --windows-cursors
-$ ./render-stanio --linux-cursors
+$ ./mousegen-render --windows-cursors
+$ ./mousegen-render --linux-cursors
 ```
 
 Both can't be effective at the same time, currently.
@@ -75,7 +75,7 @@ Both can't be effective at the same time, currently.
 To render a few selected cursors – specify them with `-f <cursor>` options:
 
 ```sh
-$ ./render-stanio ... -f left_ptr -f left_ptr_watch -f xterm
+$ ./mousegen-render ... -f left_ptr -f left_ptr_watch -f xterm
 ```
 
 The `<cursor>` name is the original file name without the `.svg` suffix.
@@ -84,14 +84,14 @@ Note, the specified filter applies on top of `--windows-cursors` or
 `--linux-cursors` name mapping in effect:
 
 ```sh
-$ ./render-stanio --windows-cursors -f left_side
+$ ./mousegen-render --windows-cursors -f left_side
 ```
 
 will not render any cursor, unless you specify `--all-cursors` option:
 
 ```sh
-$ ./render-stanio --windows-cursors --all-cursors -f left_side
-$ ./render-stanio --windows-cursors --all-cursors # render all
+$ ./mousegen-render --windows-cursors --all-cursors -f left_side
+$ ./mousegen-render --windows-cursors --all-cursors # render all
 ```
 
 ### Customizing the resolutions/sizes
@@ -104,7 +104,7 @@ The default resolutions currently are:
 Customize the output resolutions using `-r` option(s):
 
 ```sh
-$ ./render-stanio -r 32,48,64
+$ ./mousegen-render -r 32,48,64
 ```
 
 `--windows-cursors` also implies three (canvas) sizing-schemes: Normal, Large,
@@ -112,16 +112,16 @@ and  Extra-Large (N, L, XL).  Customize the sizing schemes via `-s` option(s).
 The following will output only Normal and Large variants:
 
 ```sh
-$ ./render-stanio -s N,L
+$ ./mousegen-render -s N,L
 ```
 
 To reset to just the original sizing use `-s SOURCE` – that's equivalent to
-Extra-Large but doesn't change the theme name to reflect that.
+Extra-Large (full canvas) but doesn't change the theme name to reflect that.
 
 ### Customizing the color
 
 ```sh
-$ ./render-stanio --color Ice,Turquoise
+$ ./mousegen-render --color Ice,Turquoise
 ```
 
 Find and customize the color mappings in `colors.jsonc`.
@@ -132,7 +132,7 @@ The cursors don't have a shadow by default (I've also removed all shadows from
 the original sources).  To get cursors with shadow use `--pointer-shadow`:
 
 ```sh
-$ ./render-stanio --pointer-shadow
+$ ./mousegen-render --pointer-shadow
 ```
 
 The full syntax is:
