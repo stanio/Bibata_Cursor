@@ -1,0 +1,51 @@
+# Sourced in build-stanio-windows
+
+RENDER_ARGS="../../$RENDER_CONFIG \
+    --windows-cursors --build-dir $BUILD_DIR-expand-fill \
+    --source svg/modern --name Modern \
+    --source svg/original --name Original \
+    --source svg/modern-right --name Left-Handed-Modern \
+    --source svg/original-right --name Left-Handed-Original \
+    --color Classic,Ice \
+    --pointer-shadow=9,15,9,0.3 --no-shadow-also \
+    --thin-stroke --stroke-width=8:Hairline \
+    --expand-fill=4 --min-stroke-width=0.9 \
+    -s N,L -r 128,96,72,64,48,32"
+
+SELECTED_CURSORS="-f bd_double_arrow \
+    -f fd_double_arrow \
+    -f move \
+    -f sb_down_arrow \
+    -f sb_h_double_arrow \
+    -f sb_left_arrow \
+    -f sb_right_arrow \
+    -f sb_up_arrow \
+    -f sb_v_double_arrow \
+    -f left_ptr_watch \
+    -f center_ptr \
+    -f circle \
+    -f context-menu \
+    -f copy \
+    -f left_ptr \
+    -f link \
+    -f person \
+    -f pin \
+    -f pointer-move \
+    -f right_ptr \
+    -f pencil"
+
+$BUILD_SCRIPT bibata:run \
+	-PbibataJvmArgs="$RENDER_JOPTS -Dbibata.animRateGain=1.25 -Dbibata.maxAnimSize=96" \
+	--args="render $RENDER_ARGS $SELECTED_CURSORS" || exit
+
+# Have only the original (sharp) pointers with expanded fill
+rm "$BUILD_DIR-expand-fill"/Modern-*/Alternate.cur \
+	"$BUILD_DIR-expand-fill"/Modern-*/Alternate_2.cur \
+	"$BUILD_DIR-expand-fill"/Modern-*/Person.cur \
+	"$BUILD_DIR-expand-fill"/Modern-*/Pin.cur \
+	"$BUILD_DIR-expand-fill"/Modern-*/Pointer.cur \
+	"$BUILD_DIR-expand-fill"/Modern-*/Unavailable.cur \
+	"$BUILD_DIR-expand-fill"/Modern-*/Work.ani
+
+cp -R "$BUILD_DIR-expand-fill"/* "$BUILD_DIR"
+rm -rf "$BUILD_DIR-expand-fill"

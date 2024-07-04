@@ -1,5 +1,5 @@
 #!/bin/sh
-VERSION=2.0.7-stanio-3-dev
+VERSION=2.0.7-stanio-5-dev
 
 BASEDIR=$(dirname "$0")
 BUILD_SCRIPT="$BASEDIR/stanio-misc/gradlew -p $BASEDIR/stanio-misc -q"
@@ -13,7 +13,7 @@ RENDER_ARGS="../../$RENDER_CONFIG \
     --source svg/original-right --name Bibata-Left-Handed-Original \
     --color Classic,Ice \
     --all-variants --pointer-shadow=9,15,9,0.3 \
-    --thin-stroke --stroke-width=6:Hairline \
+    --thin-stroke --stroke-width=8:Hairline \
     --min-stroke-width=0.9 \
     -s /1.25 -r 24,32,40,48,64,72,96"
 
@@ -21,6 +21,11 @@ USER_ARGS=$@ # Why is this necessary?
 $BUILD_SCRIPT bibata:run \
 	-PbibataJvmArgs="$RENDER_JOPTS -Dbibata.animRateGain=1.25 -Dxcur.cropToContent=true" \
 	--args="render $RENDER_ARGS $USER_ARGS" || exit
+
+echo
+echo "=== Thinner strokes with expanded fill"
+echo
+. "$BASEDIR/expand-fill-remix-linux"
 
 # Create symlinks and theme files
 echo
