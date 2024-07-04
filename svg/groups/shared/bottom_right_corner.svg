@@ -1,5 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" class="bias-top-left-reverse" d="m 208,208 v -32 l -32,32 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" class="bias-top-left-fill" d="m 208,208 v -32 l -32,32 z" fill="cyan" opacity=".8" display="none"/>
   <circle id="cursor-hotspot" cx="216" cy="216" r="3" fill="magenta" opacity=".6" display="none"/>
   <g>
     <path class="align-anchor bias-top-left-half" d="m 168,168 v -32 l -32,32 z" fill="orange" opacity=".8" display="none"/>
@@ -7,6 +7,6 @@
   </g>
   <g transform="matrix(-1,0,0,-1,216,216)" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path id="corner-stroke" d="M 0,72 V 0 h 72" stroke="#0000ff" stroke-width="48"/>
-    <path id="corner-fill" d="M 0,72 V 0 h 72 M 0,16 A 16,16 0 0 1 16,0" stroke="#00ff00" stroke-width="16" class="expand-fill-stroke"/>
+    <path id="corner-fill" d="M 0,72 V 0 h 72 M 0,16 A 16,16 0 0 1 16,0" stroke="#00ff00" stroke-width="16" class="fill-stroke"/>
   </g>
 </svg>

@@ -1,9 +1,9 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" class="bias-top-left-reverse" d="m 54.5068,31.47092 h 26 l -26,36 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" class="bias-top-left-fill" d="m 54.5068,31.47092 h 26 l -26,36 z" fill="cyan" opacity=".8" display="none"/>
   <circle id="cursor-hotspot" class="bias-t89-l40" cx="55" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
   <path id="pointer-shape-v2.0.4" d="M 54.5068,54.0092 C 54.5068,26.9331 66.9694,25.4005 86.5042,43.281 L 196.003,140.346 C 204.265,147.738 205.77,167.422 196.003,171.509 C 186.235,175.596 154.198,168.84 129.173,180.13 C 104.147,191.42 88.6033,220.04 78.4806,224.607 C 68.3579,229.174 54.6677,211.949 54.5068,200.902 L 54.5068,54.0092 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <path class="align-anchor bias-top-left-reverse" d="m 116,24 h 32 l -32,32 z" fill="orange" opacity=".8" display="none"/>
+    <path class="align-anchor bias-top-left-fill" d="m 116,24 h 32 l -32,32 z" fill="orange" opacity=".8" display="none"/>
     <rect x="116" y="24" width="96" height="96" rx="40" fill="#606060" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
     <path d="M150.6 50C138.634 50 129 59.6336 129 71.6C129 83.5664 138.634 93.2 150.6 93.2H159.24V84.56H150.6C143.429 84.56 137.64 78.8144 137.64 71.6C137.64 64.4288 143.429 58.64 150.6 58.64H159.24V50H150.6ZM167.88 50V58.64H176.52C183.691 58.64 189.48 64.4288 189.48 71.6C189.48 78.8144 183.691 84.56 176.52 84.56H167.88V93.2H176.52C188.486 93.2 198.12 83.5664 198.12 71.6C198.12 59.6336 188.486 50 176.52 50H167.88ZM150.6 67.28V75.92H176.52V67.28H150.6Z" fill="white"/>
   </g>

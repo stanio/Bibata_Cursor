@@ -1,9 +1,9 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" class="bias-bottom-left-reverse" d="m 67,148.1855 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" class="bias-top-left" cx="55" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path id="align-anchor" class="bias-bottom-left-fill" d="m 67,148.1855 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" class="bias-left-t2218" cx="55" cy="17" r="3" fill="magenta" opacity=".6" display="none"/>
   <path d="M 67,44 156,124.744 67,164 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <circle cx="118" cy="162" r="62" fill="#0A6857" stroke="#0000FF" stroke-width="32" paint-order="stroke fill" class="stroke-only"/>
+    <circle cx="118" cy="162" r="62" fill="#0A6857" stroke="#0000FF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
     <path d="M117.5 131C103.969 131 93 142.087 93 155.762C93 161.868 95.196 167.448 98.821 171.765L117.5 194L136.179 171.765C139.804 167.448 142 161.867 142 155.762C142.001 142.087 131.031 131 117.5 131ZM117.5 165.093C111.935 165.093 107.425 160.534 107.425 154.91C107.425 149.285 111.935 144.726 117.5 144.726C123.065 144.726 127.576 149.285 127.576 154.91C127.576 160.534 123.065 165.093 117.5 165.093Z" fill="white"/>
   </g>
 </svg>

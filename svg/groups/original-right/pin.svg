@@ -1,9 +1,9 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" d="m 198,148.1855 h -32 l 32,32 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" class="bias-top-right" cx="208" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path id="align-anchor" class="bias-bottom-right-fill" d="m 198,148.1855 h -32 l 32,32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" class="bias-right-t2218" cx="208" cy="17" r="3" fill="magenta" opacity=".6" display="none"/>
   <path d="M 198,44 V 164 L 153.156,145.592 L 109,124.744 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <circle cx="147" cy="162" r="62" fill="#0A6857" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+    <circle cx="147" cy="162" r="62" fill="#0A6857" stroke="#0000FF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
     <path d="M146.5 130C160.031 130 171 141.087 171 154.762C171 160.868 168.804 166.448 165.179 170.765L146.5 193L127.821 170.765C124.196 166.448 122 160.867 122 154.762C121.999 141.087 132.969 130 146.5 130ZM146.5 164.093C152.065 164.093 156.575 159.534 156.575 153.91C156.575 148.285 152.065 143.726 146.5 143.726C140.935 143.726 136.424 148.285 136.424 153.91C136.424 159.534 140.935 164.093 146.5 164.093Z" fill="white"/>
   </g>
 </svg>

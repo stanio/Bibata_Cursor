@@ -1,11 +1,11 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" class="bias-top-left-reverse" d="m 59,30.558928 h 26 l -26,36 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" class="bias-top-left-fill" d="m 59,30.558928 h 26 l -26,36 z" fill="cyan" opacity=".8" display="none"/>
   <circle id="cursor-hotspot" class="bias-t89-l40" cx="55" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
   <path d="M 68,30.646 C 70.79,30.27,73.636,31.08,76.176,33.697 L 141.496,101 L 147.598,107.289 L 59,147.271 V 134.895 V 40.662 C 59,35.8,61.628,32.86,65.242,31.395 C 66.146,31.028,67.07,30.772,68,30.646 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <circle cx="118" cy="162" r="62" fill="#FF0000" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g mask="url(#wheel-mask)">
     <mask id="wheel-mask">
-      <circle cx="118" cy="162" r="78" fill="white" stroke="black" stroke-width="58.778" class="shrink-only-stroke"/>
+      <circle cx="118" cy="162" r="48.611" fill="white" stroke="white" stroke-width="0" class="fill-stroke"/>
     </mask>
 
   <g transform="translate(118 162) scale(1.56)">

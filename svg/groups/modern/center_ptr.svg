@@ -1,4 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle id="cursor-hotspot" class="bias-top" cx="127" cy="17" r="3" fill="magenta" opacity=".6" display="none"/>
+  <circle id="cursor-hotspot" class="bias-t159" cx="126.5" cy="18" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path id="align-anchor" class="bias-t159-fill" d="m 126.6,31.473 h -24 l 24,32 z" fill="cyan" opacity=".8" display="none"/>
   <path id="bibata-v2.0.4" d="M142.464 48.0609C131.021 23.5216 119.079 27.3995 108.931 51.8605L50.7128 186.108C46.3486 196.298 53.3033 214.775 63.8829 214.351C74.4624 213.927 100.642 194.264 128.094 193.92C155.547 193.576 181.73 212.946 192.834 212.807C203.938 212.668 209.066 191.271 204.544 181.191L142.464 48.0609Z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
 </svg>
