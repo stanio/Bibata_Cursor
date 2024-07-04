@@ -3,8 +3,9 @@
   <circle cx="128" cy="128" r="90" fill="#FF0000" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g mask="url(#wheel-mask)">
     <mask id="wheel-mask">
-      <circle cx="128" cy="128" r="106" fill="white" stroke="black" stroke-width="65.916" class="shrink-only-stroke"/>
+      <circle cx="128" cy="128" r="73.042" fill="white" stroke="white" stroke-width="0" class="fill-stroke"/>
     </mask>
+
   <g transform="translate(128 128) scale(2.12)">
     <path d="M 0,0 L 0,-50 A 50,50 0 0 1 50,0 Z" fill="#F05024" fill-opacity="0.8" transform="rotate(520)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="4" dur="0.75s" ?></path>
@@ -15,5 +16,6 @@
     <path d="M 0,0 L -50,0 A 50,50 0 0 1 0,-50 Z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(130)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="1" dur="3.0s" ?></path>
   </g>
+
   </g>
 </svg>
