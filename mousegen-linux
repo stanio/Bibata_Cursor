@@ -1,8 +1,8 @@
 #!/bin/sh
-VERSION=2.0.7-stanio-5-dev
+VERSION=2.0.7-stanio-6-dev
 
 BASEDIR=$(dirname "$0")
-BUILD_SCRIPT="$BASEDIR/mousegen-tool/gradlew -p $BASEDIR/mousegen-tool -q"
+BUILD_SCRIPT="$BASEDIR/mousegen-tool/gradlew -p $BASEDIR/mousegen-tool -q --configuration-cache"
 BUILD_DIR=themes/linux
 
 RENDER_ARGS="../../$RENDER_CONFIG \
@@ -15,11 +15,11 @@ RENDER_ARGS="../../$RENDER_CONFIG \
     --all-variants --pointer-shadow=9,15,9,0.3 \
     --thin-stroke --stroke-width=8:Hairline \
     --min-stroke-width=0.9 \
-    -s /1.25 -r 24,32,40,48,64,72,96"
+    -s /1.25 -r 20,24,32,40,48,64,72,96"
 
 USER_ARGS=$@ # Why is this necessary?
-$BUILD_SCRIPT bibata:run \
-	-PbibataJvmArgs="$RENDER_JOPTS -Dbibata.animRateGain=1.25 -Dxcur.cropToContent=true" \
+$BUILD_SCRIPT mousegen:run \
+	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.25 -Dxcur.cropToContent=true" \
 	--args="render $RENDER_ARGS $USER_ARGS" || exit
 
 echo
@@ -29,12 +29,13 @@ echo
 
 # Create symlinks and theme files
 echo
-$BUILD_SCRIPT cleanLinuxThemeFiles linuxThemeFiles \
+$BUILD_SCRIPT cleanLinuxThemeFiles linuxThemeFiles --no-configuration-cache \
 	-PcursorsVersion=$VERSION -PthemeColors=Classic,Ice || exit
-cp -r "$BASEDIR/mousegen-tool/bibata/build/linux-themes"/* "$BASEDIR/$BUILD_DIR"
+cp -r "$BASEDIR/mousegen-tool/mousegen/build/linux-themes"/* "$BASEDIR/$BUILD_DIR"
 $BUILD_SCRIPT x11Symlinks --args=../../$BUILD_DIR || exit
 
 # Create packages
+echo Compressing packages...
 cd "$BUILD_DIR" || exit
 dos2unix --quiet */*.theme
 tar cJf ../Bibata-Linux-Classic-v$VERSION.tar.xz             Bibata-[MO]*-Classic*

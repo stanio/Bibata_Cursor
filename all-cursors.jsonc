@@ -1,0 +1,8 @@
+// Specify as argument to:
+//
+//   --windows-cursors=all-cursors.jsonc
+//   --linux-cursors=all-cursors.jsonc
+//
+// to render all cursors w/o name translation.
+
+{}

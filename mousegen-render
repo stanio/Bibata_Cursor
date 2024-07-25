@@ -1,11 +1,11 @@
 #!/bin/sh
 BASEDIR=$(dirname "$0")
 GRADLE_CMD=$BASEDIR/mousegen-tool/gradlew
-GRADLE_ARGS="-p $BASEDIR/mousegen-tool -q"
+GRADLE_ARGS="-p $BASEDIR/mousegen-tool -q --configuration-cache"
 
-[ -z "$RENDER_JOPTS" ] && RENDER_JOPTS="-Dbibata.animRateGain=1.25"
+[ -z "$RENDER_JOPTS" ] && RENDER_JOPTS="-Dmousegen.animRateGain=1.25"
 echo "Experimental options: $RENDER_JOPTS"
 echo
 USER_ARGS=$@ # Why is this necessary?
-$GRADLE_CMD $GRADLE_ARGS bibata:run -PbibataJvmArgs="$RENDER_JOPTS" \
+$GRADLE_CMD $GRADLE_ARGS mousegen:run -PmousegenJvmArgs="$RENDER_JOPTS" \
 	--args="render ../../$RENDER_CONFIG $USER_ARGS"

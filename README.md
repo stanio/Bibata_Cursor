@@ -153,7 +153,9 @@ To render both variants: with and without shadow, add `--no-shadow-also`:
     --stroke-width=12
     --stroke-width=6:Hairline
     --base-stroke-width=16
-    --min-stroke-width=1
+    --min-stroke-width=0.9
+    --whole-pixel-stroke
+    --expand-fill=4
     --default-stroke-also
 
 ## `--all-variants` shorthand

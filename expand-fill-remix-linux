@@ -10,7 +10,7 @@ RENDER_ARGS="../../$RENDER_CONFIG \
     --pointer-shadow=9,15,9,0.3 --no-shadow-also \
     --thin-stroke --stroke-width=8:Hairline \
     --expand-fill=4 --min-stroke-width=0.9 \
-    -s /1.25 -r 24,32,40,48,64,72,96"
+    -s /1.25 -r 20,24,32,40,48,64,72,96"
 
 SELECTED_CURSORS="-f bd_double_arrow \
     -f fd_double_arrow \
@@ -34,8 +34,8 @@ SELECTED_CURSORS="-f bd_double_arrow \
     -f right_ptr \
     -f pencil"
 
-$BUILD_SCRIPT bibata:run \
-	-PbibataJvmArgs="$RENDER_JOPTS -Dbibata.animRateGain=1.25 -Dxcur.cropToContent=true" \
+$BUILD_SCRIPT mousegen:run \
+	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.25 -Dxcur.cropToContent=true" \
 	--args="render $RENDER_ARGS $SELECTED_CURSORS" || exit
 
 # Have only the original (sharp) pointers with expanded fill

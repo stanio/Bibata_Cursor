@@ -1,8 +1,8 @@
 #!/bin/sh
-VERSION=2.0.7-stanio-5-dev
+VERSION=2.0.7-stanio-6-dev
 
 BASEDIR=$(dirname "$0")
-BUILD_SCRIPT="$BASEDIR/mousegen-tool/gradlew -p $BASEDIR/mousegen-tool -q"
+BUILD_SCRIPT="$BASEDIR/mousegen-tool/gradlew -p $BASEDIR/mousegen-tool -q --configuration-cache"
 BUILD_DIR=themes/windows/Bibata-Cursors-v$VERSION
 
 RENDER_ARGS="../../$RENDER_CONFIG \
@@ -18,8 +18,8 @@ RENDER_ARGS="../../$RENDER_CONFIG \
     -s N,L -r 128,96,72,64,48,32"
 
 USER_ARGS=$@ # Why is this necessary?
-$BUILD_SCRIPT bibata:run \
-	-PbibataJvmArgs="$RENDER_JOPTS -Dbibata.animRateGain=1.25 -Dbibata.maxAnimSize=96" \
+$BUILD_SCRIPT mousegen:run \
+	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.25 -Dmousegen.maxAnimSize=96" \
 	--args="render $RENDER_ARGS $USER_ARGS" || exit
 
 echo
@@ -29,11 +29,12 @@ echo
 
 # Create setup scripts
 echo
-$BUILD_SCRIPT cleanWindowsInstallScripts windowsInstallScripts \
+$BUILD_SCRIPT cleanWindowsInstallScripts windowsInstallScripts --no-configuration-cache \
 	-PcursorsVersion=$VERSION -PwindowsSizes=,Large -PthemeColors=Classic,Ice || exit
-cp -r "$BASEDIR/mousegen-tool/bibata/build/windows-scripts"/* "$BASEDIR/$BUILD_DIR"
+cp -r "$BASEDIR/mousegen-tool/mousegen/build/windows-scripts"/* "$BASEDIR/$BUILD_DIR"
 
 # Create packages
+echo Compressing packages...
 cd "$BUILD_DIR/.." || exit
 unix2dos --quiet */*.inf
 jar cMf ../Bibata-Windows-Classic-v$VERSION.zip             */[MO]*-Classic* */install-*-Classic.inf
