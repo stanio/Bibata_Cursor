@@ -1,6 +1,6 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path id="align-anchor" d="M 106.6,105.3 h -32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" cx="115" cy="114" r="3" fill="magenta" opacity=".6" display="none"/>
+  <circle id="cursor-hotspot" cx="117" cy="115.7" r="3" fill="magenta" opacity=".6" display="none"/>
   <defs>
     <path id="looking-glass" d="M 68.4,0 a 68.4,68.4 0 0,1 -68.4,68.4 a 68.4,68.4 0 0,1 -68.4,-68.4 a 68.4,68.4 0 0,1 68.4,-68.4 a 68.4,68.4 0 0,1 68.4,68.4 z h 62" transform="rotate(45)" stroke-linecap="round"/>
   </defs>

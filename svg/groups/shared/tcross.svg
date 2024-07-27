@@ -1,5 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" d="m 118.4,118.4 h 32 l -32,32 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" class="bias-top-left-fill" d="m 118.4,118.4 h 32 l -32,32 z" fill="cyan" opacity=".8" display="none"/>
   <path id="cross" d="M -69.44,0 h 138.88 M 0,-69.44 v 138.88" transform="translate(128,128)" fill="none" stroke-linecap="round"/>
   <use id="cross-outline" href="#cross" stroke="#0000FF" stroke-width="51.2"/>
   <use id="cross-fill" href="#cross" stroke="#00FF00" stroke-width="19.2" class="fill-stroke"/>

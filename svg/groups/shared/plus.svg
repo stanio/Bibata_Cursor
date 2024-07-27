@@ -1,5 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" d="m 112,112 h -32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <path id="align-anchor" class="bias-top-left-fill" d="m 112,112 h -32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
   <path id="plus" d="M -72,0 h 144 M 0,-72 v 144" transform="translate(128,128)" fill="none" stroke-linecap="square"/>
   <use id="plus-outline" href="#plus" stroke="#0000FF" stroke-width="64"/>
   <use id="plus-fill" href="#plus" stroke="#00FF00" stroke-width="32" class="fill-stroke"/>

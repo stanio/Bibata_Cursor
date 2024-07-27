@@ -1,6 +1,6 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="align-anchor" class="bias-top-left-fill" d="m 200,32 h -32 l 32,32 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" cx="208" cy="40" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path id="align-anchor" class="bias-top-right-fill" d="m 216,32 h -32 l 32,32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" class="bias-top-right-fill" cx="216" cy="32" r="3" fill="magenta" opacity=".6" display="none"/>
   <g transform="matrix(-1,0,0,1,208,40)" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path id="angle-stroke" d="M 0,168 V 0 h 168" stroke="#0000FF" stroke-width="48"/>
     <path id="angle-fill" d="M 0,168 V 0 h 168 M 0,16 A 16,16 0 0 1 16,0" stroke="#00FF00" stroke-width="16" class="fill-stroke"/>
