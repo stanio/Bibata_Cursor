@@ -1,18 +1,18 @@
 {
   "left_ptr_watch": {
     "durationSeconds": 3,
-    "frameRate": 12
+    "frameRate": 15
   },
   "left_ptr_watch_": {
     "durationSeconds": 3,
-    "frameRate": 12
+    "frameRate": 15
   },
   "wait": {
     "durationSeconds": 3,
-    "frameRate": 12
+    "frameRate": 15
   },
   "wait_": {
     "durationSeconds": 3,
-    "frameRate": 12
+    "frameRate": 15
   }
 }

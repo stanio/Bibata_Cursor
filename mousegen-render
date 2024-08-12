@@ -3,7 +3,7 @@ BASEDIR=$(dirname "$0")
 GRADLE_CMD=$BASEDIR/mousegen-tool/gradlew
 GRADLE_ARGS="-p $BASEDIR/mousegen-tool -q --configuration-cache"
 
-[ -z "$RENDER_JOPTS" ] && RENDER_JOPTS="-Dmousegen.animRateGain=1.25"
+[ -z "$RENDER_JOPTS" ] && RENDER_JOPTS="-Dmousegen.animRateGain=1.333"
 echo "Experimental options: $RENDER_JOPTS"
 echo
 USER_ARGS=$@ # Why is this necessary?

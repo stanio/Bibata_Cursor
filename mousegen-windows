@@ -19,7 +19,7 @@ RENDER_ARGS="../../$RENDER_CONFIG \
 
 USER_ARGS=$@ # Why is this necessary?
 $BUILD_SCRIPT mousegen:run \
-	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.25 -Dmousegen.maxAnimSize=96" \
+	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.333 -Dmousegen.maxAnimSize=96" \
 	--args="render $RENDER_ARGS $USER_ARGS" || exit
 
 echo

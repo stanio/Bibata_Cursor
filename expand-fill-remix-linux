@@ -35,7 +35,7 @@ SELECTED_CURSORS="-f bd_double_arrow \
     -f pencil"
 
 $BUILD_SCRIPT mousegen:run \
-	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.25 -Dxcur.cropToContent=true" \
+	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.333 -Dxcur.cropToContent=true" \
 	--args="render $RENDER_ARGS $SELECTED_CURSORS" || exit
 
 # Have only the original (sharp) pointers with expanded fill
