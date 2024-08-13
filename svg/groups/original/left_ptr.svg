@@ -1,6 +1,7 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path id="align-anchor" class="bias-bottom-left-fill" d="m 67,148 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" class="bias-left-t2218" cx="55" cy="17" r="3" fill="magenta" opacity=".6" display="none"/>
+  <circle id="cursor-hotspot" class="bias-t19375-l09375" cx="52" cy="13" r="3" fill="magenta" opacity=".6" display="none"/>
+  <path id="bias-offset-guide" d="m 52,13 15,31" stroke="black" stroke-width="1" display="none"/>
   <g id="blueprint" transform="translate(62.4993,34.144)" display="none">
     <path d="M 0,156.125 V 0 l 116.93071,103.45156 h -70.32918 z" transform="translate(8,17.759766)"
         fill="#00FF00" stroke="#0000FF" stroke-width="24" paint-order="stroke fill"/>

@@ -1,6 +1,6 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path id="align-anchor" class="bias-top-right-fill" d="m 212,31.470989 h -26 l 26,36 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" class="bias-t89-r40" cx="208" cy="20" r="3" fill="magenta" opacity=".6" display="none"/>
+  <circle id="cursor-hotspot" class="bias-t0837-r0001" cx="212" cy="19" r="3" fill="magenta" opacity=".6" display="none"/>
   <path id="bibata-v2.0.4" d="M202.773 54.0093C202.773 26.9331 190.311 25.4006 170.776 43.2811L61.2775 140.346C53.0154 147.738 51.51 167.422 61.2775 171.509C71.0449 175.596 103.082 168.84 128.107 180.13C153.133 191.42 168.677 220.04 178.8 224.607C188.922 229.174 202.612 211.949 202.773 200.902L202.773 54.0093Z" transform="translate(9.227)" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <!--use href="left_ptr.svg#pointer-shape-v2.0.4" transform="matrix(-1,0,0,1,256,0)"/-->
 </svg>
