@@ -9,13 +9,13 @@
     </mask>
 
   <g transform="translate(118 162) scale(1.56)">
-    <path d="M 0,0 L 0,-50 A 50,50 0 0 1 50,0 Z" fill="#F05024" fill-opacity="0.8" transform="rotate(66.98)">
+    <path d="M 0,0 L 0,-50 A 50,50 0 0 1 50,0 Z" fill="#F05024" fill-opacity="0.8" transform="rotate(1406.51)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="4" dur="0.75s" ?></path>
-    <path d="M 0,0 L 50,0 A 50,50 0 0 1 0,50 Z" fill="#FCB813" fill-opacity="0.8" transform="rotate(50.23)">
+    <path d="M 0,0 L 50,0 A 50,50 0 0 1 0,50 Z" fill="#FCB813" fill-opacity="0.8" transform="rotate(1054.88)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="3" dur="1.0s" ?></path>
-    <path d="M 0,0 L 0,50 A 50,50 0 0 1 -50,0 Z" fill="#7EBA41" fill-opacity="0.8" transform="rotate(33.49)">
+    <path d="M 0,0 L 0,50 A 50,50 0 0 1 -50,0 Z" fill="#7EBA41" fill-opacity="0.8" transform="rotate(703.26)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="2" dur="1.5s" ?></path>
-    <path d="M 0,0 L -50,0 A 50,50 0 0 1 0,-50 Z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(16.74)">
+    <path d="M 0,0 L -50,0 A 50,50 0 0 1 0,-50 Z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(351.63)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="1" dur="3.0s" ?></path>
   </g>
 
