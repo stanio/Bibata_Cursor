@@ -1,11 +1,12 @@
 #!/bin/sh
 BASEDIR=$(dirname "$0")
-GRADLE_CMD=$BASEDIR/mousegen-tool/gradlew
-GRADLE_ARGS="-p $BASEDIR/mousegen-tool -q --configuration-cache"
 
 [ -z "$RENDER_JOPTS" ] && RENDER_JOPTS="-Dmousegen.animRateGain=1.333"
 echo "Experimental options: $RENDER_JOPTS"
 echo
-USER_ARGS=$@ # Why is this necessary?
-$GRADLE_CMD $GRADLE_ARGS mousegen:run -PmousegenJvmArgs="$RENDER_JOPTS" \
-	--args="render ../../$RENDER_CONFIG $USER_ARGS"
+
+"$BASEDIR/mousegen-tool/gradlew" -p "$BASEDIR/mousegen-tool" \
+	-q mousegen:shadowJar -x test --configuration-cache || exit
+java $RENDER_JOPTS -Dmousegen.dynamicOutput=true \
+	-jar "$BASEDIR/mousegen-tool/mousegen/build/libs/mousegen.jar" \
+	render "$@"

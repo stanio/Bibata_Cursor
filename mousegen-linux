@@ -2,45 +2,57 @@
 VERSION=2.0.7-stanio-6-dev
 
 BASEDIR=$(dirname "$0")
-BUILD_SCRIPT="$BASEDIR/mousegen-tool/gradlew -p $BASEDIR/mousegen-tool -q --configuration-cache"
+cd "$BASEDIR"
+
 BUILD_DIR=themes/linux
 
-RENDER_ARGS="../../$RENDER_CONFIG \
-    --linux-cursors --build-dir $BUILD_DIR \
-    --source svg/modern --name Bibata-Modern \
-    --source svg/original --name Bibata-Original \
-    --source svg/modern-right --name Bibata-Left-Handed-Modern \
-    --source svg/original-right --name Bibata-Left-Handed-Original \
-    --color Classic,Ice \
-    --all-variants --pointer-shadow=9,15,9,0.3 \
-    --thin-stroke --stroke-width=8:Hairline \
-    --min-stroke-width=0.9 \
-    -s /1.25 -r 20,24,32,40,48,64,72,96"
+mousegen() {
+  java $MOUSEGEN_JOPTS -jar \
+      "mousegen-tool/mousegen/build/libs/mousegen.jar" "$@" || exit
+}
 
-USER_ARGS=$@ # Why is this necessary?
-$BUILD_SCRIPT mousegen:run \
-	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.333 -Dxcur.cropToContent=true" \
-	--args="render $RENDER_ARGS $USER_ARGS" || exit
+mousegenRender() {
+  MOUSEGEN_JOPTS="$RENDER_JOPTS -Dmousegen.dynamicOutput=true \
+      -Dmousegen.animRateGain=1.333 -Dxcur.cropToContent=true"
+  mousegen render "$RENDER_CONFIG" \
+      --linux-cursors --build-dir "$BUILD_DIR" \
+      --source svg/modern --name Bibata-Modern \
+      --source svg/original --name Bibata-Original \
+      --source svg/modern-right --name Bibata-Left-handed-Modern \
+      --source svg/original-right --name Bibata-Left-handed-Original \
+      --color Classic,Ice \
+      --pointer-shadow=9,15,9,0.3 \
+      --thin-stroke --stroke-width=8:Hairline \
+      --min-stroke-width=0.9 \
+      -s 1.25/1.25 -r 20,24,32,40,48,64,96 "$@"
+  MOUSEGEN_JOPTS=
+}
 
-echo
-echo "=== Thinner strokes with expanded fill"
-echo
-. "$BASEDIR/expand-fill-remix-linux"
+"mousegen-tool/gradlew" -p "mousegen-tool" \
+	-q mousegen:shadowJar -x test --configuration-cache || exit
+mousegenRender --all-variants "$@"
+
+if [ $# -eq 0 ]; then
+  echo
+  echo "=== Thinner strokes with expanded fill"
+  echo
+  . "./expand-fill-remix-linux"
+fi
 
 # Create symlinks and theme files
 echo
-$BUILD_SCRIPT cleanLinuxThemeFiles linuxThemeFiles --no-configuration-cache \
-	-PcursorsVersion=$VERSION -PthemeColors=Classic,Ice || exit
-cp -r "$BASEDIR/mousegen-tool/mousegen/build/linux-themes"/* "$BASEDIR/$BUILD_DIR"
-$BUILD_SCRIPT x11Symlinks --args=../../$BUILD_DIR || exit
+mousegen linuxThemeFiles "$BUILD_DIR" --config configs/themes.jsonc \
+	--var color=Classic --var color=Ice --var version=$VERSION
+mousegen x11Symlinks "$BUILD_DIR"
 
 # Create packages
-echo Compressing packages...
+echo -n "Compressing packages... "
+cp configs/COPYING "$BUILD_DIR"
 cd "$BUILD_DIR" || exit
-dos2unix --quiet */*.theme
-tar cJf ../Bibata-Linux-Classic-v$VERSION.tar.xz             Bibata-[MO]*-Classic*
-tar cJf ../Bibata-Linux-Ice-v$VERSION.tar.xz                 Bibata-[MO]*-Ice*
-tar cJf ../Bibata-Linux-Left-Handed-Classic-v$VERSION.tar.xz Bibata-Left*-Classic*
-tar cJf ../Bibata-Linux-Left-Handed-Ice-v$VERSION.tar.xz     Bibata-Left*-Ice*
+dos2unix --quiet COPYING */*.theme
+tar cJf ../Bibata-Linux-Classic-v$VERSION.tar.xz             COPYING Bibata-[MO]*-Classic*
+tar cJf ../Bibata-Linux-Ice-v$VERSION.tar.xz                 COPYING Bibata-[MO]*-Ice*
+tar cJf ../Bibata-Linux-Left-handed-Classic-v$VERSION.tar.xz COPYING Bibata-Left*-Classic*
+tar cJf ../Bibata-Linux-Left-handed-Ice-v$VERSION.tar.xz     COPYING Bibata-Left*-Ice*
 
-echo Done.
+echo done.

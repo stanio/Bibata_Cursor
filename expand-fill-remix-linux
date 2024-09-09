@@ -1,18 +1,6 @@
-# Sourced in build-stanio-linux
+# Sourced in mousegen-linux
 
-RENDER_ARGS="../../$RENDER_CONFIG \
-    --linux-cursors --build-dir $BUILD_DIR-expand-fill \
-    --source svg/modern --name Bibata-Modern \
-    --source svg/original --name Bibata-Original \
-    --source svg/modern-right --name Bibata-Left-Handed-Modern \
-    --source svg/original-right --name Bibata-Left-Handed-Original \
-    --color Classic,Ice \
-    --pointer-shadow=9,15,9,0.3 --no-shadow-also \
-    --thin-stroke --stroke-width=8:Hairline \
-    --expand-fill=4 --min-stroke-width=0.9 \
-    -s /1.25 -r 20,24,32,40,48,64,72,96"
-
-SELECTED_CURSORS="-f bd_double_arrow \
+EXPAND_FILL_CURSORS="-f bd_double_arrow \
     -f fd_double_arrow \
     -f move \
     -f sb_down_arrow \
@@ -34,20 +22,22 @@ SELECTED_CURSORS="-f bd_double_arrow \
     -f right_ptr \
     -f pencil"
 
-$BUILD_SCRIPT mousegen:run \
-	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.333 -Dxcur.cropToContent=true" \
-	--args="render $RENDER_ARGS $SELECTED_CURSORS" || exit
+EXPAND_FILL_BUILD_DIR="$BUILD_DIR.expand-fill"
+(
+  BUILD_DIR="$EXPAND_FILL_BUILD_DIR"
+  mousegenRender --no-shadow-also --expand-fill=4 $EXPAND_FILL_CURSORS
+)
 
-# Have only the original (sharp) pointers with expanded fill
-rm "$BUILD_DIR-expand-fill"/*-Modern-*/cursors/center_ptr \
-	"$BUILD_DIR-expand-fill"/*-Modern-*/cursors/circle \
-	"$BUILD_DIR-expand-fill"/*-Modern-*/cursors/context-menu \
-	"$BUILD_DIR-expand-fill"/*-Modern-*/cursors/copy \
-	"$BUILD_DIR-expand-fill"/*-Modern-*/cursors/left_ptr \
-	"$BUILD_DIR-expand-fill"/*-Modern-*/cursors/left_ptr_watch \
-	"$BUILD_DIR-expand-fill"/*-Modern-*/cursors/link \
-	"$BUILD_DIR-expand-fill"/*-Modern-*/cursors/pointer-move \
-	"$BUILD_DIR-expand-fill"/*-Modern-*/cursors/right_ptr
+# Have only the arrows and the original (sharp) pointers with expanded fill
+rm "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/center_ptr \
+	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/circle \
+	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/context-menu \
+	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/copy \
+	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/left_ptr \
+	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/left_ptr_watch \
+	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/link \
+	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/pointer-move \
+	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/right_ptr
 
-cp -R "$BUILD_DIR-expand-fill"/* "$BUILD_DIR"
-rm -rf "$BUILD_DIR-expand-fill"
+cp -R "$EXPAND_FILL_BUILD_DIR"/* "$BUILD_DIR"
+rm -rf "$EXPAND_FILL_BUILD_DIR"

@@ -1,0 +1,90 @@
+{
+  "x11Themes": [
+    {
+      "name": "Bibata-${right}-${shape}-${color}-${outline}-${shadow}",
+      "title": "Bibata ${shape} ${color} ${right} ${outlineAndShadow}",
+      "comment": "${color} and ${shape}, ${right}, ${outline} ${shadow} Bibata cursors (v${version})"
+    }
+  ],
+  "winSchemes": [
+    {
+      "name": "${right}-${shape}-${color}-${size}-${outline}-${shadow}",
+      "title": "Bibata ${shape} ${color} ${right} ${size} ${outlineAndShadow}",
+      "comment": "${color} and ${shape}, ${right}, ${outline} ${shadow} Bibata cursors. https://github.com/stanio/Bibata_Cursor\n; Bibata_Cursor is created by Abdulkaiz Khatri.",
+      // Multiple schemes with the same "packageName" get grouped in the same install script.
+      // The package name is included in the install script name: "install-${packageName}.inf"
+      "packageName": "${right}-${shape}-${color}-${shadow}",
+      "packageTitle": "Bibata ${shape} ${color} ${right} ${shadow} (v${version})",
+      "packageFamily": "Bibata"
+    }
+  ],
+  "winFiles": [
+    "Pointer.cur",     // Arrow
+    "Help.cur",        // Help
+    "Work.ani",        // AppStarting
+    "Busy.ani",        // Wait
+    "Cross.cur",       // Crosshair
+    "Text.cur",        // IBeam
+    "Handwriting.cur", // NWPen
+    "Unavailable.cur", // No
+    "Vert.cur",        // SizeNS
+    "Horz.cur",        // SizeWE
+    "Dgn1.cur",        // SizeNWSE
+    "Dgn2.cur",        // SizeNESW
+    "Move.cur",        // SizeAll
+    "Alternate.cur",   // UpArrow
+    "Link.cur",        // Hand
+    "Pin.cur",         // Pin
+    "Person.cur",      // Person
+
+    // Extra files to copy
+    "Zoom-in.cur",
+    "Zoom-out.cur",
+    "Pan.cur",
+    "Grabbing.cur",
+    "Alternate_2.cur",
+    "Alternate_3.cur",
+    "Cross_2.cur",
+    "Unavailable_2.cur"
+  ],
+  "variables": {
+    "shape":   ["Modern", "Original"],
+    "color":   ["Amber", "Classic", "Ice"],
+    "right":   ["", "Left-handed"],
+    "outline": ["", "Thin", "Hairline"],
+    "shadow":  ["", "Shadow"],
+    "size":    [""], // Windows: --var "size=Normal" --var "size=Large"
+    "version": ["2.0.7-stanio-test"],
+    "outlineAndShadow": ["(${outline}, ${shadow})"]
+  },
+  "replacements": {
+    "title": {
+      "Thin": "thin",
+      "Hairline": "hairline",
+      "Shadow": "shadow",
+      "Normal": "",
+      "Large": "[large]",
+      "Extra-Large": "[x-large]"
+    },
+    "comment": {
+      "Modern": "rounded edge",
+      "Original": "sharp edge",
+
+      "Amber": "Yellowish",
+      "Classic": "Black",
+      "Ice": "White",
+      "DarkRed": "Rich red",
+      "DodgerBlue": "Slightly light blue",
+      "Pink": "Queen pink",
+      "Turquoise": "Sky blue with green tint",
+
+      "Left-handed": "left-handed",
+      "Thin": "thin-stroke",
+      "Hairline": "hairline-stroke",
+      "Shadow": "with pointer shadow"
+    },
+    "packageTitle": {
+      "Shadow": "w/ Shadow"
+    }
+  }
+}

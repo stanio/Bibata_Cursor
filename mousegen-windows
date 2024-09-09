@@ -2,44 +2,57 @@
 VERSION=2.0.7-stanio-6-dev
 
 BASEDIR=$(dirname "$0")
-BUILD_SCRIPT="$BASEDIR/mousegen-tool/gradlew -p $BASEDIR/mousegen-tool -q --configuration-cache"
+cd "$BASEDIR"
+
 BUILD_DIR=themes/windows/Bibata-Cursors-v$VERSION
 
-RENDER_ARGS="../../$RENDER_CONFIG \
-    --windows-cursors --build-dir $BUILD_DIR \
-    --source svg/modern --name Modern \
-    --source svg/original --name Original \
-    --source svg/modern-right --name Left-Handed-Modern \
-    --source svg/original-right --name Left-Handed-Original \
-    --color Classic,Ice \
-    --all-variants --pointer-shadow=9,15,9,0.3 \
-    --thin-stroke --stroke-width=8:Hairline \
-    --min-stroke-width=0.9 \
-    -s N,L -r 128,96,72,64,48,32"
+mousegen() {
+  java $MOUSEGEN_JOPTS -jar \
+      "mousegen-tool/mousegen/build/libs/mousegen.jar" "$@" || exit
+}
 
-USER_ARGS=$@ # Why is this necessary?
-$BUILD_SCRIPT mousegen:run \
-	-PmousegenJvmArgs="$RENDER_JOPTS -Dmousegen.animRateGain=1.333 -Dmousegen.maxAnimSize=96" \
-	--args="render $RENDER_ARGS $USER_ARGS" || exit
+mousegenRender() {
+  MOUSEGEN_JOPTS="$RENDER_JOPTS -Dmousegen.dynamicOutput=true \
+      -Dmousegen.animRateGain=1.333 -Dmousegen.maxAnimSize=96"
+  mousegen render "$RENDER_CONFIG" \
+      --windows-cursors --build-dir "$BUILD_DIR" \
+      --source svg/modern --name Modern \
+      --source svg/original --name Original \
+      --source svg/modern-right --name Left-handed-Modern \
+      --source svg/original-right --name Left-handed-Original \
+      --color Classic,Ice \
+      --pointer-shadow=9,15,9,0.3 \
+      --thin-stroke --stroke-width=8:Hairline \
+      --min-stroke-width=0.9 \
+      -s N,L -r 32,48,64,72,96,128 "$@"
+  MOUSEGEN_JOPTS=
+}
 
-echo
-echo "=== Thinner strokes with expanded fill"
-echo
-. "$BASEDIR/expand-fill-remix-windows"
+"mousegen-tool/gradlew" -p "mousegen-tool" \
+	-q mousegen:shadowJar -x test --configuration-cache || exit
+mousegenRender --all-variants "$@"
+
+if [ $# -eq 0 ]; then
+  echo
+  echo "=== Thinner strokes with expanded fill"
+  echo
+  . "./expand-fill-remix-windows"
+fi
 
 # Create setup scripts
 echo
-$BUILD_SCRIPT cleanWindowsInstallScripts windowsInstallScripts --no-configuration-cache \
-	-PcursorsVersion=$VERSION -PwindowsSizes=,Large -PthemeColors=Classic,Ice || exit
-cp -r "$BASEDIR/mousegen-tool/mousegen/build/windows-scripts"/* "$BASEDIR/$BUILD_DIR"
+mousegen windowsInstallScripts "$BUILD_DIR" --config configs/themes.jsonc \
+	--var color=Classic --var color=Ice --var version=$VERSION \
+	--var size=Normal --var size=Large
 
 # Create packages
-echo Compressing packages...
+echo -n "Compressing packages... "
+cp configs/COPYING "$BUILD_DIR/.."
 cd "$BUILD_DIR/.." || exit
-unix2dos --quiet */*.inf
-jar cMf ../Bibata-Windows-Classic-v$VERSION.zip             */[MO]*-Classic* */install-*-Classic.inf
-jar cMf ../Bibata-Windows-Ice-v$VERSION.zip                 */[MO]*-Ice*     */install-*-Ice.inf
-jar cMf ../Bibata-Windows-Left-Handed-Classic-v$VERSION.zip */Left*-Classic* */install-*-Classic-Left*.inf
-jar cMf ../Bibata-Windows-Left-Handed-Ice-v$VERSION.zip     */Left*-Ice*     */install-*-Ice-Left*.inf
+unix2dos --quiet COPYING */*.inf
+jar cMf ../Bibata-Windows-Classic-v$VERSION.zip             COPYING */[MO]*-Classic* */install-[MO]*-Classic*.inf
+jar cMf ../Bibata-Windows-Ice-v$VERSION.zip                 COPYING */[MO]*-Ice*     */install-[MO]*-Ice*.inf
+jar cMf ../Bibata-Windows-Left-handed-Classic-v$VERSION.zip COPYING */Left*-Classic* */install-Left*-Classic*.inf
+jar cMf ../Bibata-Windows-Left-handed-Ice-v$VERSION.zip     COPYING */Left*-Ice*     */install-Left*-Ice*.inf
 
-echo Done.
+echo done.

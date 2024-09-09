@@ -1,7 +1,7 @@
 ## Build (stanio)
 
 This fork uses alternative to the official Bibata_Cursor
-[build tools](https://github.com/stanio/stanio-misc/tree/HEAD/bibata) that
+[build tools](https://github.com/stanio/stanio-misc/tree/HEAD/mousegen) that
 should provide somewhat better quality results.  The build is Java-based and
 requires [JDK](https://adoptium.net/) 11 or later.  It should automatically
 download [Gradle](https://gradle.org/) and specific application dependencies,
