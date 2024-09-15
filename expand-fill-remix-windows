@@ -10,16 +10,13 @@ EXPAND_FILL_CURSORS="-f bd_double_arrow \
     -f sb_up_arrow \
     -f sb_v_double_arrow \
     -f left_ptr_watch \
-    -f center_ptr \
     -f circle \
     -f context-menu \
     -f copy \
-    -f left_ptr \
     -f link \
     -f person \
     -f pin \
     -f pointer-move \
-    -f right_ptr \
     -f pencil"
 
 EXPAND_FILL_BUILD_DIR="$BUILD_DIR.expand-fill"
@@ -29,11 +26,8 @@ EXPAND_FILL_BUILD_DIR="$BUILD_DIR.expand-fill"
 )
 
 # Have only the arrows and the original (sharp) pointers with expanded fill
-rm "$EXPAND_FILL_BUILD_DIR"/Modern-*/Alternate.cur \
-	"$EXPAND_FILL_BUILD_DIR"/Modern-*/Alternate_2.cur \
-	"$EXPAND_FILL_BUILD_DIR"/Modern-*/Person.cur \
+rm "$EXPAND_FILL_BUILD_DIR"/Modern-*/Person.cur \
 	"$EXPAND_FILL_BUILD_DIR"/Modern-*/Pin.cur \
-	"$EXPAND_FILL_BUILD_DIR"/Modern-*/Pointer.cur \
 	"$EXPAND_FILL_BUILD_DIR"/Modern-*/Unavailable.cur \
 	"$EXPAND_FILL_BUILD_DIR"/Modern-*/Work.ani
 

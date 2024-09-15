@@ -10,16 +10,13 @@ EXPAND_FILL_CURSORS="-f bd_double_arrow \
     -f sb_up_arrow \
     -f sb_v_double_arrow \
     -f left_ptr_watch \
-    -f center_ptr \
     -f circle \
     -f context-menu \
     -f copy \
-    -f left_ptr \
     -f link \
     -f person \
     -f pin \
     -f pointer-move \
-    -f right_ptr \
     -f pencil"
 
 EXPAND_FILL_BUILD_DIR="$BUILD_DIR.expand-fill"
@@ -29,15 +26,12 @@ EXPAND_FILL_BUILD_DIR="$BUILD_DIR.expand-fill"
 )
 
 # Have only the arrows and the original (sharp) pointers with expanded fill
-rm "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/center_ptr \
-	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/circle \
+rm "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/circle \
 	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/context-menu \
 	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/copy \
-	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/left_ptr \
 	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/left_ptr_watch \
 	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/link \
-	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/pointer-move \
-	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/right_ptr
+	"$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/pointer-move
 
 cp -R "$EXPAND_FILL_BUILD_DIR"/* "$BUILD_DIR"
 rm -rf "$EXPAND_FILL_BUILD_DIR"
