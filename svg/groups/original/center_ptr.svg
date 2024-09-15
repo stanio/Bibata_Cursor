@@ -2,5 +2,5 @@
   <circle id="cursor-hotspot" class="bias-t200" cx="127" cy="25" r="3" fill="magenta" opacity=".6" display="none"/>
   <path id="bias-offset-guide" d="m 127,25 v 32" stroke="black" stroke-width="1" display="none"/>
   <path id="align-anchor" class="bias-t243-fill" d="m 124,57 h -24 l 24,32 z" fill="cyan" opacity=".8" display="none"/>
-  <path d="M 127.779,57 191.863,199.381 127.902,172.234 64,198.27 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <path d="M 127.779,57 196.7911,210.3301 127.9115,181.0955 59.0954,209.1337 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
 </svg>
