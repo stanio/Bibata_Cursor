@@ -1,20 +1,15 @@
 #!/bin/sh
-VERSION=2.0.7-stanio-6-dev
+VERSION=2.0.7-stanio-7-dev
 
 BASEDIR=$(dirname "$0")
 cd "$BASEDIR"
 
 BUILD_DIR=themes/windows/Bibata-Cursors-v$VERSION
 
-mousegen() {
-  java $MOUSEGEN_JOPTS -jar \
-      "mousegen-tool/mousegen/build/libs/mousegen.jar" "$@" || exit
-}
-
 mousegenRender() {
-  MOUSEGEN_JOPTS="$RENDER_JOPTS -Dmousegen.dynamicOutput=true \
+  export MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true \
       -Dmousegen.animRateGain=1.333 -Dmousegen.maxAnimSize=96"
-  mousegen render "$RENDER_CONFIG" \
+  ./mousegen-render \
       --windows-cursors --build-dir "$BUILD_DIR" \
       --source svg/modern --name Modern \
       --source svg/original --name Original \
@@ -25,11 +20,8 @@ mousegenRender() {
       --thin-stroke --stroke-width=8:Hairline \
       --min-stroke-width=0.9 \
       -s N,L -r 32,48,64,72,96,128 "$@"
-  MOUSEGEN_JOPTS=
 }
 
-"mousegen-tool/gradlew" -p "mousegen-tool" \
-	-q mousegen:shadowJar -x test --configuration-cache || exit
 mousegenRender --all-variants "$@"
 
 if [ $# -eq 0 ]; then
@@ -39,13 +31,12 @@ if [ $# -eq 0 ]; then
   . "./expand-fill-remix-windows"
 fi
 
-# Create setup scripts
+# Create install scripts
 echo
-mousegen windowsInstallScripts "$BUILD_DIR" --config configs/themes.jsonc \
+./mousegen windowsInstallScripts "$BUILD_DIR" --config configs/themes.jsonc \
 	--var color=Classic --var color=Ice --var version=$VERSION \
 	--var size=Normal --var size=Large
 
-# Create packages
 echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR/.."
 cd "$BUILD_DIR/.." || exit

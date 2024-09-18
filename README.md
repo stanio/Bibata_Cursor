@@ -1,24 +1,10 @@
 ## Build (stanio)
 
 This fork uses alternative to the official Bibata_Cursor
-[build tools](https://github.com/stanio/stanio-misc/tree/HEAD/mousegen) that
-should provide somewhat better quality results.  The build is Java-based and
-requires [JDK](https://adoptium.net/) 11 or later.  It should automatically
-download [Gradle](https://gradle.org/) and specific application dependencies,
-during the first run.  One day I may package it as a self-contained `mousegen`
-tool.
-
-Make sure you clone this with `--recurse-submodules`:
-
-```sh
-$ git clone --recurse-submodules https://github.com/stanio/Bibata_Cursor.git
-```
-
-or checkout the `mousegen-tool` submodule afterward:
-
-```sh
-$ git submodule update --init
-```
+[build tools](https://github.com/stanio/stanio-misc/releases/tag/mousegen-0.3)
+that should provide somewhat better quality results.  The build requires
+[Java](https://adoptium.net/) 11 or later on your executable `PATH`.  On first
+run it will download a released `mousegen` executable.
 
 A notable difference with the official Bibata_Cursor is this build requires
 the cursor hostpost embedded into the individual source SVG files, as seen in

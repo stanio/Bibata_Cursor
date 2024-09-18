@@ -1,20 +1,15 @@
 #!/bin/sh
-VERSION=2.0.7-stanio-6-dev
+VERSION=2.0.7-stanio-7-dev
 
 BASEDIR=$(dirname "$0")
 cd "$BASEDIR"
 
 BUILD_DIR=themes/linux
 
-mousegen() {
-  java $MOUSEGEN_JOPTS -jar \
-      "mousegen-tool/mousegen/build/libs/mousegen.jar" "$@" || exit
-}
-
 mousegenRender() {
-  MOUSEGEN_JOPTS="$RENDER_JOPTS -Dmousegen.dynamicOutput=true \
+  export MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true \
       -Dmousegen.animRateGain=1.333 -Dxcur.cropToContent=true"
-  mousegen render "$RENDER_CONFIG" \
+  ./mousegen-render \
       --linux-cursors --build-dir "$BUILD_DIR" \
       --source svg/modern --name Bibata-Modern \
       --source svg/original --name Bibata-Original \
@@ -25,11 +20,8 @@ mousegenRender() {
       --thin-stroke --stroke-width=8:Hairline \
       --min-stroke-width=0.9 \
       -s 1.25/1.25 -r 20,24,32,40,48,64,96 "$@"
-  MOUSEGEN_JOPTS=
 }
 
-"mousegen-tool/gradlew" -p "mousegen-tool" \
-	-q mousegen:shadowJar -x test --configuration-cache || exit
 mousegenRender --all-variants "$@"
 
 if [ $# -eq 0 ]; then
@@ -39,13 +31,12 @@ if [ $# -eq 0 ]; then
   . "./expand-fill-remix-linux"
 fi
 
-# Create symlinks and theme files
+# Create theme files and symlinks
 echo
-mousegen linuxThemeFiles "$BUILD_DIR" --config configs/themes.jsonc \
+./mousegen linuxThemeFiles "$BUILD_DIR" --config configs/themes.jsonc \
 	--var color=Classic --var color=Ice --var version=$VERSION
-mousegen x11Symlinks "$BUILD_DIR"
+./mousegen x11Symlinks "$BUILD_DIR"
 
-# Create packages
 echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
 cd "$BUILD_DIR" || exit

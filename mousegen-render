@@ -1,12 +1,17 @@
 #!/bin/sh
 BASEDIR=$(dirname "$0")
+cd "$BASEDIR"
 
-[ -z "$RENDER_JOPTS" ] && RENDER_JOPTS="-Dmousegen.animRateGain=1.333"
-echo "Experimental options: $RENDER_JOPTS"
-echo
+# Download 'mousegen' if it doesn't exist or is outdated
+MTAG="0.3"
+MTIME=1726597568 # 2024-09-17 18:26:08
+if [ ! -f "mousegen" ] || [ $(stat -c "%Y" "mousegen") -lt $MTIME ]; then
+  curl --progress-bar --fail -LRo mousegen \
+      "https://github.com/stanio/stanio-misc/releases/download/mousegen-$MTAG/mousegen.sh"
+  chmod u+x mousegen
+fi
 
-"$BASEDIR/mousegen-tool/gradlew" -p "$BASEDIR/mousegen-tool" \
-	-q mousegen:shadowJar -x test --configuration-cache || exit
-java $RENDER_JOPTS -Dmousegen.dynamicOutput=true \
-	-jar "$BASEDIR/mousegen-tool/mousegen/build/libs/mousegen.jar" \
-	render "$@"
+[ -z "$MOUSEGEN_OPTS" ] && export \
+    MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true -Dmousegen.animRateGain=1.333"
+
+./mousegen render "$@"
