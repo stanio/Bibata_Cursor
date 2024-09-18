@@ -41,9 +41,8 @@ echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
 cd "$BUILD_DIR" || exit
 dos2unix --quiet COPYING */*.theme
-tar cJf ../Bibata-Linux-Classic-v$VERSION.tar.xz             COPYING Bibata-[MO]*-Classic*
-tar cJf ../Bibata-Linux-Ice-v$VERSION.tar.xz                 COPYING Bibata-[MO]*-Ice*
-tar cJf ../Bibata-Linux-Left-handed-Classic-v$VERSION.tar.xz COPYING Bibata-Left*-Classic*
-tar cJf ../Bibata-Linux-Left-handed-Ice-v$VERSION.tar.xz     COPYING Bibata-Left*-Ice*
-
+for color in Classic Ice; do
+  tar cJf ../Bibata-Linux-$color-v$VERSION.tar.xz             COPYING Bibata-[MO]*-$color*
+  tar cJf ../Bibata-Linux-Left-handed-$color-v$VERSION.tar.xz COPYING Bibata-Left*-$color*
+done
 echo done.

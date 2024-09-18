@@ -41,9 +41,8 @@ echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR/.."
 cd "$BUILD_DIR/.." || exit
 unix2dos --quiet COPYING */*.inf
-jar cMf ../Bibata-Windows-Classic-v$VERSION.zip             COPYING */[MO]*-Classic* */install-[MO]*-Classic*.inf
-jar cMf ../Bibata-Windows-Ice-v$VERSION.zip                 COPYING */[MO]*-Ice*     */install-[MO]*-Ice*.inf
-jar cMf ../Bibata-Windows-Left-handed-Classic-v$VERSION.zip COPYING */Left*-Classic* */install-Left*-Classic*.inf
-jar cMf ../Bibata-Windows-Left-handed-Ice-v$VERSION.zip     COPYING */Left*-Ice*     */install-Left*-Ice*.inf
-
+for color in Classic Ice; do
+  jar cMf ../Bibata-Windows-$color-v$VERSION.zip             COPYING */[MO]*-$color* */install-[MO]*-$color*.inf
+  jar cMf ../Bibata-Windows-Left-handed-$color-v$VERSION.zip COPYING */Left*-$color* */install-Left*-$color*.inf
+done
 echo done.
