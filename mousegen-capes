@@ -1,0 +1,34 @@
+#!/bin/sh
+VERSION=2.0.7-stanio-8-dev
+
+BASEDIR=$(dirname "$0")
+cd "$BASEDIR"
+
+BUILD_DIR=themes/mousecape
+
+mousegenRender() {
+  export MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true \
+      -Dmousegen.animRateGain=1.333 -Dmousegen.maxAnimSize=160 \
+      -Dmousecape.author=ful1e5 -Dmousecape.capeVersion=$VERSION"
+  ./mousegen-render \
+      --mousecape-theme --build-dir "$BUILD_DIR" \
+      --source svg/modern --name Bibata-Modern \
+      --source svg/original --name Bibata-Original \
+      --color Classic,Ice \
+      --pointer-shadow=9,15,9,0.3 \
+      --thin-stroke --stroke-width=8:Hairline \
+      --min-stroke-width=0.9 \
+      -s 1.5 -r 32,64,160,320 "$@"
+}
+
+mousegenRender --all-variants "$@"
+
+echo
+echo -n "Compressing packages... "
+cp configs/COPYING "$BUILD_DIR"
+cd "$BUILD_DIR" || exit
+dos2unix --quiet COPYING *.cape
+for color in Classic Ice; do
+  jar cMf ../Bibata-Mousecape-$color-v$VERSION.zip COPYING Bibata-*-$color*.cape
+done
+echo done.

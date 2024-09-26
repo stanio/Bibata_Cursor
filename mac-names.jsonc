@@ -1,0 +1,57 @@
+{
+  // https://github.com/alexzielenski/Mousecape/blob/184f87b5d/Mousecape/mousecloak/MCDefs.m#L13-L23
+  //"Alias":            "com.apple.coregraphics.Alias",
+  "left_ptr":           "com.apple.coregraphics.Arrow",
+  "context-menu":       "com.apple.coregraphics.ArrowCtx",
+  //"Copy":             "com.apple.coregraphics.Copy",
+  //"Empty":            "com.apple.coregraphics.Empty",
+  "xterm":              "com.apple.coregraphics.IBeam",
+  "cross":              "com.apple.coregraphics.IBeamXOR",
+  "move":               "com.apple.coregraphics.Move",
+  "wait":               "com.apple.coregraphics.Wait",
+
+  // https://github.com/alexzielenski/Mousecape/blob/184f87b5d/Mousecape/mousecloak/MCDefs.m#L138-L187
+  // https://github.com/isaacrobinson2000/CursorCreate/blob/248a0863a/CursorCreate/lib/cur_theme.py#L490-L529
+  "link":               "com.apple.cursor.2",   // Link
+  "circle":             "com.apple.cursor.3",   // Forbidden
+  "left_ptr_watch":     "com.apple.cursor.4",   // Busy
+  "copy":               "com.apple.cursor.5",   // Copy Drag
+
+  "crosshair":          "com.apple.cursor.7",   // Crosshair
+  "dotbox":             "com.apple.cursor.8",   // Crosshair 2
+  //"Camera 2":         "com.apple.cursor.9",
+  //"Camera":           "com.apple.cursor.10",
+  "grabbing":           "com.apple.cursor.11",  // Closed
+  "hand1":              "com.apple.cursor.12",  // Open
+  "hand2":              "com.apple.cursor.13",  // Pointing
+  //"Counting Up":      "com.apple.cursor.14",
+  //"Counting Down":    "com.apple.cursor.15",
+  //"Counting Up/Down": "com.apple.cursor.16",
+  //"Resize W":         "com.apple.cursor.17",
+  //"Resize E":         "com.apple.cursor.18",
+  //"Resize W-E":       "com.apple.cursor.19",
+  //"Cell XOR":         "com.apple.cursor.20",
+  //"Resize N":         "com.apple.cursor.21",
+  //"Resize S":         "com.apple.cursor.22",
+  //"Resize N-S":       "com.apple.cursor.23",
+  //"Ctx Menu":         "com.apple.cursor.24",
+  //"Poof":             "com.apple.cursor.25",
+  "vertical-text":      "com.apple.cursor.26",  // IBeam H.
+  "sb_right_arrow":     "com.apple.cursor.27",  // Window E
+  "sb_h_double_arrow":  "com.apple.cursor.28",  // Window E-W
+  //"Window NE":        "com.apple.cursor.29",
+  "bd_double_arrow":    "com.apple.cursor.30",  // Window NE-SW
+  "sb_up_arrow":        "com.apple.cursor.31",  // Window N
+  "sb_v_double_arrow":  "com.apple.cursor.32",  // Window N-S
+  //"Window NW":        "com.apple.cursor.33",
+  "fd_double_arrow":    "com.apple.cursor.34",  // Window NW-SE
+  //"Window SE":        "com.apple.cursor.35",
+  "sb_down_arrow":      "com.apple.cursor.36",  // Window S
+  //"Window SW":        "com.apple.cursor.37",
+  "sb_left_arrow":      "com.apple.cursor.38",  // Window W
+  //"Resize Square":    "com.apple.cursor.39",
+  "question_arrow":     "com.apple.cursor.40",  // Help
+  "tcross":             "com.apple.cursor.41",  // Cell
+  "zoom-in":            "com.apple.cursor.42",
+  "zoom-out":           "com.apple.cursor.43"
+}

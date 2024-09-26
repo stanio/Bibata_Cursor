@@ -3,8 +3,8 @@ BASEDIR=$(dirname "$0")
 cd "$BASEDIR"
 
 # Download 'mousegen' if it doesn't exist or is outdated
-MTAG="0.4"
-MTIME=1726982394 # 2024-09-22 05:19:54
+MTAG="0.5"
+MTIME=1727340936 # 2024-09-26 11:55:36
 if [ ! -f "mousegen" ] || [ $(stat -c "%Y" "mousegen") -lt $MTIME ]; then
   curl --progress-bar --fail -LRo mousegen \
       "https://github.com/stanio/stanio-misc/releases/download/mousegen-$MTAG/mousegen.sh"
