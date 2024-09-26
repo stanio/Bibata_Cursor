@@ -1,4 +1,4 @@
-# Sourced in mousegen-windows
+# Sourced in the mousegen-* scripts
 
 EXPAND_FILL_CURSORS="-f bd_double_arrow \
     -f fd_double_arrow \
@@ -26,10 +26,7 @@ EXPAND_FILL_BUILD_DIR="$BUILD_DIR.expand-fill"
 )
 
 # Have only the arrows and the original (sharp) pointers with expanded fill
-rm "$EXPAND_FILL_BUILD_DIR"/Modern-*/Person.cur \
-	"$EXPAND_FILL_BUILD_DIR"/Modern-*/Pin.cur \
-	"$EXPAND_FILL_BUILD_DIR"/Modern-*/Unavailable.cur \
-	"$EXPAND_FILL_BUILD_DIR"/Modern-*/Work.ani
+filterExpandFillCursors
 
 cp -R "$EXPAND_FILL_BUILD_DIR"/* "$BUILD_DIR"
 rm -rf "$EXPAND_FILL_BUILD_DIR"
