@@ -14,4 +14,11 @@ fi
 [ -z "$MOUSEGEN_OPTS" ] && export \
     MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true -Dmousegen.animRateGain=1.333"
 
+# Prevent arguments being automatically replaced
+# by MSYS2: "/1.25" -> "C:/Program Files/git/1.25"
+# https://www.msys2.org/docs/filesystem-paths/
+#export MSYS2_ARG_CONV_EXCL="*"
+export MSYS2_ARG_CONV_EXCL="-s"
+# https://github.com/git-for-windows/msys2-runtime/pull/11#issuecomment-112817152
+#export MSYS_NO_PATHCONV=1
 ./mousegen render "$@"
