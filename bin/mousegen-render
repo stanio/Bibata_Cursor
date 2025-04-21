@@ -1,14 +1,13 @@
 #!/bin/sh
-BASEDIR=$(dirname "$0")
-cd "$BASEDIR"
+BIN_DIR="$(dirname "$0")"
 
 # Download 'mousegen' if it doesn't exist or is outdated
 MTAG="0.6.1"
 MTIME=1744917982 # 2025-04-17 19:26:22
-if [ ! -f "mousegen" ] || [ $(stat -c "%Y" "mousegen") -lt $MTIME ]; then
-  curl --progress-bar --fail -LRo mousegen \
+if [ ! -f "$BIN_DIR/mousegen" ] || [ $(stat -c "%Y" "$BIN_DIR/mousegen") -lt $MTIME ]; then
+  curl --progress-bar --fail -LRo "$BIN_DIR/mousegen" \
       "https://github.com/stanio/stanio-misc/releases/download/mousegen-$MTAG/mousegen.sh"
-  chmod u+x mousegen
+  chmod u+x "$BIN_DIR/mousegen"
 fi
 
 [ -z "$MOUSEGEN_OPTS" ] && export \
@@ -21,4 +20,4 @@ fi
 export MSYS2_ARG_CONV_EXCL="-s"
 # https://github.com/git-for-windows/msys2-runtime/pull/11#issuecomment-112817152
 #export MSYS_NO_PATHCONV=1
-./mousegen render "$@"
+"$BIN_DIR/mousegen" render "$@"

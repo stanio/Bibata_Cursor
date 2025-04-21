@@ -1,9 +1,7 @@
 # Custom
-themes/
-bin/
-bitmaps/
-/mousegen
-/*.jar
+/themes/
+/bin/
+/bitmaps/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

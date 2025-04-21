@@ -1,21 +1,21 @@
 #!/bin/sh
 VERSION=2.0.7-stanio-9-dev
 
-BASEDIR=$(dirname "$0")
-cd "$BASEDIR"
+BIN_DIR="$(dirname "$0")"
+cd "$BIN_DIR/.."
 
 BUILD_DIR=themes/linux
 
 mousegenRender() {
   export MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true \
       -Dmousegen.animRateGain=1.333 -Dxcur.cropToContent=true"
-  ./mousegen-render \
-      --linux-cursors --build-dir "$BUILD_DIR" \
+  "$BIN_DIR/mousegen-render" \
+      --linux-cursors=configs/x11-names.json --build-dir "$BUILD_DIR" \
       --source svg/modern --name Bibata-Modern \
       --source svg/original --name Bibata-Original \
       --source svg/modern-right --name Bibata-Left-handed-Modern \
       --source svg/original-right --name Bibata-Left-handed-Original \
-      --color Classic,Ice \
+      --color Classic,Ice --color-map=configs/colors.jsonc \
       --pointer-shadow=9,15,9,0.3 \
       --thin-stroke --stroke-width=8:Hairline \
       --min-stroke-width=0.9 \
@@ -37,14 +37,14 @@ if [ $# -eq 0 ]; then
   echo
   echo "=== Thinner strokes with expanded fill"
   echo
-  . "./expand-fill-remix"
+  . "$BIN_DIR/expand-fill-remix"
 fi
 
 # Create theme files and symlinks
 echo
-./mousegen linuxThemeFiles "$BUILD_DIR" --config configs/themes.jsonc \
+"$BIN_DIR/mousegen" linuxThemeFiles "$BUILD_DIR" --config configs/themes.jsonc \
 	--var color=Classic --var color=Ice --var version=$VERSION
-./mousegen x11Symlinks "$BUILD_DIR"
+"$BIN_DIR/mousegen" x11Symlinks "$BUILD_DIR"
 
 echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
