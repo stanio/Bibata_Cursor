@@ -11,7 +11,7 @@ if [ ! -f "$BIN_DIR/mousegen" ] || [ $(stat -c "%Y" "$BIN_DIR/mousegen") -lt $MT
 fi
 
 [ -z "$MOUSEGEN_OPTS" ] && export \
-    MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true -Dmousegen.animRateGain=1.333"
+    MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true -Dmousegen.animRateGain=1.395"
 
 # Prevent arguments being automatically replaced
 # by MSYS2: "/1.25" -> "C:/Program Files/git/1.25"

@@ -8,7 +8,7 @@ BUILD_DIR=themes/linux
 
 mousegenRender() {
   export MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true \
-      -Dmousegen.animRateGain=1.333 -Dxcur.cropToContent=true"
+      -Dmousegen.animRateGain=1.395 -Dxcur.cropToContent=true"
   "$BIN_DIR/mousegen-render" \
       --linux-cursors=configs/x11-names.json --build-dir "$BUILD_DIR" \
       --source svg/modern --name Bibata-Modern \

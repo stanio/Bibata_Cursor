@@ -8,7 +8,7 @@ BUILD_DIR=themes/mousecape
 
 mousegenRender() {
   export MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true \
-      -Dmousegen.animRateGain=1.333 -Dmousegen.maxAnimSize=160 \
+      -Dmousegen.animRateGain=1.395 -Dmousegen.maxAnimSize=160 \
       -Dmousecape.author=ful1e5 -Dmousecape.capeVersion=$VERSION"
   "$BIN_DIR/mousegen-render" \
       --mousecape-theme=configs/mac-names.jsonc --build-dir "$BUILD_DIR" \

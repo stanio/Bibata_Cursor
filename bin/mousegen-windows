@@ -8,7 +8,7 @@ BUILD_DIR=themes/windows/Bibata-Cursors-v$VERSION
 
 mousegenRender() {
   export MOUSEGEN_OPTS="-Dmousegen.dynamicOutput=true \
-      -Dmousegen.animRateGain=1.333 -Dmousegen.maxAnimSize=96"
+      -Dmousegen.animRateGain=1.395 -Dmousegen.maxAnimSize=96"
   "$BIN_DIR/mousegen-render" \
       --windows-cursors=configs/win-names.json --build-dir "$BUILD_DIR" \
       --source svg/modern --name Modern \

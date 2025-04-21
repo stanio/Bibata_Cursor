@@ -8,13 +8,13 @@
   "xterm":              "com.apple.coregraphics.IBeam",
   "cross":              "com.apple.coregraphics.IBeamXOR",
   "move":               "com.apple.coregraphics.Move",
-  "wait":               "com.apple.coregraphics.Wait",
+  "wait_":              "com.apple.coregraphics.Wait",
 
   // https://github.com/alexzielenski/Mousecape/blob/184f87b5d/Mousecape/mousecloak/MCDefs.m#L138-L187
   // https://github.com/isaacrobinson2000/CursorCreate/blob/248a0863a/CursorCreate/lib/cur_theme.py#L490-L529
   "link":               "com.apple.cursor.2",   // Link
   "circle":             "com.apple.cursor.3",   // Forbidden
-  "left_ptr_watch":     "com.apple.cursor.4",   // Busy
+  "left_ptr_watch_":    "com.apple.cursor.4",   // Busy
   "copy":               "com.apple.cursor.5",   // Copy Drag
 
   "crosshair":          "com.apple.cursor.7",   // Crosshair
