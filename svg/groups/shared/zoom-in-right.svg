@@ -1,0 +1,12 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path id="align-anchor" d="M 128.6,105.3 h -32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" cx="139" cy="115.7" r="3" fill="magenta" opacity=".6" display="none"/>
+  <defs>
+    <path id="looking-glass" d="M 68.4,0 a 68.4,68.4 0 0,1 -68.4,68.4 a 68.4,68.4 0 0,1 -68.4,-68.4 a 68.4,68.4 0 0,1 68.4,-68.4 a 68.4,68.4 0 0,1 68.4,68.4 z h 62" transform="rotate(45)" stroke-linecap="round"/>
+  </defs>
+  <g id="position-on-canvas" transform="matrix(-1,0,0,1,139,115.7)">
+    <use id="glass-stroke" href="#looking-glass" fill="#0000FF" stroke="#0000FF" stroke-width="44.8"/>
+    <use id="glass-fill" href="#looking-glass" stroke="#00FF00" stroke-width="12.8" class="fill-stroke"/>
+    <path id="plus" d="M -33.6,0 h 67.2 M 0,-33.6 v 67.2" fill="#00FF00" stroke="#00FF00" stroke-linecap="round" stroke-width="20.8"/>
+  </g>
+</svg>
