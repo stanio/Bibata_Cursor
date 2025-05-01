@@ -9,7 +9,7 @@ EXPAND_FILL_CURSORS="-f bd_double_arrow \
     -f sb_right_arrow \
     -f sb_up_arrow \
     -f sb_v_double_arrow \
-    -f left_ptr_watch \
+    -f left_ptr_watch_ \
     -f circle \
     -f context-menu \
     -f copy \
