@@ -24,8 +24,11 @@ mousegenRender() {
 mousegenRender --all-variants "$@"
 
 filterExpandFillCursors() {
-  rm "$EXPAND_FILL_BUILD_DIR"/Modern-*/Person.cur \
+  rm "$EXPAND_FILL_BUILD_DIR"/Modern-*/Alternate.cur \
+     "$EXPAND_FILL_BUILD_DIR"/Modern-*/Alternate_2.cur \
+     "$EXPAND_FILL_BUILD_DIR"/Modern-*/Person.cur \
      "$EXPAND_FILL_BUILD_DIR"/Modern-*/Pin.cur \
+     "$EXPAND_FILL_BUILD_DIR"/Modern-*/Pointer.cur \
      "$EXPAND_FILL_BUILD_DIR"/Modern-*/Unavailable.cur \
      "$EXPAND_FILL_BUILD_DIR"/Modern-*/Work.ani
 }
