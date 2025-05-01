@@ -2,8 +2,8 @@
   <path id="align-anchor" class="bias-top-left-fill" d="m 116,116 v -32 l -32,32 z" fill="cyan" opacity=".8" display="none"/>
   <path d="m 116,34 a 12,12 0 0 1 24,0 v 82 h 82 a 12,12 0 0 1 0,24 h -82 v 82 a 12,12 0 0 1 -24,0 v -82 h -82 a 12,12 0 0 1 0,-24 h 82 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill" mask="url(#aperture)" filter="url(#isolation-isolate)"/>
   <mask id="aperture">
-    <rect width="256" height="256" fill="white"/>
-    <circle cx="128" cy="128" r="23" fill="black"/>
+    <rect width="256" height="256" fill="#fff"/>
+    <circle cx="128" cy="128" r="23" fill="#000"/>
   </mask>
   <circle cx="128" cy="128" r="6" fill="#FE0000"/>
   <!-- https://github.com/weisJ/jsvg/issues/74#issuecomment-2019003404 -->

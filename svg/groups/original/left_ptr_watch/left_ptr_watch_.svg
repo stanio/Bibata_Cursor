@@ -5,7 +5,7 @@
   <circle cx="118" cy="162" r="62" fill="#FF0000" stroke="#0000FF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
   <g mask="url(#wheel-mask)">
     <mask id="wheel-mask">
-      <circle cx="118" cy="162" r="48.611" fill="white" stroke="white" stroke-width="0" class="fixed-stroke"/>
+      <circle cx="118" cy="162" r="48.611" fill="#fff" stroke="#fff" stroke-width="0" class="fixed-stroke"/>
     </mask>
 
   <g transform="translate(118 162) scale(1.56)">
