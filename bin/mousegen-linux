@@ -5,6 +5,14 @@ cd "$(dirname "$0")/.."
 
 BUILD_DIR=themes/linux
 
+RENDER_COLORS=
+THEME_COLORS=
+[ -z "$MOUSE_COLORS" ] && MOUSE_COLORS="Classic Ice"
+for color in $MOUSE_COLORS; do
+  RENDER_COLORS="$RENDER_COLORS --color $color"
+  THEME_COLORS="$THEME_COLORS --var color=$color"
+done
+
 mousegenRender() {
   export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dmousegen.dynamicOutput=true \
       -Dmousegen.animRateGain=1.395 -Dxcur.cropToContent=true"
@@ -14,8 +22,8 @@ mousegenRender() {
       --source svg/original --name Bibata-Original \
       --source svg/modern-right --name Bibata-Left-handed-Modern \
       --source svg/original-right --name Bibata-Left-handed-Original \
-      --color Classic,Ice \
-      --pointer-shadow=9,15,9,0.3 \
+      $RENDER_COLORS \
+      --pointer-shadow=9,15,9,0.3: --no-shadow-also=NoShadow \
       --thin-stroke --stroke-width=8:Hairline \
       --min-stroke-width=0.9 \
       -s=/1.25 -r 20,24,32,36,40,48,54,64,72,80,96 "$@"
@@ -44,15 +52,15 @@ fi
 
 # Create theme files and symlinks
 echo
-bin/mousegen linuxThemeFiles "$BUILD_DIR" --config configs/themes.jsonc \
-	--var color=Classic --var color=Ice --var version=$VERSION
-bin/mousegen x11Symlinks -c configs/x11-symlinks.json "$BUILD_DIR"
+bin/mousegen linuxThemeFiles "$BUILD_DIR" --config configs \
+	$THEME_COLORS --var version=$VERSION --var shadow=NoShadow --var shadow=
+bin/mousegen x11Symlinks -c configs "$BUILD_DIR"
 
 echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
 cd "$BUILD_DIR" || exit
 dos2unix --quiet COPYING */*.theme
-for color in Classic Ice; do
+for color in $MOUSE_COLORS; do
   tar cJf ../Bibata-Linux-$color-v$VERSION.tar.xz             COPYING Bibata-[MO]*-$color*
   tar cJf ../Bibata-Linux-Left-handed-$color-v$VERSION.tar.xz COPYING Bibata-Left*-$color*
 done

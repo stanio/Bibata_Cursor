@@ -5,6 +5,12 @@ cd "$(dirname "$0")/.."
 
 BUILD_DIR=themes/mousecape
 
+RENDER_COLORS=
+[ -z "$MOUSE_COLORS" ] && MOUSE_COLORS="Classic Ice"
+for color in $MOUSE_COLORS; do
+  RENDER_COLORS="$RENDER_COLORS --color $color"
+done
+
 mousegenRender() {
   export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dmousegen.dynamicOutput=true \
       -Dmousegen.animRateGain=1.395 -Dmousegen.maxAnimSize=160 \
@@ -13,8 +19,8 @@ mousegenRender() {
       --mousecape-theme --build-dir "$BUILD_DIR" \
       --source svg/modern --name Bibata-Modern \
       --source svg/original --name Bibata-Original \
-      --color Classic,Ice \
-      --pointer-shadow=9,15,9,0.3 \
+      $RENDER_COLORS \
+      --pointer-shadow=9,15,9,0.3 --no-shadow-also \
       --thin-stroke --stroke-width=8:Hairline \
       --min-stroke-width=0.9 \
       -s 1.5 -r 32,64,160,320 "$@"
@@ -27,7 +33,7 @@ echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
 cd "$BUILD_DIR" || exit
 dos2unix --quiet COPYING *.cape
-for color in Classic Ice; do
+for color in $MOUSE_COLORS; do
   jar cMf ../Bibata-Mousecape-$color-v$VERSION.zip COPYING Bibata-*-$color*.cape
 done
 echo done.

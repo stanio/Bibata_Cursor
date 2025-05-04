@@ -25,7 +25,7 @@ EXPAND_FILL_CURSORS="-f bd_double_arrow \
 EXPAND_FILL_BUILD_DIR="$BUILD_DIR.expand-fill"
 (
   BUILD_DIR="$EXPAND_FILL_BUILD_DIR"
-  mousegenRender --no-shadow-also --expand-fill=4 $EXPAND_FILL_CURSORS
+  mousegenRender --expand-fill=4 $EXPAND_FILL_CURSORS
 )
 
 # Have only the arrows and the original (sharp) pointers with expanded fill

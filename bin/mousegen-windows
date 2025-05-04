@@ -5,6 +5,14 @@ cd "$(dirname "$0")/.."
 
 BUILD_DIR=themes/windows/Bibata-Cursors-v$VERSION
 
+RENDER_COLORS=
+THEME_COLORS=
+[ -z "$MOUSE_COLORS" ] && MOUSE_COLORS="Classic Ice"
+for color in $MOUSE_COLORS; do
+  RENDER_COLORS="$RENDER_COLORS --color $color"
+  THEME_COLORS="$THEME_COLORS --var color=$color"
+done
+
 mousegenRender() {
   export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dmousegen.dynamicOutput=true \
       -Dmousegen.animRateGain=1.395 -Dmousegen.maxAnimSize=96"
@@ -14,8 +22,8 @@ mousegenRender() {
       --source svg/original --name Original \
       --source svg/modern-right --name Left-handed-Modern \
       --source svg/original-right --name Left-handed-Original \
-      --color Classic,Ice \
-      --pointer-shadow=9,15,9,0.3 \
+      $RENDER_COLORS \
+      --pointer-shadow=9,15,9,0.3 --no-shadow-also \
       --thin-stroke --stroke-width=8:Hairline \
       --min-stroke-width=0.9 \
       -s N,L -r 32,48,64,72,96,128 "$@"
@@ -42,15 +50,14 @@ fi
 
 # Create install scripts
 echo
-bin/mousegen windowsInstallScripts "$BUILD_DIR" --config configs/themes.jsonc \
-	--var color=Classic --var color=Ice --var version=$VERSION \
-	--var size=Normal --var size=Large
+bin/mousegen windowsInstallScripts "$BUILD_DIR" --config configs \
+	$THEME_COLORS --var version=$VERSION --var size=Normal --var size=Large
 
 echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR/.."
 cd "$BUILD_DIR/.." || exit
 unix2dos --quiet COPYING */*.inf
-for color in Classic Ice; do
+for color in $MOUSE_COLORS; do
   jar cMf ../Bibata-Windows-$color-v$VERSION.zip             COPYING */[MO]*-$color* */install-[MO]*-$color*.inf
   jar cMf ../Bibata-Windows-Left-handed-$color-v$VERSION.zip COPYING */Left*-$color* */install-Left*-$color*.inf
 done
