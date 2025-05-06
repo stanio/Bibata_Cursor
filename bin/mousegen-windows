@@ -14,7 +14,9 @@ for color in $MOUSE_COLORS; do
 done
 
 mousegenRender() {
+  # -Dwincur.PNGEncoder=zopfli
   export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dmousegen.dynamicOutput=true \
+      -Dmousegen.renderer.asyncEncoding=2 \
       -Dmousegen.animRateGain=1.395 -Dmousegen.maxAnimSize=96"
   bin/mousegen-render \
       --windows-cursors --build-dir "$BUILD_DIR" \
