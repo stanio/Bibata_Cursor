@@ -10,16 +10,13 @@ EXPAND_FILL_CURSORS="-f bd_double_arrow \
     -f sb_up_arrow \
     -f sb_v_double_arrow \
     -f left_ptr_watch_ \
-    -f center_ptr \
     -f circle \
     -f context-menu \
     -f copy \
-    -f left_ptr \
     -f link \
     -f person \
     -f pin \
     -f pointer-move \
-    -f right_ptr \
     -f pencil"
 
 EXPAND_FILL_BUILD_DIR="$BUILD_DIR.expand-fill"

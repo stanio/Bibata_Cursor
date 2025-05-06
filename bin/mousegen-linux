@@ -33,15 +33,12 @@ mousegenRender() {
 mousegenRender --all-variants "$@"
 
 filterExpandFillCursors() {
-  rm "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/center_ptr \
-     "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/circle \
+  rm "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/circle \
      "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/context-menu \
      "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/copy \
-     "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/left_ptr \
      "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/left_ptr_watch \
      "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/link \
-     "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/pointer-move \
-     "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/right_ptr
+     "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/pointer-move
 }
 
 if [ $# -eq 0 ]; then
