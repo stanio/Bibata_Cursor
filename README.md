@@ -1,7 +1,7 @@
 ## Build (stanio)
 
 This fork uses alternative to the official Bibata_Cursor
-[build tools](https://github.com/stanio/stanio-misc/releases/tag/mousegen-0.3)
+[build tools](https://github.com/stanio/stanio-misc/releases/tag/mousegen-0.6.3)
 that should provide somewhat better quality results.  The build requires
 [Java](https://adoptium.net/) 11 or later on your executable `PATH`.  On first
 run it will download a released `mousegen` executable.
@@ -11,12 +11,13 @@ the cursor hostpost embedded into the individual source SVG files, as seen in
 this fork, rather than maintained separately in `configs/**.build.toml` files:
 
 ```xml
-  <circle id="cursor-hotstop" cx="..." cy="..." />
+  <circle id="cursor-hotspot" cx="..." cy="..." />
 ```
 
 Better quality results are achieved by rasterizing the source SVGs at each
-individual resolution, and employing pixel-grid alignment hints embedded into
-the sources:
+individual resolution, and employing pixel-grid
+[alignment hints](https://github.com/stanio/Bibata_Cursor/commit/8cc992faefc8d9327957d0d7a58b0ac1687bcc5f#commitcomment-131173743)
+embedded into the sources:
 
 ```xml
   <path id="align-anchor" d="m #,# ..." />
@@ -28,8 +29,8 @@ the sources:
 For my releases I have two scripts with specific configurations:
 
 ```
-$ ./mousegen-windows
-$ ./mousegen-linux
+$ bin/mousegen-windows
+$ bin/mousegen-linux
 ```
 
 For building customized versions of the cursors see `mousegen-render` further.
@@ -39,7 +40,7 @@ For building customized versions of the cursors see `mousegen-render` further.
 Get a rough overview of the available options:
 
 ```sh
-$ ./mousegen-render --help
+$ bin/mousegen-render --help
 ```
 
 The default output directory is `themes/`, and without options given, it would
@@ -50,8 +51,8 @@ To render either Linux (X) or Windows cursors specify `--linux-cursors` or
 `--windows-cursors` option:
 
 ```sh
-$ ./mousegen-render --windows-cursors
-$ ./mousegen-render --linux-cursors
+$ bin/mousegen-render --windows-cursors
+$ bin/mousegen-render --linux-cursors
 ```
 
 Both can't be effective at the same time, currently.
@@ -61,7 +62,7 @@ Both can't be effective at the same time, currently.
 To render a few selected cursors – specify them with `-f <cursor>` options:
 
 ```sh
-$ ./mousegen-render ... -f left_ptr -f left_ptr_watch -f xterm
+$ bin/mousegen-render ... -f left_ptr -f left_ptr_watch -f xterm
 ```
 
 The `<cursor>` name is the original file name without the `.svg` suffix.
@@ -70,14 +71,14 @@ Note, the specified filter applies on top of `--windows-cursors` or
 `--linux-cursors` name mapping in effect:
 
 ```sh
-$ ./mousegen-render --windows-cursors -f left_side
+$ bin/mousegen-render --windows-cursors -f left_side
 ```
 
 will not render any cursor, unless you specify `--all-cursors` option:
 
 ```sh
-$ ./mousegen-render --windows-cursors --all-cursors -f left_side
-$ ./mousegen-render --windows-cursors --all-cursors # render all
+$ bin/mousegen-render --windows-cursors --all-cursors -f left_side
+$ bin/mousegen-render --windows-cursors --all-cursors # render all
 ```
 
 ### Customizing the resolutions/sizes
@@ -90,7 +91,7 @@ The default resolutions currently are:
 Customize the output resolutions using `-r` option(s):
 
 ```sh
-$ ./mousegen-render -r 32,48,64
+$ bin/mousegen-render -r 32,48,64
 ```
 
 `--windows-cursors` also implies three (canvas) sizing-schemes: Normal, Large,
@@ -98,7 +99,7 @@ and  Extra-Large (N, L, XL).  Customize the sizing schemes via `-s` option(s).
 The following will output only Normal and Large variants:
 
 ```sh
-$ ./mousegen-render -s N,L
+$ bin/mousegen-render -s N,L
 ```
 
 To reset to just the original sizing use `-s SOURCE` – that's equivalent to
@@ -107,7 +108,7 @@ Extra-Large (full canvas) but doesn't change the theme name to reflect that.
 ### Customizing the color
 
 ```sh
-$ ./mousegen-render --color Ice,Turquoise
+$ bin/mousegen-render --color Ice,Turquoise
 ```
 
 Find and customize the color mappings in `colors.jsonc`.
@@ -118,7 +119,7 @@ The cursors don't have a shadow by default (I've also removed all shadows from
 the original sources).  To get cursors with shadow use `--pointer-shadow`:
 
 ```sh
-$ ./mousegen-render --pointer-shadow
+$ bin/mousegen-render --pointer-shadow
 ```
 
 The full syntax is:
