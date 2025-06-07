@@ -1,6 +1,6 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path id="align-anchor" class="bias-top-right-fill" d="m 212,38.4025 h -26 l 26,36 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" class="bias-t0837-r0001" cx="212" cy="25" r="3" fill="magenta" opacity=".6" display="none"/>
+  <circle id="cursor-hotspot" class="bias-t0909-r04115-outside" cx="204.918" cy="39.037" r="3" fill="magenta" opacity=".6" display="none"/>
   <path id="pointer-shape" d="M 212,59.3294 C 212,34.1891 200.429,32.7662 182.2908,49.3682 L 80.6214,139.493 C 72.9501,146.3565 71.5523,164.6331 80.6214,168.4278 C 89.6905,172.2226 119.4369,165.9497 142.6726,176.4324 C 165.9093,186.9152 180.3419,213.4889 189.7411,217.7293 C 199.1393,221.9698 211.8505,205.9764 212,195.7192 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g>
     <path class="align-anchor bias-top-left-fill" d="m 54,24 h 32 l -32,32 z" fill="orange" opacity=".8" display="none"/>
