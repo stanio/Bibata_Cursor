@@ -4,7 +4,7 @@
   <path id="pointer-shape" d="M 54.5068,59.3293 C 54.5068,34.1891 66.0783,32.7661 84.2164,49.3681 L 185.886,139.493 C 193.5573,146.3565 194.9547,164.6331 185.886,168.4278 C 176.8164,172.2226 147.0701,165.9497 123.8344,176.4324 C 100.5977,186.9152 86.1654,213.4889 76.7665,217.7293 C 67.3675,221.9698 54.6562,205.9764 54.5068,195.7192 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
   <g>
     <path class="align-anchor bias-top-left-fill" d="m 116,24 h 32 l -32,32 z" fill="orange" opacity=".8" display="none"/>
-    <rect x="116" y="24" width="96" height="96" rx="40" fill="#179DD8" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+    <rect id="badge-shape" x="116" y="24" width="96" height="96" rx="40" fill="#179DD8" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
     <rect x="138" y="46" width="52" height="52" rx="20" fill="white"/>
   </g>
 </svg>

@@ -7,5 +7,5 @@
         fill="#00FF00" stroke="#0000FF" stroke-width="24" paint-order="stroke fill"/>
     <path d="M 0,195 V 0 l 146.04637,129.21091 h -87.84109 z" fill="#00FF00" stroke="#0000FF" stroke-width="16"/>
   </g>
-  <path d="M 67,44 192.9973,155.34767 118.1885,157.04716 67,210.9195 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <path id="pointer-shape" d="M 67,44 192.9973,155.34767 118.1885,157.04716 67,210.9195 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
 </svg>
