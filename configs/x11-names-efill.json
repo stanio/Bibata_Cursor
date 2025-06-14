@@ -1,0 +1,18 @@
+{
+  "bd_double_arrow": "bd_double_arrow",
+  "circle": "circle",
+  "context-menu": "context-menu",
+  "copy": "copy",
+  "fd_double_arrow": "fd_double_arrow",
+  "left_ptr_watch_": "left_ptr_watch",
+  "link": "link",
+  "move": "move",
+  "pencil": "pencil",
+  "pointer-move": "pointer-move",
+  "sb_down_arrow": "sb_down_arrow",
+  "sb_h_double_arrow": "sb_h_double_arrow",
+  "sb_left_arrow": "sb_left_arrow",
+  "sb_right_arrow": "sb_right_arrow",
+  "sb_up_arrow": "sb_up_arrow",
+  "sb_v_double_arrow": "sb_v_double_arrow"
+}

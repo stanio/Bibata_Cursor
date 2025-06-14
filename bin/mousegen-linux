@@ -33,7 +33,7 @@ mousegenRender() {
 mousegenRender --all-variants "$@"
 
 filterExpandFillCursors() {
-  rm "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/circle \
+  rm -f "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/circle \
      "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/context-menu \
      "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/copy \
      "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/left_ptr_watch \
@@ -41,12 +41,11 @@ filterExpandFillCursors() {
      "$EXPAND_FILL_BUILD_DIR"/*-Modern-*/cursors/pointer-move
 }
 
-if [ $# -eq 0 ]; then
-  echo
-  echo "=== Thinner strokes with expanded fill"
-  echo
-  . bin/expand-fill-remix
-fi
+echo
+echo "=== Thinner strokes with expanded fill"
+echo
+EXPAND_FILL_CURSORS=--linux-cursors=x11-names-efill.json
+. bin/expand-fill-remix
 
 # Create theme files and symlinks
 echo

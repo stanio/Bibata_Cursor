@@ -34,18 +34,17 @@ mousegenRender() {
 mousegenRender --all-variants "$@"
 
 filterExpandFillCursors() {
-  rm "$EXPAND_FILL_BUILD_DIR"/Modern-*/Person.cur \
+  rm -f "$EXPAND_FILL_BUILD_DIR"/Modern-*/Person.cur \
      "$EXPAND_FILL_BUILD_DIR"/Modern-*/Pin.cur \
      "$EXPAND_FILL_BUILD_DIR"/Modern-*/Unavailable.cur \
      "$EXPAND_FILL_BUILD_DIR"/Modern-*/Work.ani
 }
 
-if [ $# -eq 0 ]; then
-  echo
-  echo "=== Thinner strokes with expanded fill"
-  echo
-  . bin/expand-fill-remix
-fi
+echo
+echo "=== Thinner strokes with expanded fill"
+echo
+EXPAND_FILL_CURSORS=--windows-cursors=win-names-efill.json
+. bin/expand-fill-remix
 
 # Create install scripts
 echo
