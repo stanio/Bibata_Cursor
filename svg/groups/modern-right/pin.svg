@@ -1,10 +1,26 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path id="align-anchor" class="bias-top-right-fill" d="m 212,38.4025 h -26 l 26,36 z" fill="cyan" opacity=".8" display="none"/>
   <circle id="cursor-hotspot" class="bias-t0909-r04115-outside" cx="204.918" cy="39.037" r="3" fill="magenta" opacity=".6" display="none"/>
-  <path id="pointer-shape" d="M 212,59.3294 C 212,34.1891 200.429,32.7662 182.2908,49.3682 L 80.6214,139.493 C 72.9501,146.3565 71.5523,164.6331 80.6214,168.4278 C 89.6905,172.2226 119.4369,165.9497 142.6726,176.4324 C 165.9093,186.9152 180.3419,213.4889 189.7411,217.7293 C 199.1393,221.9698 211.8505,205.9764 212,195.7192 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
-  <g>
-    <path class="align-anchor bias-top-left-fill" d="m 54,24 h 32 l -32,32 z" fill="orange" opacity=".8" display="none"/>
-    <rect id="badge-shape" x="54" y="24" width="96" height="96" rx="40" fill="#0A6857" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
+  <defs>
+    <path id="pointer-shape" d="M 212,59.3294 C 212,34.1891 200.429,32.7662 182.2908,49.3682 L 80.6214,139.493 C 72.9501,146.3565 71.5523,164.6331 80.6214,168.4278 C 89.6905,172.2226 119.4369,165.9497 142.6726,176.4324 C 165.9093,186.9152 180.3419,213.4889 189.7411,217.7293 C 199.1393,221.9698 211.8505,205.9764 212,195.7192 z"/>
+    <rect id="badge-shape" x="54" y="24" width="96" height="96" rx="40"/>
+    <path id="badge-align" class="align-anchor-def bias-top-left-fill" d="m 54,24 h 32 l -32,32 z" fill="orange" opacity=".8"/>
+    <mask id="outline-mask">
+      <use href="#pointer-shape" fill="#fff" stroke="#fff" stroke-width="32"/>
+      <use href="#badge-shape" fill="#fff" stroke="#fff" stroke-width="32" align-anchor="badge-align"/>
+    </mask>
+    <mask id="pointer-mask">
+      <use href="#pointer-shape" fill="#fff" stroke="none" stroke-width="32"/>
+    </mask>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0000FF" mask="url(#outline-mask)"/>
+  <g mask="url(#pointer-mask)">
+    <rect width="100%" height="100%" fill="#00FF00"/>
+    <use href="#badge-shape" fill="none" stroke="#0000FF" stroke-width="32" align-anchor="badge-align"/>
+  </g>
+  <g align-anchor="badge-align">
+    <use href="#badge-shape" fill="#0A6857"/>
     <path d="M102.5 44C90.6259 44 81 53.6788 81 65.6181C81 70.9482 82.9271 75.8193 86.1082 79.5887L102.5 99L118.892 79.5881C122.073 75.8193 124 70.9476 124 65.6174C124.001 53.6788 114.374 44 102.5 44ZM102.5 73.7642C97.6164 73.7642 93.6587 69.784 93.6587 64.8737C93.6587 59.9634 97.6164 55.9833 102.5 55.9833C107.384 55.9833 111.342 59.9634 111.342 64.8737C111.342 69.784 107.384 73.7642 102.5 73.7642Z" fill="white"/>
   </g>
 </svg>

@@ -59,6 +59,8 @@
   },
   "replacements": {
     "title": {
+      "Classic-GE": "Classic glass-edge",
+      "Ice-GE": "Ice glass-edge",
       "Thin": "thin",
       "Hairline": "hairline",
       "Shadow": "shadow",
@@ -67,6 +69,10 @@
       "Large": "[large]",
       "Extra-Large": "[x-large]"
     },
+    "packageName": {
+      "Classic-GE": "Classic",
+      "Ice-GE": "Ice"
+    },
     "comment": {
       "Modern": "rounded edge",
       "Original": "sharp edge",
@@ -74,6 +80,8 @@
       "Amber": "Yellowish",
       "Classic": "Black",
       "Ice": "White",
+      "Classic-GE": "Black with translucent",
+      "Ice-GE": "White with translucent",
       "DarkRed": "Rich red",
       "DodgerBlue": "Slightly light blue",
       "Pink": "Queen pink",
@@ -86,6 +94,8 @@
       "NoShadow": "without pointer shadow"
     },
     "packageTitle": {
+      "Classic-GE": "Classic",
+      "Ice-GE": "Ice",
       "Shadow": "w/ Shadow"
     }
   }
