@@ -36,10 +36,10 @@ set -e
 mousegenRender --all-variants "$@"
 
 filterExpandFillCursors() {
-  rm -f "$EXPAND_FILL_BUILD_DIR"/Modern-*/Person.cur \
-     "$EXPAND_FILL_BUILD_DIR"/Modern-*/Pin.cur \
-     "$EXPAND_FILL_BUILD_DIR"/Modern-*/Unavailable.cur \
-     "$EXPAND_FILL_BUILD_DIR"/Modern-*/Work.ani
+  rm -f "$EXPAND_FILL_BUILD_DIR"/*Modern-*/Person.cur \
+     "$EXPAND_FILL_BUILD_DIR"/*Modern-*/Pin.cur \
+     "$EXPAND_FILL_BUILD_DIR"/*Modern-*/Unavailable.cur \
+     "$EXPAND_FILL_BUILD_DIR"/*Modern-*/Work.ani
 }
 
 echo
