@@ -29,6 +29,8 @@ mousegenRender() {
       -s 1.5 -r 32,64,160,320 "$@"
 }
 
+set -e
+
 mousegenRender --all-variants "$@"
 
 # REVISIT: Make --update-existing work for --mousecape-theme, so selected
