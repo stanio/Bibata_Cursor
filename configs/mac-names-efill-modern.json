@@ -1,0 +1,11 @@
+{
+  "move":               "com.apple.coregraphics.Move",
+  "sb_right_arrow":     "com.apple.cursor.27",
+  "sb_h_double_arrow":  "com.apple.cursor.28",
+  "bd_double_arrow":    "com.apple.cursor.30",
+  "sb_up_arrow":        "com.apple.cursor.31",
+  "sb_v_double_arrow":  "com.apple.cursor.32",
+  "fd_double_arrow":    "com.apple.cursor.34",
+  "sb_down_arrow":      "com.apple.cursor.36",
+  "sb_left_arrow":      "com.apple.cursor.38"
+}

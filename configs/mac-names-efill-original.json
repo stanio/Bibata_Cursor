@@ -1,0 +1,16 @@
+{
+  "context-menu":       "com.apple.coregraphics.ArrowCtx",
+  "move":               "com.apple.coregraphics.Move",
+  "link":               "com.apple.cursor.2",
+  "circle":             "com.apple.cursor.3",
+  "left_ptr_watch_":    "com.apple.cursor.4",
+  "copy":               "com.apple.cursor.5",
+  "sb_right_arrow":     "com.apple.cursor.27",
+  "sb_h_double_arrow":  "com.apple.cursor.28",
+  "bd_double_arrow":    "com.apple.cursor.30",
+  "sb_up_arrow":        "com.apple.cursor.31",
+  "sb_v_double_arrow":  "com.apple.cursor.32",
+  "fd_double_arrow":    "com.apple.cursor.34",
+  "sb_down_arrow":      "com.apple.cursor.36",
+  "sb_left_arrow":      "com.apple.cursor.38"
+}
