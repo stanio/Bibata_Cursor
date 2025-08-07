@@ -20,10 +20,6 @@ mousegenRender() {
       -Dmousegen.animRateGain=1.395 -Dmousegen.maxAnimSize=96"
   bin/mousegen-render \
       --windows-cursors --build-dir "$BUILD_DIR" \
-      --source svg/modern --name Modern \
-      --source svg/original --name Original \
-      --source svg/modern-right --name Left-handed-Modern \
-      --source svg/original-right --name Left-handed-Original \
       $RENDER_COLORS \
       --pointer-shadow=9,15,9,0.3 --no-shadow-also \
       --thin-stroke --stroke-width=8:Hairline \
@@ -33,20 +29,24 @@ mousegenRender() {
 
 set -e
 
-mousegenRender --all-variants "$@"
-
-filterExpandFillCursors() {
-  rm -f "$EXPAND_FILL_BUILD_DIR"/*Modern-*/Person.cur \
-     "$EXPAND_FILL_BUILD_DIR"/*Modern-*/Pin.cur \
-     "$EXPAND_FILL_BUILD_DIR"/*Modern-*/Unavailable.cur \
-     "$EXPAND_FILL_BUILD_DIR"/*Modern-*/Work.ani
-}
+mousegenRender --source svg/modern --name Modern \
+    --source svg/original --name Original \
+    --source svg/modern-right --name Left-handed-Modern \
+    --source svg/original-right --name Left-handed-Original \
+    --all-variants "$@"
 
 echo
 echo "=== Thinner strokes with expanded fill"
 echo
-EXPAND_FILL_CURSORS=--windows-cursors=win-names-efill.json
-. bin/expand-fill-remix
+mousegenRender --windows-cursors=win-names-efill-modern.json \
+    --source svg/modern --name Modern \
+    --source svg/modern-right --name Left-handed-Modern \
+    --expand-fill=4 "$@"
+echo
+mousegenRender --windows-cursors=win-names-efill-original.json \
+    --source svg/original --name Original \
+    --source svg/original-right --name Left-handed-Original \
+    --expand-fill=4 "$@"
 
 # Create install scripts
 echo
@@ -55,7 +55,7 @@ bin/mousegen windowsInstallScripts "$BUILD_DIR" --config configs \
 
 echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR/.."
-cd "$BUILD_DIR/.." || exit
+cd "$BUILD_DIR/.."
 unix2dos --quiet COPYING */*.inf
 for color in $MOUSE_COLORS; do
   jar cMf ../Bibata-Windows-$color-v$VERSION.zip             COPYING */[MO]*-$color* */install-[MO]*-$color*.inf
