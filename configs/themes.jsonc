@@ -13,7 +13,7 @@
       "comment": "${color} and ${shape}, ${right}, ${outline} ${shadow} Bibata cursors. https://github.com/stanio/Bibata_Cursor\n; Bibata_Cursor is created by Abdulkaiz Khatri.",
       // Multiple schemes with the same "packageName" get grouped in the same install script.
       // The package name is included in the install script name: "install-${packageName}.inf"
-      "packageName": "${right}-${shape}-${color}-${shadow}",
+      "packageName": "Bibata-${right}-${color}-${outline}-${shadow}",
       "packageTitle": "Bibata ${shape} ${color} ${right} ${shadow} (v${version})",
       "packageFamily": "Bibata"
     }

@@ -57,8 +57,9 @@ echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR/.."
 cd "$BUILD_DIR/.."
 unix2dos --quiet COPYING */*.inf
+set +e # Classic/Classic-GE and Ice/Ice-GE get groupped in the same *.inf
 for color in $MOUSE_COLORS; do
-  jar cMf ../Bibata-Windows-$color-v$VERSION.zip             COPYING */[MO]*-$color* */install-[MO]*-$color*.inf
-  jar cMf ../Bibata-Windows-Left-handed-$color-v$VERSION.zip COPYING */Left*-$color* */install-Left*-$color*.inf
+  jar cMf ../Bibata-Windows-$color-v$VERSION.zip             COPYING */[MO]*-$color* */install-Bibata-$color*.inf
+  jar cMf ../Bibata-Windows-Left-handed-$color-v$VERSION.zip COPYING */Left*-$color* */install-Bibata-Left*-$color*.inf
 done
 echo done.
