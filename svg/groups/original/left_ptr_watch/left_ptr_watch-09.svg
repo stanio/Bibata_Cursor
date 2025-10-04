@@ -1,11 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
-  <path id="align-anchor" class="bias-bottom-left-fill" d="m 67,148 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
-  <circle id="cursor-hotspot" class="bias-t19375-l09375" cx="52" cy="13" r="3" fill="magenta" opacity=".6" display="none"/>
-  <path d="M 67,44 156,124.744 67,164 z" fill="#00FF00" stroke="#0000FF" stroke-width="32" paint-order="stroke fill"/>
-  <circle cx="118" cy="162" r="62" fill="#FF0000" stroke="#0000FF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
+  <path id="align-anchor" class="bias-bottom-left-fill" d="m 67,156 v 32 l 32,-32 z" fill="cyan" opacity=".8" display="none"/>
+  <circle id="cursor-hotspot" class="bias-t2218-left-outside" cx="67" cy="44" r="3" fill="magenta" opacity=".6" display="none"/>
+  <defs>
+    <path id="pointer-shape" d="M 67,44 156,124.744 67,164 z"/>
+    <circle id="badge-shape" cx="118" cy="162" r="62"/>
+    <mask id="outline-mask">
+      <use href="#pointer-shape" fill="#fff" stroke="#fff" stroke-width="32"/>
+      <use href="#badge-shape" fill="#fff" stroke="#fff" stroke-width="32" class="fixed-fill"/>
+    </mask>
+    <mask id="pointer-mask">
+      <use href="#pointer-shape" fill="#fff" stroke="none" stroke-width="32"/>
+    </mask>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0000FF" mask="url(#outline-mask)"/>
+  <g mask="url(#pointer-mask)">
+    <rect width="100%" height="100%" fill="#00FF00"/>
+    <use href="#badge-shape" fill="none" stroke="#0000FF" stroke-width="32" class="fixed-fill"/>
+  </g>
+  <use href="#badge-shape" fill="#FF0000"/>
   <g mask="url(#wheel-mask)">
     <mask id="wheel-mask">
-      <circle cx="118" cy="162" r="48.611" fill="white" stroke="white" stroke-width="0" class="fixed-stroke"/>
+      <circle cx="118" cy="162" r="48.611" fill="#fff" stroke="#fff" stroke-width="0" class="fixed-stroke"/>
     </mask>
 
   <g transform="translate(118 162) scale(1.56)">
