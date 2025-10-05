@@ -13,9 +13,9 @@
     </mask>
   </defs>
 
-  <rect width="100%" height="100%" fill="#0000FF" mask="url(#outline-mask)"/>
+  <rect width="256" height="256" fill="#0000FF" mask="url(#outline-mask)"/>
   <g mask="url(#hand-mask)">
-    <rect width="100%" height="100%" fill="#00FF00"/>
+    <rect width="256" height="256" fill="#00FF00"/>
     <use href="#badge-shape" fill="none" stroke="#0000FF" stroke-width="32"/>
   </g>
   <g>
