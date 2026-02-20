@@ -4,6 +4,11 @@
     "#0000FF": "#FFFFFF",
     "#FF0000": "#001524"
   },
+  "Amber-Dark": {
+    "#00FF00": "#FF8300",
+    "#0000FF": "#0000009A", // Glass-Edge
+    "#FF0000": "#F0F8FF"
+  },
   "Classic": {
     "#00FF00": "#000000",
     "#96C865": "#000000", // bottom_left_corner

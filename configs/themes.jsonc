@@ -70,6 +70,7 @@
       "Extra-Large": "[x-large]"
     },
     "packageName": {
+      "Amber-Dark": "Amber",
       "Classic-GE": "Classic",
       "Ice-GE": "Ice"
     },
@@ -78,6 +79,7 @@
       "Original": "sharp edge",
 
       "Amber": "Yellowish",
+      "Amber-Dark": "Yellowish with dark",
       "Classic": "Black",
       "Ice": "White",
       "Classic-GE": "Black with translucent",
