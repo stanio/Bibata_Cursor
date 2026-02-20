@@ -1,19 +1,19 @@
 {
   "x11Themes": [
     {
-      "name": "Bibata-${right}-${shape}-${color}-${outline}-${shadow}",
-      "title": "Bibata ${shape} ${color} ${right} ${outlineAndShadow}",
+      "name": "Bibata-${right}-${shape}-${color}-${size}-${outline}-${shadow}",
+      "title": "Bibata ${shape} ${color} ${right} ${sizeOutlineShadow}",
       "comment": "${color} and ${shape}, ${right}, ${outline} ${shadow} Bibata cursors (v${version})"
     }
   ],
   "winSchemes": [
     {
       "name": "${right}-${shape}-${color}-${size}-${outline}-${shadow}",
-      "title": "Bibata ${shape} ${color} ${right} ${size} ${outlineAndShadow}",
+      "title": "Bibata ${shape} ${color} ${right} ${sizeBracket} ${outlineAndShadow}",
       "comment": "${color} and ${shape}, ${right}, ${outline} ${shadow} Bibata cursors. https://github.com/stanio/Bibata_Cursor\n; Bibata_Cursor is created by Abdulkaiz Khatri.",
       // Multiple schemes with the same "packageName" get grouped in the same install script.
       // The package name is included in the install script name: "install-${packageName}.inf"
-      "packageName": "Bibata-${right}-${color}-${outline}-${shadow}",
+      "packageName": "Bibata-${right}-${color}-${size}-${outline}-${shadow}",
       "packageTitle": "Bibata ${shape} ${color} ${right} ${shadow} (v${version})",
       "packageFamily": "Bibata"
     }
@@ -53,9 +53,11 @@
     "right":   ["", "Left-handed"],
     "outline": ["", "Thin", "Hairline"],
     "shadow":  ["", "Shadow"], // Linux: --var "shadow=" --var "shadow=NoShadow"
-    "size":    [""], // Windows: --var "size=Normal" --var "size=Large"
+    "size":    ["Normal", "Medium", "Large"], // Linux: --var "size="
     "version": ["2.0.7-stanio-test"],
-    "outlineAndShadow": ["(${outline}, ${shadow})"]
+    "sizeBracket": ["[${size}]"],
+    "outlineAndShadow": ["(${outline}, ${shadow})"],
+    "sizeOutlineShadow": ["(${size}, ${outline}, ${shadow})"]
   },
   "replacements": {
     "title": {
@@ -66,7 +68,8 @@
       "Shadow": "shadow",
       "NoShadow": "w/o shadow",
       "Normal": "",
-      "Large": "[large]",
+      "Medium": "medium",
+      "Large": "large",
       "Extra-Large": "[x-large]"
     },
     "packageName": {

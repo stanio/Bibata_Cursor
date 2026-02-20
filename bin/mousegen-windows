@@ -24,7 +24,7 @@ mousegenRender() {
       --pointer-shadow=9,15,9,0.3 --no-shadow-also \
       --thin-stroke --stroke-width=8:Hairline \
       --min-stroke-width=0.9 \
-      -s N,L -r 32,48,64,72,96,128 "$@"
+      -s N,1.375:Medium,L -r 32,48,64,72,96,128 "$@"
 }
 
 set -e
@@ -50,8 +50,8 @@ mousegenRender --windows-cursors=win-names-efill-original.json \
 
 # Create install scripts
 echo
-bin/mousegen windowsInstallScripts "$BUILD_DIR" --config configs \
-	$THEME_COLORS --var version=$VERSION --var size=Normal --var size=Large
+bin/mousegen windowsInstallScripts "$BUILD_DIR/NoShadow" --config configs \
+	$THEME_COLORS --var version=$VERSION
 
 echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR/.."
