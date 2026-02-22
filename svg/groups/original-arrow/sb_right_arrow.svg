@@ -1,3 +1,4 @@
+<?sizing-origin 0 0.5 ?>
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path id="align-anchor" class="bias-top-left-fill" d="m 172.5,112 h -32 l 32,32 z" fill="cyan" opacity=".8" display="none"/>
 <circle id="cursor-hotspot" class="bias-r155-outside" cx="220.559" cy="128" r="3" fill="magenta" opacity=".6" display="none"/>

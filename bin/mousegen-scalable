@@ -13,8 +13,9 @@ done
 
 mousegenRender() {
   export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dmousegen.dynamicOutput=true \
-      -Dmousegen.animRateGain=1.34 -Dmousegen.balanceCanvasSize=true \
-      -Dmousegen.canvasBalanceFactor=1 -Dmousegen.canvasBalanceLimit=0.5"
+      -Dmousegen.animRateGain=1.34 -Dmousegen.enableSizingOrigin=true \
+      -Dmousegen.defaultAnchor=0.5 -Dmousegen.defaultScalableGrid=4 \
+      -Dmousegen.altAlignAnchor=align-anchor-scalable"
   bin/mousegen-render \
       --scalable-cursors --build-dir "$BUILD_DIR" \
       $RENDER_COLORS \
