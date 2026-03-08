@@ -26,28 +26,31 @@ mousegenRender() {
 
 set -e
 
-mousegenRender --source svg/modern --name Bibata-Modern \
-    --source svg/original --name Bibata-Original \
-    --source svg/modern-right --name Bibata-Left-handed-Modern \
-    --source svg/original-right --name Bibata-Left-handed-Original \
+modernName='Modern-${color}-${size}-${outline}-${shadow}'
+originalName='Original-${color}-${size}-${outline}-${shadow}'
+
+mousegenRender --source svg/modern --name "\${shadow:Shadow}/Bibata-$modernName" \
+    --source svg/original --name "\${shadow:Shadow}/Bibata-$originalName" \
+    --source svg/modern-right --name "\${shadow:Shadow}/Bibata-Left-handed-$modernName" \
+    --source svg/original-right --name "\${shadow:Shadow}/Bibata-Left-handed-$originalName" \
     --all-variants "$@"
 
 echo
 echo "=== Thinner strokes with expanded fill"
 echo
 mousegenRender --scalable-cursors=x11-names-efill-modern.json \
-    --source svg/modern --name Bibata-Modern \
-    --source svg/modern-right --name Bibata-Left-handed-Modern \
+    --source svg/modern --name "\${shadow:Shadow}/Bibata-$modernName" \
+    --source svg/modern-right --name "\${shadow:Shadow}/Bibata-Left-handed-$modernName" \
     --expand-fill=4 "$@"
 echo
 mousegenRender --scalable-cursors=x11-names-efill-original.json \
-    --source svg/original --name Bibata-Original \
-    --source svg/original-right --name Bibata-Left-handed-Original \
+    --source svg/original --name "\${shadow:Shadow}/Bibata-$originalName" \
+    --source svg/original-right --name "\${shadow:Shadow}/Bibata-Left-handed-$originalName" \
     --expand-fill=4 "$@"
 
 #echo
 #echo dos2unix
-#find "$BUILD_DIR" -type f -name '*.svg' -exec dos2unix -q "{}" +
+#find "$BUILD_DIR" -type f -name '*.svg' -name 'metadata.json' -exec dos2unix -q "{}" +
 
 echo
 echo 'Run `bin/mousegen-linux` to complete the packages.'

@@ -52,7 +52,7 @@
     "color":   ["Amber", "Classic", "Ice"],
     "right":   ["", "Left-handed"],
     "outline": ["", "Thin", "Hairline"],
-    "shadow":  ["", "Shadow"], // Linux: --var "shadow=" --var "shadow=NoShadow"
+    "shadow":  [""], // Linux: --var "shadow=" --var "shadow=NoShadow"
     "size":    ["Normal", "Medium", "Large"], // Linux: --var "size="
     "version": ["2.0.7-stanio-test"],
     "sizeBracket": ["[${size}]"],

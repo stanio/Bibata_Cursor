@@ -27,23 +27,26 @@ mousegenRender() {
 
 set -e
 
-mousegenRender --source svg/modern --name Bibata-Modern \
-    --source svg/original --name Bibata-Original \
-    --source svg/modern-right --name Bibata-Left-handed-Modern \
-    --source svg/original-right --name Bibata-Left-handed-Original \
+modernName='Modern-${color}-${size}-${outline}-${shadow}'
+originalName='Original-${color}-${size}-${outline}-${shadow}'
+
+mousegenRender --source svg/modern --name "\${shadow:NoShadow}/Bibata-$modernName" \
+    --source svg/original --name "\${shadow:NoShadow}/Bibata-$originalName" \
+    --source svg/modern-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$modernName" \
+    --source svg/original-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$originalName" \	
     --all-variants "$@"
 
 echo
 echo "=== Thinner strokes with expanded fill"
 echo
 mousegenRender --mousecape-theme=mac-names-efill-modern.json \
-    --source svg/modern --name Bibata-Modern \
-    --source svg/modern-right --name Bibata-Left-handed-Modern \
+    --source svg/modern --name "\${shadow:NoShadow}/Bibata-$modernName" \
+    --source svg/modern-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$modernName" \
     --expand-fill=4 --update-existing "$@"
 echo
 mousegenRender --mousecape-theme=mac-names-efill-original.json \
-    --source svg/original --name Bibata-Original \
-    --source svg/original-right --name Bibata-Left-handed-Original \
+    --source svg/original --name "\${shadow:NoShadow}/Bibata-$originalName" \
+    --source svg/original-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$originalName" \
     --expand-fill=4 --update-existing "$@"
 
 echo
@@ -52,7 +55,7 @@ cp configs/COPYING "$BUILD_DIR"
 cd "$BUILD_DIR"
 dos2unix --quiet COPYING *.cape
 for color in $MOUSE_COLORS; do
-  jar cMf ../Bibata-Mousecape-$color-v$VERSION.zip             COPYING Bibata-[MO]*-$color*.cape
-  jar cMf ../Bibata-Mousecape-Left-handed-$color-v$VERSION.zip COPYING Bibata-Left*-$color*.cape
+  jar cMf ../Bibata-Mousecape-$color-v$VERSION.zip             COPYING */Bibata-[MO]*-$color*.cape
+  jar cMf ../Bibata-Mousecape-Left-handed-$color-v$VERSION.zip COPYING */Bibata-Left*-$color*.cape  
 done
 echo done.

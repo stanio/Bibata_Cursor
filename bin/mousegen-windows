@@ -3,7 +3,7 @@ VERSION=2.0.7-stanio-13-dev
 
 cd "$(dirname "$0")/.."
 
-BUILD_DIR=themes/windows/Bibata-Cursors-v$VERSION
+BUILD_DIR=themes/windows/
 
 RENDER_COLORS=
 THEME_COLORS=
@@ -29,33 +29,38 @@ mousegenRender() {
 
 set -e
 
-mousegenRender --source svg/modern --name Modern \
-    --source svg/original --name Original \
-    --source svg/modern-right --name Left-handed-Modern \
-    --source svg/original-right --name Left-handed-Original \
+modernName='Modern-${color}-${size}-${outline}-${shadow}'
+originalName='Original-${color}-${size}-${outline}-${shadow}'
+
+mousegenRender --source svg/modern --name "\${shadow:NoShadow}/$modernName" \
+    --source svg/original --name "\${shadow:NoShadow}/$originalName" \
+    --source svg/modern-right --name "\${shadow:NoShadow}/Left-handed-$modernName" \
+    --source svg/original-right --name "\${shadow:NoShadow}/Left-handed-$originalName" \
     --all-variants "$@"
 
 echo
 echo "=== Thinner strokes with expanded fill"
 echo
 mousegenRender --windows-cursors=win-names-efill-modern.json \
-    --source svg/modern --name Modern \
-    --source svg/modern-right --name Left-handed-Modern \
+    --source svg/modern --name "\${shadow:NoShadow}/$modernName" \
+    --source svg/modern-right --name "\${shadow:NoShadow}/Left-handed-$modernName" \	
     --expand-fill=4 "$@"
 echo
 mousegenRender --windows-cursors=win-names-efill-original.json \
-    --source svg/original --name Original \
-    --source svg/original-right --name Left-handed-Original \
+    --source svg/original --name "\${shadow:NoShadow}/$originalName" \
+    --source svg/original-right --name "\${shadow:NoShadow}/Left-handed-$originalName" \
     --expand-fill=4 "$@"
 
 # Create install scripts
 echo
 bin/mousegen windowsInstallScripts "$BUILD_DIR/NoShadow" --config configs \
 	$THEME_COLORS --var version=$VERSION
+bin/mousegen windowsInstallScripts "$BUILD_DIR/Shadow" --config configs \
+	$THEME_COLORS --var version=$VERSION --var shadow=Shadow
 
 echo -n "Compressing packages... "
-cp configs/COPYING "$BUILD_DIR/.."
-cd "$BUILD_DIR/.."
+cp configs/COPYING "$BUILD_DIR"
+cd "$BUILD_DIR"
 unix2dos --quiet COPYING */*.inf
 set +e # Classic/Classic-GE and Ice/Ice-GE get groupped in the same *.inf
 for color in $MOUSE_COLORS; do
