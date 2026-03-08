@@ -15,7 +15,7 @@ done
 
 mousegenRender() {
   export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dmousegen.dynamicOutput=true \
-      -Dmousegen.renderer.asyncEncoding=1 \
+      -Dmousegen.renderer.asyncEncoding=2 \
       -Dmousegen.animRateGain=1.34 -Dxcur.cropToContent=true"
   bin/mousegen-render \
       --linux-cursors --build-dir "$BUILD_DIR" \
