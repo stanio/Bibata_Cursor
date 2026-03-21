@@ -13,7 +13,7 @@ done
 
 mousegenRender() {
   export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dmousegen.dynamicOutput=true \
-      -Dmousegen.animRateGain=1.34 -Dmousegen.maxAnimSize=160 \
+      -Dmousegen.animRateGain=1.395 -Dmousegen.maxAnimSize=160 \
       -Dmousegen.renderer.asyncEncoding=2,3 \
       -Dmousecape.author=ful1e5 -Dmousecape.capeVersion=$VERSION"
   bin/mousegen-render \

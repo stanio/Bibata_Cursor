@@ -5,7 +5,7 @@
   },
   "left_ptr_watch_": {
     "durationSeconds": 3,
-    "frameRate": 15
+    "frameRate": 14.333
   },
   "wait": {
     "durationSeconds": 3,
@@ -13,6 +13,6 @@
   },
   "wait_": {
     "durationSeconds": 3,
-    "frameRate": 15
+    "frameRate": 14.333
   }
 }
