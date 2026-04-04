@@ -1,0 +1,28 @@
+#!/bin/sh
+VERSION=2.0.7-stanio-14-dev
+
+cd "$(dirname "$0")/.."
+
+BUILD_DIR=themes/hyprland
+
+[ -z "$MOUSE_COLORS" ] && MOUSE_COLORS="Classic Ice"
+
+export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dhyprcursor.version=$VERSION \
+    -Dmousegen.flapper.width=3 -Dmousegen.flapper=⠒⠂⠀⠐⠒⠀⠀⠒⠂⠀⠐⠒⠀⠀⠲⠀⠀⠴⠀⠠⠤⠀⠤⠄⠠⠤⠀⠤⠄⠀⠦⠀⠀⠖⠀⠀ \
+    -Dhyprcursor.author=ful1e5 -Dhyprcursor.description.cleanup"='\x20\(v.*\)$'
+
+set -e
+
+bin/mousegen hyprcursor themes/linux/Shadow "$BUILD_DIR/Shadow"
+bin/mousegen hyprcursor themes/linux/NoShadow "$BUILD_DIR/NoShadow"
+
+echo
+echo -n "Compressing packages... "
+cp configs/COPYING "$BUILD_DIR"
+cd "$BUILD_DIR"
+dos2unix --quiet COPYING */*/*.hl
+for color in $MOUSE_COLORS; do
+  tar cJf ../Bibata-Hyprcursors-$color-v$VERSION.tar.xz             COPYING */Bibata-[MO]*-$color*
+  tar cJf ../Bibata-Hyprcursors-Left-handed-$color-v$VERSION.tar.xz COPYING */Bibata-Left*-$color*
+done
+echo done.
