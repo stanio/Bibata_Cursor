@@ -13,8 +13,8 @@ export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dhyprcursor.version=$VERSION \
 
 set -e
 
-bin/mousegen hyprcursor themes/linux/Shadow "$BUILD_DIR/Shadow"
-bin/mousegen hyprcursor themes/linux/NoShadow "$BUILD_DIR/NoShadow"
+bin/mousegen hyprcursor themes/xcursors/Shadow "$BUILD_DIR/Shadow"
+bin/mousegen hyprcursor themes/xcursors/NoShadow "$BUILD_DIR/NoShadow"
 
 echo
 echo -n "Compressing packages... "

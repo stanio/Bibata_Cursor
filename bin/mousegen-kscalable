@@ -3,7 +3,7 @@
 
 cd "$(dirname "$0")/.."
 
-BUILD_DIR=themes/linux
+BUILD_DIR=themes/xcursors
 
 RENDER_COLORS=
 [ -z "$MOUSE_COLORS" ] && MOUSE_COLORS="Classic Ice"
@@ -54,4 +54,4 @@ mousegenRender --scalable-cursors=x11-names-efill-original.json \
 #find "$BUILD_DIR" -type f -name '*.svg' -name 'metadata.json' -exec dos2unix -q "{}" +
 
 echo
-echo 'Run `bin/mousegen-linux` to complete the packages.'
+echo 'Run `bin/mousegen-xcursors` to complete the packages.'

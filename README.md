@@ -26,11 +26,12 @@ embedded into the sources:
     <path class="align-anchor" d="m #,# ..." />
 ```
 
-For my releases I have two scripts with specific configurations:
+For my releases I have a few scripts with specific configurations:
 
 ```
 $ bin/mousegen-windows
-$ bin/mousegen-linux
+$ bin/mousegen-capes
+$ bin/mousegen-xcursors
 ```
 
 For building customized versions of the cursors see `mousegen-render` further.
