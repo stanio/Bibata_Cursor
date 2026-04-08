@@ -1,4 +1,5 @@
 {
+  "left_ptr":           "com.apple.coregraphics.Arrow",
   "context-menu":       "com.apple.coregraphics.ArrowCtx",
   "move":               "com.apple.coregraphics.Move",
   "link":               "com.apple.cursor.2",
