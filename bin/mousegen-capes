@@ -15,7 +15,7 @@ mousegenRender() {
   [ -t 1 ] && richout=true
   export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dmousegen.dynamicOutput=$richout \
       -Dmousegen.animRateGain=1.395 -Dmousegen.maxAnimSize=160 \
-      -Dmousegen.renderer.asyncEncoding=2,3 \
+      -Dmousegen.colors.replaceNamed=true -Dmousegen.renderer.asyncEncoding=2,3 \
       -Dmousecape.author=ful1e5 -Dmousecape.capeVersion=$VERSION"
   bin/mousegen-render \
       --mousecape-theme --build-dir "$BUILD_DIR" \

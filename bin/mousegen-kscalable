@@ -14,6 +14,7 @@ done
 mousegenRender() {
   [ -t 1 ] && richout=true
   export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dmousegen.dynamicOutput=$richout \
+      -Dmousegen.colors.replaceNamed=true \
       -Dmousegen.animRateGain=1.34 -Dmousegen.enableSizingOrigin=true \
       -Dmousegen.defaultAnchor=0.5 -Dmousegen.defaultScalableGrid=4 \
       -Dmousegen.altAlignAnchor=align-anchor-scalable"

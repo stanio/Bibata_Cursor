@@ -166,11 +166,11 @@
 
   "CatMocha": {
     "#00FF00": "#1E1E2E",
-    "#0000FF": "#CDD6F4",
-    "#FF0000": "#1E1E2E",
+    "#0000FF": "#BAC2DE",
 
-    "#32A0DA": "#89B4FA",
-    "#F05024": "#FAB387",
+    "#FF0000": "#11111B",
+    "#32A0DA": "#89DCEB",
+    "#F05024": "#EBA0AC",
     "#7EBA41": "#A6E3A1",
     "#FCB813": "#F9E2AF",
 
@@ -179,42 +179,84 @@
     "#4FADDF": "#1E1E2E",
     "#F1613A": "#1E1E2E",
 
-    "white":   "#1E1E2E",
-    "#FFFFFF": "#1E1E2E",
-    "#FE0000": "#F38BA8",
-    "#5F3BE4": "#CBA6F7",
-    "#06B231": "#A6E3A1",
-    "#F27400": "#FAB387",
-    "#606060": "#F9E2AF",
-    "#2C2C2C": "#F9E2AF",
-    "#0A6857": "#74C7EC",
-    "#179DD8": "#89B4FA"
+    "#01FF01": "#BAC2DE",
+    "#0101FF": "#1E1E2E",
+
+    "black": "#1E1E2E",
+    "white": "#BAC2DE",
+
+    "#FE0000":   "#11111B", // Red/forbidden
+    "#0000FEFF": "#F38BA8",
+    "#0000FE":   "#F38BA8",
+    "#FFFFFE":   "#F38BA8",
+    "#5F3BE4":   "#11111B", // Violet/ctx-menu
+    "#0000FCFF": "#B4BEFE",
+    "#FFFFFC":   "#B4BEFE",
+    "#06B231":   "#11111B", // Green/copy
+    "#0000FBFF": "#A6E3A1",
+    "#FFFFFB":   "#A6E3A1",
+    "#F27400":   "#11111B", // Orange/ask
+    "#0000FDFF": "#FAB387",
+    "#FFFFFD":   "#FAB387",
+    "#606060":   "#11111B", // Gray/link
+    "#0000FAFF": "#CBA6F7",
+    "#FFFFFA":   "#CBA6F7",
+    "#2C2C2C":   "#11111B", // Dark gray/person
+    "#0000F9FF": "#89B4FA",
+    "#FFFFF9":   "#89B4FA",
+    "#0A6857":   "#11111B", // Dark green/location
+    "#0000F8FF": "#74C7EC",
+    "#FFFFF8":   "#74C7EC",
+    "#179DD8":   "#11111B", // Sky/move
+    "#0000F7FF": "#89DCEB",
+    "#FFFFF7":   "#89DCEB"
   },
   "CatLatte": {
-    "#00FF00": "#EFF1F5",
+    "#00FF00": "#E6E9EF",
     "#0000FF": "#4C4F69",
+
     "#FF0000": "#EFF1F5",
+    "#32A0DA": "#04A5E5", // blue
+    "#F05024": "#E64553", // red
+    "#7EBA41": "#40A02B", // green
+    "#FCB813": "#DF8E1D", // yellow
 
-    "#32A0DA": "#1E66F5",
-    "#F05024": "#FE640B",
-    "#7EBA41": "#40A02B",
-    "#FCB813": "#DF8E1D",
+    "#96C865": "#E6E9EF",
+    "#FDBE2A": "#E6E9EF",
+    "#4FADDF": "#E6E9EF",
+    "#F1613A": "#E6E9EF",
 
-    "#96C865": "#EFF1F5",
-    "#FDBE2A": "#EFF1F5",
-    "#4FADDF": "#EFF1F5",
-    "#F1613A": "#EFF1F5",
+    "#01FF01": "#4C4F69",
+    "#0101FF": "#E6E9EF",
 
-    "white":   "#EFF1F5",
-    "#FFFFFF": "#EFF1F5",
-    "#FE0000": "#D20F39",
-    "#5F3BE4": "#8839EF",
-    "#06B231": "#40A02B",
-    "#F27400": "#FE640B",
-    "#606060": "#DF8E1D",
-    "#2C2C2C": "#DF8E1D",
-    "#0A6857": "#209FB5",
-    "#179DD8": "#1E66F5"
+    "black": "#E6E9EF",
+    "white": "#4C4F69",
+
+    "#FE0000":   "#EFF1F5", // Red/forbidden
+    "#0000FE":   "#D20F39",
+    "#0000FEFF": "#D20F39",
+    "#FFFFFE":   "#D20F39",
+    "#5F3BE4":   "#EFF1F5", // Violet/ctx-menu
+    "#0000FCFF": "#7287FD",
+    "#FFFFFC":   "#7287FD",
+    "#06B231":   "#EFF1F5", // Green/copy
+    "#0000FBFF": "#40A02B",
+    "#FFFFFB":   "#40A02B",
+    "#F27400":   "#EFF1F5", // Orange/ask
+    "#0000FDFF": "#FE640B",
+    "#FFFFFD":   "#FE640B",
+    "#606060":   "#EFF1F5", // Gray/link
+    "#0000FAFF": "#8839EF",
+    "#FFFFFA":   "#8839EF",
+    "#2C2C2C":   "#EFF1F5", // Dark gray/person
+    "#0000F9FF": "#1E66F5",
+    "#FFFFF9":   "#1E66F5",
+    "#0A6857":   "#EFF1F5", // Dark green/location
+    "#0000F8FF": "#179299",
+    "#FFFFF8":   "#179299",
+    "#179DD8":   "#EFF1F5",  // Sky/move
+    "#0000F7FF": "#04A5E5",
+    "#FFFFF7":   "#04A5E5"
   },
 
   "Rose-Pine": {
