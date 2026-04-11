@@ -64,9 +64,7 @@ cp configs/COPYING "$BUILD_DIR"
 cd "$BUILD_DIR"
 dos2unix --quiet COPYING */*/*.theme
 for color in $MOUSE_COLORS; do
-  tar cJf ../Bibata-Xcursors-$color-v$VERSION.tar.xz             COPYING */Bibata-[MO]*-$color*/*.theme */Bibata-[MO]*-$color*/cursors
-  tar cJf ../Bibata-Scalable-$color-v$VERSION.tar.xz             COPYING */Bibata-[MO]*-$color*/*.theme */Bibata-[MO]*-$color*/cursors_scalable
-  tar cJf ../Bibata-Xcursors-Left-handed-$color-v$VERSION.tar.xz COPYING */Bibata-Left*-$color*/*.theme */Bibata-[MO]*-$color*/cursors
-  tar cJf ../Bibata-Scalable-Left-handed-$color-v$VERSION.tar.xz COPYING */Bibata-Left*-$color*/*.theme */Bibata-[MO]*-$color*/cursors_scalable
+  tar cJf ../Bibata-Xcursors-$color-v$VERSION.tar.xz             COPYING */Bibata-[MO]*-$color*
+  tar cJf ../Bibata-Xcursors-Left-handed-$color-v$VERSION.tar.xz COPYING */Bibata-Left*-$color*
 done
 echo done.
