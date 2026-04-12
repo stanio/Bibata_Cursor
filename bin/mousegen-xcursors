@@ -24,7 +24,7 @@ mousegenRender() {
       --pointer-shadow=9,15,9,0.3: --no-shadow-also=NoShadow \
       --thin-stroke --stroke-width=8:Hairline \
       --min-stroke-width=0.9 \
-      -s=1.5/0.75 -r 24,30,32,36,42,48,54,60,64,72 "$@"
+      -s=1.375/0.75 -r 18,24,30,32,36,42,48,54,60,64,72 "$@"
 }
 
 set -e
