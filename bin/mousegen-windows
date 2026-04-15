@@ -44,7 +44,7 @@ echo "=== Thinner strokes with expanded fill"
 echo
 mousegenRender --windows-cursors=win-names-efill-modern.json \
     --source svg/modern --name "\${shadow:NoShadow}/$modernName" \
-    --source svg/modern-right --name "\${shadow:NoShadow}/Left-handed-$modernName" \	
+    --source svg/modern-right --name "\${shadow:NoShadow}/Left-handed-$modernName" \
     --expand-fill=4 "$@"
 echo
 mousegenRender --windows-cursors=win-names-efill-original.json \

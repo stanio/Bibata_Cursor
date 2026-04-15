@@ -34,7 +34,7 @@ originalName='Original-${color}-${size}-${outline}-${shadow}'
 mousegenRender --source svg/modern --name "\${shadow:NoShadow}/Bibata-$modernName" \
     --source svg/original --name "\${shadow:NoShadow}/Bibata-$originalName" \
     --source svg/modern-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$modernName" \
-    --source svg/original-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$originalName" \	
+    --source svg/original-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$originalName" \
     --all-variants "$@"
 
 echo
@@ -57,6 +57,6 @@ cd "$BUILD_DIR"
 dos2unix --quiet COPYING *.cape
 for color in $MOUSE_COLORS; do
   jar cMf ../Bibata-Mousecape-$color-v$VERSION.zip             COPYING */Bibata-[MO]*-$color*.cape
-  jar cMf ../Bibata-Mousecape-Left-handed-$color-v$VERSION.zip COPYING */Bibata-Left*-$color*.cape  
+  jar cMf ../Bibata-Mousecape-Left-handed-$color-v$VERSION.zip COPYING */Bibata-Left*-$color*.cape
 done
 echo done.
