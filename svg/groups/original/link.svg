@@ -4,22 +4,23 @@
   <defs>
     <path id="pointer-shape" d="M 67,44 156,124.744 67,164 z"/>
     <circle id="badge-shape" cx="118" cy="162" r="62"/>
-    <mask id="outline-mask">
-      <use href="#pointer-shape" fill="#fff" stroke="#fff" stroke-width="32"/>
-      <use href="#badge-shape" fill="#fff" stroke="#fff" stroke-width="32" class="fixed-fill"/>
+    <mask id="outline-mask" color="#FFFFFF00">
+      <use href="#pointer-shape" fill="currentColor" stroke="currentColor" stroke-width="32"/>
+      <use href="#badge-shape" fill="currentColor" stroke="currentColor" stroke-width="32" class="fixed-fill"/>
     </mask>
-    <mask id="pointer-mask">
-      <use href="#pointer-shape" fill="#fff" stroke="none" stroke-width="32"/>
+    <mask id="pointer-mask" color="#FFFFFF00">
+      <use href="#pointer-shape" fill="currentColor" stroke="none" stroke-width="32"/>
     </mask>
   </defs>
 
-  <rect width="256" height="256" fill="#0000FF" mask="url(#outline-mask)"/>
-  <g mask="url(#pointer-mask)">
+  <rect width="256" height="256" fill="#0000FF00" mask="url(#outline-mask)"/>
+  <g color="#0000FF00" mask="url(#pointer-mask)">
     <rect width="256" height="256" fill="#00FF00"/>
-    <use href="#badge-shape" fill="none" stroke="#0000FF" stroke-width="32" class="fixed-fill"/>
+    <use href="#badge-shape" fill="none" stroke="#0000FF00" stroke-width="32" class="fixed-fill"/>
   </g>
+  <use href="#pointer-shape" fill="#00FF00FF" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <use href="#badge-shape" fill="#606060"/>
+    <use href="#badge-shape" fill="#606060" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
     <path d="M104.6 140C92.6336 140 83 149.634 83 161.6C83 173.566 92.6336 183.2 104.6 183.2H113.24V174.56H104.6C97.4288 174.56 91.64 168.814 91.64 161.6C91.64 154.429 97.4288 148.64 104.6 148.64H113.24V140H104.6ZM121.88 140V148.64H130.52C137.691 148.64 143.48 154.429 143.48 161.6C143.48 168.814 137.691 174.56 130.52 174.56H121.88V183.2H130.52C142.486 183.2 152.12 173.566 152.12 161.6C152.12 149.634 142.486 140 130.52 140H121.88ZM104.6 157.28V165.92H130.52V157.28H104.6Z" fill="white"/>
   </g>
 </svg>

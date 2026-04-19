@@ -3,13 +3,14 @@
   <circle id="cursor-hotspot" cx="117" cy="115.7" r="3" fill="magenta" opacity=".6" display="none"/>
   <defs>
     <path id="looking-glass" d="M 68.4,0 a 68.4,68.4 0 0,1 -68.4,68.4 a 68.4,68.4 0 0,1 -68.4,-68.4 a 68.4,68.4 0 0,1 68.4,-68.4 a 68.4,68.4 0 0,1 68.4,68.4 z h 62" transform="rotate(45)" stroke-linecap="round"/>
-    <mask id="glass-mask">
-      <use href="#looking-glass" fill="#fff" stroke="#fff" stroke-width="44.8"/>
+    <mask id="glass-mask" color="#FFFFFF00">
+      <use href="#looking-glass" fill="currentColor" stroke="currentColor" stroke-width="44.8"/>
     </mask>
   </defs>
 
   <g id="position-on-canvas" transform="translate(117,115.7)">
-    <rect id="glass-stroke" x="-128" y="-128" width="256" height="256" fill="#0000FF" mask="url(#glass-mask)"/>
+    <rect id="glass-stroke" x="-128" y="-128" width="256" height="256" fill="#0000FF00" mask="url(#glass-mask)"/>
+    <use href="#looking-glass" fill="#0000FFFF" stroke="#0000FFFF" stroke-width="44.8"/>
     <use id="glass-fill" href="#looking-glass" stroke="#00FF00" stroke-width="12.8" class="fill-stroke"/>
     <path id="plus" d="M -33.6,0 h 67.2 M 0,-33.6 v 67.2" fill="#00FF00" stroke="#00FF00" stroke-linecap="round" stroke-width="20.8"/>
   </g>

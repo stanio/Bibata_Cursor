@@ -4,22 +4,23 @@
   <defs>
     <path id="hand-grabbing" d="M122.145 61.3359C114.904 61.7736 108.722 68.7468 109.188 75.9528L110.081 88.7262C110.307 91.9731 107.266 92.6517 106.913 90.1589L105.794 82.2583C104.804 75.4509 98.0015 70.0073 91.1097 70.5074C83.5267 71.1859 77.4299 79.09 78.7286 86.5576L83.5911 116.814C83.638 117.978 83.3036 123.979 83.3036 123.979L76.9691 111.082C67.716 118.019 54.2572 126.89 60.4566 146.515C67.7937 169.741 89.7355 197.724 103.171 197.638L184.655 197.351C200.422 162.571 197.479 130.087 197.324 107.069L197.222 91.8607C197.167 83.146 191.556 74.0193 182.825 74.6642C176.919 75.0004 171.502 79.5345 170.156 85.2684L168.531 93.8851C168.046 96.4546 167.186 95.3977 167.379 93.3123L169.205 73.5213C169.71 65.7417 162.336 58.4018 154.521 58.9044C147.765 59.3209 141.834 65.356 141.564 72.0883L140.025 85.8605C139.666 89.0778 137.63 89.1571 137.434 85.5741L136.83 74.5207C136.537 67.2149 129.475 60.8739 122.145 61.3359Z" transform="translate(-23.04)"/>
     <circle id="badge-shape" cx="176.64" cy="176.64" r="56.32"/>
-    <mask id="outline-mask">
-      <use href="#hand-grabbing" fill="#fff" stroke="#fff" stroke-width="32"/>
-      <use href="#badge-shape" fill="#fff" stroke="#fff" stroke-width="32"/>
+    <mask id="outline-mask" color="#FFFFFF00">
+      <use href="#hand-grabbing" fill="currentColor" stroke="currentColor" stroke-width="32"/>
+      <use href="#badge-shape" fill="currentColor" stroke="currentColor" stroke-width="32"/>
     </mask>
-    <mask id="hand-mask">
-      <use href="#hand-grabbing" fill="#fff" stroke="none" stroke-width="32"/>
+    <mask id="hand-mask" color="#FFFFFF00">
+      <use href="#hand-grabbing" fill="currentColor" stroke="none" stroke-width="32"/>
     </mask>
   </defs>
 
-  <rect width="256" height="256" fill="#0000FF" mask="url(#outline-mask)"/>
-  <g mask="url(#hand-mask)">
+  <rect width="256" height="256" fill="#0000FF00" mask="url(#outline-mask)"/>
+  <g color="#0000FF00" mask="url(#hand-mask)">
     <rect width="256" height="256" fill="#00FF00"/>
-    <use href="#badge-shape" fill="none" stroke="#0000FF" stroke-width="32"/>
+    <use href="#badge-shape" fill="none" stroke="#0000FF00" stroke-width="32"/>
   </g>
+  <use href="#hand-grabbing" fill="#00FF00FF" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <use href="#badge-shape" fill="#06B231"/>
+    <use href="#badge-shape" fill="#06B231" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
     <path d="M206.487 170.356H146.793C144.191 170.356 142.08 172.468 142.08 175.069V178.211C142.08 180.812 144.191 182.924 146.793 182.924H206.487C209.089 182.924 211.2 180.812 211.2 178.211V175.069C211.2 172.468 209.089 170.356 206.487 170.356Z" fill="white"/>
     <path d="M170.357 146.793V206.487C170.357 209.089 172.468 211.2 175.069 211.2H178.211C180.812 211.2 182.924 209.089 182.924 206.487V146.793C182.924 144.191 180.812 142.08 178.211 142.08H175.069C172.468 142.08 170.357 144.191 170.357 146.793Z" fill="white"/>
   </g>

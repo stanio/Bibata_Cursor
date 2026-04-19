@@ -4,22 +4,23 @@
   <defs>
     <path id="pointer-shape" d="M 198,44 V 164 L 153.156,145.592 L 109,124.744 z"/>
     <circle id="badge-shape" cx="147" cy="162" r="62"/>
-    <mask id="outline-mask">
-      <use href="#pointer-shape" fill="#fff" stroke="#fff" stroke-width="32"/>
-      <use href="#badge-shape" fill="#fff" stroke="#fff" stroke-width="32" class="fixed-fill"/>
+    <mask id="outline-mask" color="#FFFFFF00">
+      <use href="#pointer-shape" fill="currentColor" stroke="currentColor" stroke-width="32"/>
+      <use href="#badge-shape" fill="currentColor" stroke="currentColor" stroke-width="32" class="fixed-fill"/>
     </mask>
-    <mask id="pointer-mask">
-      <use href="#pointer-shape" fill="#fff" stroke="none" stroke-width="32"/>
+    <mask id="pointer-mask" color="#FFFFFF00">
+      <use href="#pointer-shape" fill="currentColor" stroke="none" stroke-width="32"/>
     </mask>
   </defs>
 
-  <rect width="256" height="256" fill="#0000FF" mask="url(#outline-mask)"/>
-  <g mask="url(#pointer-mask)">
+  <rect width="256" height="256" fill="#0000FF00" mask="url(#outline-mask)"/>
+  <g color="#0000FF00" mask="url(#pointer-mask)">
     <rect width="256" height="256" fill="#00FF00"/>
-    <use href="#badge-shape" fill="none" stroke="#0000FF" stroke-width="32" class="fixed-fill"/>
+    <use href="#badge-shape" fill="none" stroke="#0000FF00" stroke-width="32" class="fixed-fill"/>
   </g>
+  <use href="#pointer-shape" fill="#00FF00FF" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <use href="#badge-shape" fill="#FE0000"/>
+    <use href="#badge-shape" fill="#FE0000" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
     <path d="M138.385 162L119 181.385L127.615 190L147 170.615L166.385 190L175 181.385L155.615 162L175 142.615L166.385 134L147 153.385L127.615 134L119 142.615L138.385 162Z" fill="white"/>
   </g>
 </svg>

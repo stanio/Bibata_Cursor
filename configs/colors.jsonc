@@ -1,82 +1,112 @@
 {
   "Amber": {
     "#00FF00": "#FF8300",
+    "#00FF00FF": "#FF8300",
     "#0000FF": "#FFFFFF",
+    "#0000FFFF": "#FFFFFF",
     "#FF0000": "#001524"
   },
   "Amber-Dark": {
     "#00FF00": "#FF8300",
+    "#00FF00FF": "#FF830000",
     "#0000FF": "#0000009A", // Glass-Edge
+    "#0000FFFF": "#00000000",
+    "#0000FF00": "#0000009A",
+    "#FFFFFF00": "#FFFFFF",
     "#FF0000": "#F0F8FF"
   },
   "Classic": {
     "#00FF00": "#000000",
+    "#00FF00FF": "#000000",
     "#96C865": "#000000", // bottom_left_corner
     "#FDBE2A": "#000000", // bottom_right_corner
     "#4FADDF": "#000000", // top_left_corner
     "#F1613A": "#000000", // top_right_corner
     "#0000FF": "#FFFFFF",
+    "#0000FFFF": "#FFFFFF",
     "#FF0000": "#000000"
   },
   "Classic-GE": { // Glass-Edge
     "#00FF00": "#000000",
+    "#00FF00FF": "#00000000",
     "#96C865": "#000000", // bottom_left_corner
     "#FDBE2A": "#000000", // bottom_right_corner
     "#4FADDF": "#000000", // top_left_corner
     "#F1613A": "#000000", // top_right_corner
     "#0000FF": "#FFFFFFCD",
+    "#0000FFFF": "#FFFFFF00",
+    "#0000FF00": "#FFFFFFCD",
+    "#FFFFFF00": "#FFFFFF",
     "#FF0000": "#000000"
   },
   "Ice": {
     "#00FF00": "#FFFFFF",
+    "#00FF00FF": "#FFFFFF",
     "#96C865": "#FFFFFF", // bottom_left_corner
     "#FDBE2A": "#FFFFFF", // bottom_right_corner
     "#4FADDF": "#FFFFFF", // top_left_corner
     "#F1613A": "#FFFFFF", // top_right_corner
     "#0000FF": "#000000",
+    "#0000FFFF": "#000000",
     "#FF0000": "#FFFFFF"
   },
   "Ice-GE": { // Glass-Edge
     "#00FF00": "#FFFFFF",
+    "#00FF00FF": "#FFFFFF00",
     "#96C865": "#FFFFFF", // bottom_left_corner
     "#FDBE2A": "#FFFFFF", // bottom_right_corner
     "#4FADDF": "#FFFFFF", // top_left_corner
     "#F1613A": "#FFFFFF", // top_right_corner
     "#0000FF": "#0000009A",
+    "#0000FFFF": "#00000000",
+    "#0000FF00": "#0000009A",
+    "#FFFFFF00": "#FFFFFF",
     "#FF0000": "#FFFFFF"
   },
   "Default": {},
 
   "DarkRed": {
     "#00FF00": "#B20000",
+    "#00FF00FF": "#B20000",
     "#0000FF": "#FFFFFF",
+    "#0000FFFF": "#FFFFFF",
     "#FF0000": "#000000"
   },
   "DodgerBlue": {
     "#00FF00": "#5848FF",
+    "#00FF00FF": "#5848FF",
     "#0000FF": "#FFFFFF",
+    "#0000FFFF": "#FFFFFF",
     "#FF0000": "#000000"
   },
   "Turquoise": {
     "#00FF00": "#00F0B7",
+    "#00FF00FF": "#00F0B7",
     "#0000FF": "#000000",
+    "#0000FFFF": "#000000",
     "#FF0000": "#FFFFFF"
   },
   "Pink": {
     "#00FF00": "#FE009E",
+    "#00FF00FF": "#FE009E",
     "#0000FF": "#FFFFFF",
+    "#0000FFFF": "#FFFFFF",
     "#FF0000": "#000000"
   },
 
   "Dracula": {
     "#00FF00": "#282A36",
+    "#00FF00FF": "#282A36",
     "#0000FF": "#F8F8F2",
+    "#0000FFFF": "#F8F8F2",
     "#FF0000": "#44475A"
   },
 
   "Everforest": {
     "#00FF00": "#272E33",
+    "#00FF00FF": "#272E33",
     "#0000FF": "#D3C6AA",
+    "#0000FFFF": "#D3C6AA",
     "#FF0000": "#272E33",
 
     "#32A0DA": "#7FBBB3",
@@ -102,7 +132,9 @@
   },
   "Everforest-Light": {
     "#00FF00": "#FFFBEF",
+    "#00FF00FF": "#FFFBEF",
     "#0000FF": "#5C6A72",
+    "#0000FFFF": "#5C6A72",
     "#FF0000": "#FFFBEF",
 
     "#32A0DA": "#3A94C5",
@@ -129,7 +161,9 @@
 
   "CatMocha": {
     "#00FF00": "#1E1E2E",
+    "#00FF00FF": "#1E1E2E",
     "#0000FF": "#CDD6F4",
+    "#0000FFFF": "#CDD6F4",
     "#FF0000": "#1E1E2E",
 
     "#32A0DA": "#89B4FA",
@@ -155,7 +189,9 @@
   },
   "CatLatte": {
     "#00FF00": "#EFF1F5",
+    "#00FF00FF": "#EFF1F5",
     "#0000FF": "#4C4F69",
+    "#0000FFFF": "#4C4F69",
     "#FF0000": "#EFF1F5",
 
     "#32A0DA": "#1E66F5",
@@ -182,7 +218,9 @@
 
   "Rose-Pine": {
     "#00FF00": "#1F1D2E",
+    "#00FF00FF": "#1F1D2E",
     "#0000FF": "#E0DEF4",
+    "#0000FFFF": "#E0DEF4",
     "#FF0000": "#1F1D2E",
 
     "#32A0DA": "#9CCFD8",
@@ -208,7 +246,9 @@
   },
   "Pine-Dawn": {
     "#00FF00": "#fffaf3",
+    "#00FF00FF": "#fffaf3",
     "#0000FF": "#575279",
+    "#0000FFFF": "#575279",
     "#FF0000": "#fffaf3",
 
     "#32A0DA": "#56949f",
@@ -233,4 +273,3 @@
     "#179DD8": "#56949f"
   }
 }
-
