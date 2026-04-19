@@ -4,27 +4,23 @@
   <defs>
     <path id="pointer-shape" d="M 179.824,33.697 C 182.364,31.08 185.21,30.27 188,30.646 C 188.93,30.772 189.854,31.028 190.758,31.395 C 194.372,32.86 197,35.8 197,40.662 V 147.271 L 108.4,107.289 L 114.504,101 z"/>
     <circle id="badge-shape" cx="138" cy="162" r="62"/>
-    <mask id="outline-mask">
-      <use href="#pointer-shape" fill="#fff" stroke="#fff" stroke-width="32"/>
-      <use href="#badge-shape" fill="#fff" stroke="#fff" stroke-width="32"/>
+    <mask id="outline-mask" color="#FFFFFF00">
+      <use href="#pointer-shape" fill="currentColor" stroke="currentColor" stroke-width="32"/>
+      <use href="#badge-shape" fill="currentColor" stroke="currentColor" stroke-width="32" class="fixed-fill"/>
     </mask>
-    <mask id="pointer-mask">
-      <use href="#pointer-shape" fill="#fff" stroke="none" stroke-width="32"/>
+    <mask id="pointer-mask" color="#FFFFFF00">
+      <use href="#pointer-shape" fill="currentColor" stroke="none" stroke-width="32"/>
     </mask>
   </defs>
 
-  <rect width="256" height="256" fill="#0000FF" mask="url(#outline-mask)"/>
-  <g mask="url(#pointer-mask)">
+  <rect width="256" height="256" fill="#0000FF00" mask="url(#outline-mask)"/>
+  <g color="#0000FF00" mask="url(#pointer-mask)">
     <rect width="256" height="256" fill="#00FF00"/>
-    <use href="#badge-shape" fill="none" stroke="#0000FF" stroke-width="32"/>
+    <use href="#badge-shape" fill="none" stroke="#0000FF00" stroke-width="32" class="fixed-fill"/>
   </g>
-  <use href="#badge-shape" fill="#FF0000"/>
-  <g mask="url(#wheel-mask)">
-    <mask id="wheel-mask">
-      <circle cx="138" cy="162" r="48.611" fill="#fff" stroke="#fff" stroke-width="0" class="fill-stroke"/>
-    </mask>
-
-  <g transform="translate(138,162) scale(1.56)">
+  <use href="#pointer-shape" fill="#00FF00FF" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
+  <use href="#badge-shape" fill="#FF0000" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
+  <g transform="translate(138,162) scale(0.97222)">
     <path d="M 0,0 L 0,-50 A 50,50 0 0,1 50,0 z" fill="#F05024" fill-opacity="0.8" transform="rotate(200.93)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="4" dur="0.75s" ?></path>
     <path d="M 0,0 L 50,0 A 50,50 0 0,1 0,50 z" fill="#FCB813" fill-opacity="0.8" transform="rotate(150.7)">
@@ -33,7 +29,5 @@
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="2" dur="1.5s" ?></path>
     <path d="M 0,0 L -50,0 A 50,50 0 0,1 0,-50 z" fill="#32A0DA" fill-opacity="0.8" transform="rotate(50.23)">
       <?animateTransform attributeName="transform" type="rotate" values="0;360" keyTimes="0;1" repeatCount="1" dur="3.0s" ?></path>
-  </g>
-
   </g>
 </svg>
