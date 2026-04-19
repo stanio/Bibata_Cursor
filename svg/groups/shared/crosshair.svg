@@ -5,7 +5,7 @@
     <rect width="256" height="256" fill="#fff"/>
     <circle cx="128" cy="128" r="23" fill="#000"/>
   </mask>
-  <circle cx="128" cy="128" r="6" fill="#FE0000"/>
+  <circle cx="128" cy="128" r="6" fill="#FF0001"/>
   <!-- https://github.com/weisJ/jsvg/issues/74#issuecomment-2019003404 -->
   <filter id="isolation-isolate" x="-0.2" y="-0.2" width="1.4" height="1.4">
     <feMerge>

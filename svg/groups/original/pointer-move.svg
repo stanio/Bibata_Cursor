@@ -20,7 +20,7 @@
   </g>
   <use href="#pointer-shape" fill="#00FF00FF" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <use href="#badge-shape" fill="#179DD8" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
-    <rect x="95" y="139" width="46" height="46" rx="17" fill="white"/>
+    <use href="#badge-shape" fill="#179DD8" stroke="#0000F7FF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
+    <rect x="95" y="139" width="46" height="46" rx="17" fill="#FFFFF7"/>
   </g>
 </svg>

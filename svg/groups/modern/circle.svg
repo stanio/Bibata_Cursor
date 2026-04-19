@@ -22,7 +22,7 @@
   </g>
   <use href="#pointer-shape" fill="#00FF00FF" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
   <g align-anchor="badge-align">
-    <use href="#badge-shape" fill="#FE0000" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
-    <path d="M155.385 72L136 52.6154L144.615 44L164 63.3846L183.385 44L192 52.6154L172.615 72L192 91.3846L183.385 100L164 80.6154L144.615 100L136 91.3846L155.385 72Z" fill="white"/>
+    <use href="#badge-shape" fill="#FE0000" stroke="#0000FEFF" stroke-width="32" paint-order="stroke fill"/>
+    <path d="M155.385 72L136 52.6154L144.615 44L164 63.3846L183.385 44L192 52.6154L172.615 72L192 91.3846L183.385 100L164 80.6154L144.615 100L136 91.3846L155.385 72Z" fill="#FFFFFE"/>
   </g>
 </svg>

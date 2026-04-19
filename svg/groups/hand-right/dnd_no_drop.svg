@@ -20,7 +20,7 @@
   </g>
   <use href="#hand-grabbing" fill="#00FF00FF" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <use href="#badge-shape" fill="#FE0000" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
-    <path d="M101.095 177.32L120.48 157.935L111.865 149.32L92.48 168.704L73.0954 149.32L64.48 157.935L83.8646 177.32L64.48 196.704L73.0954 205.32L92.48 185.935L111.865 205.32L120.48 196.704L101.095 177.32Z" fill="white"/>
+    <use href="#badge-shape" fill="#FE0000" stroke="#0000FEFF" stroke-width="32" paint-order="stroke fill"/>
+    <path d="M101.095 177.32L120.48 157.935L111.865 149.32L92.48 168.704L73.0954 149.32L64.48 157.935L83.8646 177.32L64.48 196.704L73.0954 205.32L92.48 185.935L111.865 205.32L120.48 196.704L101.095 177.32Z" fill="#FFFFFE"/>
   </g>
 </svg>

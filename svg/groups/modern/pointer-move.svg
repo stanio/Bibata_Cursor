@@ -21,7 +21,7 @@
   </g>
   <use href="#pointer-shape" fill="#00FF00FF" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
   <g align-anchor="badge-align">
-    <use href="#badge-shape" fill="#179DD8" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
-    <rect x="138" y="46" width="52" height="52" rx="20" fill="white"/>
+    <use href="#badge-shape" fill="#179DD8" stroke="#0000F7FF" stroke-width="32" paint-order="stroke fill"/>
+    <rect x="138" y="46" width="52" height="52" rx="20" fill="#FFFFF7"/>
   </g>
 </svg>

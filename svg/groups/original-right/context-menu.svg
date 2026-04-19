@@ -20,7 +20,7 @@
   </g>
   <use href="#pointer-shape" fill="#00FF00FF" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill"/>
   <g>
-    <use href="#badge-shape" fill="#5F3BE4" stroke="#0000FFFF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
-    <path d="M147.118 127.688C153.234 127.688 158.21 132.504 158.21 138.423C158.21 144.342 153.234 149.158 147.118 149.158C141.001 149.158 136.025 144.342 136.025 138.423C136.025 132.504 141.001 127.688 147.118 127.688ZM161.236 196H133V190.145H139.05V160.868H133V155.013H155.185V190.145H161.236V196Z" fill="white"/>
+    <use href="#badge-shape" fill="#5F3BE4" stroke="#0000FCFF" stroke-width="32" paint-order="stroke fill" class="fixed-fill"/>
+    <path d="M147.118 127.688C153.234 127.688 158.21 132.504 158.21 138.423C158.21 144.342 153.234 149.158 147.118 149.158C141.001 149.158 136.025 144.342 136.025 138.423C136.025 132.504 141.001 127.688 147.118 127.688ZM161.236 196H133V190.145H139.05V160.868H133V155.013H155.185V190.145H161.236V196Z" fill="#FFFFFC"/>
   </g>
 </svg>
