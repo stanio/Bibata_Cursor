@@ -61,6 +61,9 @@
     "#00FF00FF": "#00FF00", // Non-GE fill
     "#0000FFFF": "#0000FF", // Non-GE stroke
 
+    "#01FF01":   "#00FF00", // alt/inverse fill
+    "#0101FF":   "none",    // alt/inverse stroke
+
     // Badges
     "#0000FEFF": "#0000FFFF", // Red/forbidden stroke
     "#0000FE":   "#0000FF",   // --"--
