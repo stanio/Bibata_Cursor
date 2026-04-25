@@ -10,6 +10,8 @@ RENDER_COLORS=
 for color in $MOUSE_COLORS; do
   RENDER_COLORS="$RENDER_COLORS --color $color"
 done
+echo "Colors: $MOUSE_COLORS"
+echo
 
 mousegenRender() {
   [ -t 1 ] && richout=true
@@ -51,12 +53,16 @@ mousegenRender --mousecape-theme=mac-names-efill-original.json \
     --expand-fill=4 --update-existing "$@"
 
 echo
-echo -n "Compressing packages... "
+echo "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
+. bin/package-colors.sh
 cd "$BUILD_DIR"
 dos2unix --quiet COPYING *.cape
 for color in $MOUSE_COLORS; do
-  jar cMf ../Bibata-Mousecape-$color-v$VERSION.zip             COPYING */Bibata-[MO]*-$color*.cape
-  jar cMf ../Bibata-Mousecape-Left-handed-$color-v$VERSION.zip COPYING */Bibata-Left*-$color*.cape
+  getPkgName $color
+  if [ -z "$pkgName" ]; then continue; fi
+  echo "Bibata-Mousecape-$pkgName-v$VERSION.zip"
+  jar cMf ../Bibata-Mousecape-$pkgName-v$VERSION.zip             COPYING */Bibata-[MO]*-$dirName*.cape
+  jar cMf ../Bibata-Mousecape-Left-handed-$pkgName-v$VERSION.zip COPYING */Bibata-Left*-$dirName*.cape
 done
 echo done.

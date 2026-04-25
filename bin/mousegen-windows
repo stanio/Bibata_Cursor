@@ -12,6 +12,8 @@ for color in $MOUSE_COLORS; do
   RENDER_COLORS="$RENDER_COLORS --color $color"
   THEME_COLORS="$THEME_COLORS --var color=$color"
 done
+echo "Colors: $MOUSE_COLORS"
+echo
 
 mousegenRender() {
   # -Dwincur.PNGEncoder=zopfli
@@ -59,13 +61,16 @@ bin/mousegen windowsInstallScripts "$BUILD_DIR/NoShadow" --config configs \
 bin/mousegen windowsInstallScripts "$BUILD_DIR/Shadow" --config configs \
 	$THEME_COLORS --var version=$VERSION --var shadow=Shadow
 
-echo -n "Compressing packages... "
+echo "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
+. bin/package-colors.sh
 cd "$BUILD_DIR"
 unix2dos --quiet COPYING */*.inf
-set +e # Classic/Classic-GE and Ice/Ice-GE get groupped in the same *.inf
 for color in $MOUSE_COLORS; do
-  jar cMf ../Bibata-Windows-$color-v$VERSION.zip             COPYING */[MO]*-$color* */install-Bibata-$color*.inf
-  jar cMf ../Bibata-Windows-Left-handed-$color-v$VERSION.zip COPYING */Left*-$color* */install-Bibata-Left*-$color*.inf
+  getPkgName $color
+  if [ -z "$pkgName" ]; then continue; fi
+  echo "Bibata-Windows-$pkgName-v$VERSION.zip"
+  jar cMf ../Bibata-Windows-$pkgName-v$VERSION.zip             COPYING */[MO]*-$dirName* */install-Bibata-$dirName*.inf
+  jar cMf ../Bibata-Windows-Left-handed-$pkgName-v$VERSION.zip COPYING */Left*-$dirName* */install-Bibata-Left*-$dirName*.inf
 done
 echo done.

@@ -10,6 +10,8 @@ RENDER_COLORS=
 for color in $MOUSE_COLORS; do
   RENDER_COLORS="$RENDER_COLORS --color $color"
 done
+echo "Colors: $MOUSE_COLORS"
+echo
 
 mousegenRender() {
   [ -t 1 ] && richout=true

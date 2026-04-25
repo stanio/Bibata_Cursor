@@ -12,6 +12,8 @@ for color in $MOUSE_COLORS; do
   RENDER_COLORS="$RENDER_COLORS --color $color"
   THEME_COLORS="$THEME_COLORS --var color=$color"
 done
+echo "Colors: $MOUSE_COLORS"
+echo
 
 mousegenRender() {
   [ -t 1 ] && richout=true
@@ -67,12 +69,16 @@ echo "Converting cursors_scalable to hyprcursors:"
 bin/mousegen-hyprland
 
 echo
-echo -n "Compressing packages... "
+echo "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
+. bin/package-colors.sh
 cd "$BUILD_DIR"
 dos2unix --quiet COPYING */*/*.theme
 for color in $MOUSE_COLORS; do
-  tar cJf ../Bibata-Xcursors-$color-v$VERSION.tar.xz             COPYING */Bibata-[MO]*-$color*
-  tar cJf ../Bibata-Xcursors-Left-handed-$color-v$VERSION.tar.xz COPYING */Bibata-Left*-$color*
+  getPkgName $color
+  if [ -z "$pkgName" ]; then continue; fi
+  echo "Bibata-Xcursors-$pkgName-v$VERSION.tar.xz"
+  tar cJf ../Bibata-Xcursors-$pkgName-v$VERSION.tar.xz             COPYING */Bibata-[MO]*-$dirName*
+  tar cJf ../Bibata-Xcursors-Left-handed-$pkgName-v$VERSION.tar.xz COPYING */Bibata-Left*-$dirName*  
 done
 echo done.
