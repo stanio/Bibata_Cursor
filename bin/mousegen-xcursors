@@ -57,8 +57,16 @@ bin/mousegen linuxThemeFiles "$BUILD_DIR/NoShadow" --config configs \
 	$THEME_COLORS --var version=$VERSION --var size= --var shadow=NoShadow
 bin/mousegen linuxThemeFiles "$BUILD_DIR/Shadow" --config configs \
 	$THEME_COLORS --var version=$VERSION --var size= --var shadow=
-bin/mousegen x11Symlinks -c configs "$BUILD_DIR"
 
+echo -n "Creating alias symlinks "
+bin/mousegen x11Symlinks -c configs "$BUILD_DIR"
+echo ✔
+
+echo
+echo "Converting cursors_scalable to hyprcursors:"
+bin/mousegen-hyprland
+
+echo
 echo -n "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
 cd "$BUILD_DIR"

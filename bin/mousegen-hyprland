@@ -14,19 +14,3 @@ export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dhyprcursor.version=$VERSION \
 set -e
 
 bin/mousegen hyprcursor "$BUILD_DIR"
-
-echo
-echo 'Run `bin/mousegen-xcursors` to complete the packages.'
-
-exit
-
-echo
-echo -n "Compressing packages... "
-cp configs/COPYING "$BUILD_DIR"
-cd "$BUILD_DIR"
-dos2unix --quiet COPYING */*/*.hl
-for color in $MOUSE_COLORS; do
-  tar cJf ../Bibata-Hyprcursors-$color-v$VERSION.tar.xz             COPYING */Bibata-[MO]*-$color*
-  tar cJf ../Bibata-Hyprcursors-Left-handed-$color-v$VERSION.tar.xz COPYING */Bibata-Left*-$color*
-done
-echo done.

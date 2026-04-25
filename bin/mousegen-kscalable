@@ -50,9 +50,6 @@ mousegenRender --scalable-cursors=x11-names-efill-original.json \
     --source svg/original-right --name "\${shadow:Shadow}/Bibata-Left-handed-$originalName" \
     --expand-fill=4 "$@"
 
-echo
-bin/mousegen x11Symlinks -c configs "$BUILD_DIR"
-
 #echo
 #echo dos2unix
 #find "$BUILD_DIR" -type f -name '*.svg' -name 'metadata.json' -exec dos2unix -q "{}" +
