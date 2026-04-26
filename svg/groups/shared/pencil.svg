@@ -14,7 +14,7 @@
     <path d="M 150.17,75.295 181.99,107.114" stroke="#0000FF00" stroke-width="16" stroke-linecap="square"/>
   </g>
   <g color="#0000FFFF">
-    <use href="#pencil-shape" fill="#00FF00" stroke="currentColor" stroke-width="32" paint-order="stroke fill"/>
+    <use href="#pencil-shape" fill="#00FF00FF" stroke="currentColor" stroke-width="32" paint-order="stroke fill"/>
     <path d="M 150.17,75.295 181.99,107.114" stroke="currentColor" stroke-width="16" stroke-linecap="square"/>
   </g>
 </svg>
