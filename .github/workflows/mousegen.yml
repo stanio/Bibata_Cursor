@@ -1,0 +1,41 @@
+name: Build with mousegen
+
+on:
+  workflow_dispatch:
+    #inputs:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      MOUSE_COLORS: Classic Ice-GE
+      #MOUSEGEN_OPTS: -Dwincur.PNGEncoder=zopfli
+
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+
+    - name: KDE scalable cursors
+      run: bin/mousegen-kscalable
+
+    - name: Xcursors (+Hyprcursors)
+      run: bin/mousegen-xcursors
+
+    - name: Windows cursors
+      run: bin/mousegen-windows
+
+    - name: Mousecape themes
+      run: bin/mousegen-mousecape
+
+    - uses: actions/upload-artifact@v7
+      with:
+        name: bibata-themes
+        overwrite: true
+        compression-level: 0
+        path: |
+          themes/Bibata-Mousecape-*.zip
+          themes/Bibata-Windows-*.zip
+          themes/Bibata-Xcursors-*.tar.xz
