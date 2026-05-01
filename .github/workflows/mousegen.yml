@@ -2,14 +2,41 @@ name: Build with mousegen
 
 on:
   workflow_dispatch:
-    #inputs:
+    inputs:
+      version:
+        description: Version
+        required: true
+        type: string
+        default: 2.0.7-test
+      colors:
+        description: Color themes
+        required: true
+        type: string
+        # Amber Amber-Dark Classic Classic-GE Ice Ice-GE CatLatte CatMocha
+        default: Classic Ice
+      xcursors:
+        description: XCursors (+scalable +hyprcursors)
+        type: boolean
+        default: true
+      windows:
+        description: Windows cursors
+        type: boolean
+        default: true
+      capes:
+        description: Mousecape cursors
+        type: boolean
+        default: true
+      zopfliPNG:
+        description: Zopfli PNG (veery slow)
+        type: boolean
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      MOUSE_COLORS: Classic Ice-GE
-      #MOUSEGEN_OPTS: -Dwincur.PNGEncoder=zopfli
+      VERSION: ${{ inputs.version }}
+      MOUSE_COLORS: ${{ inputs.colors }}
+      MOUSEGEN_OPTS: -Dwincur.PNGEncoder=${{ inputs.zopfliPNG && 'zopfli' || '' }}
 
     steps:
     - uses: actions/checkout@v6
@@ -18,23 +45,37 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
 
+    - name: Install dos2unix
+      run: sudo apt install -y dos2unix
+
+    - name: Download pngtastic.jar
+      if: inputs.zopfliPNG
+      run: "curl -Lo bin/pngtastic.jar https://repo.maven.apache.org/maven2/\
+        com/github/depsypher/pngtastic/1.8/pngtastic-1.8.jar"
+
     - name: KDE scalable cursors
+      if: inputs.xcursors
       run: bin/mousegen-kscalable
 
     - name: Xcursors (+Hyprcursors)
+      if: inputs.xcursors
       run: bin/mousegen-xcursors
 
     - name: Windows cursors
+      if: inputs.windows
       run: bin/mousegen-windows
 
     - name: Mousecape themes
-      run: bin/mousegen-mousecape
+      if: inputs.capes
+      run: bin/mousegen-capes
 
     - uses: actions/upload-artifact@v7
+      #if: always()
       with:
         name: bibata-themes
         overwrite: true
         compression-level: 0
+        #path: themes/
         path: |
           themes/Bibata-Mousecape-*.zip
           themes/Bibata-Windows-*.zip
