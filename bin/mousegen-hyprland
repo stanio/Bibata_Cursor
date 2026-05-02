@@ -7,8 +7,9 @@ BUILD_DIR=themes/xcursors
 
 [ -z "$MOUSE_COLORS" ] && MOUSE_COLORS="Classic Ice"
 
+[ -t 1 ] && flapper=⠒⠂⠀⠐⠒⠀⠀⠒⠂⠀⠐⠒⠀⠀⠲⠀⠀⠴⠀⠠⠤⠀⠤⠄⠠⠤⠀⠤⠄⠀⠦⠀⠀⠖⠀⠀
 export MOUSEGEN_OPTS="$MOUSEGEN_OPTS -Dhyprcursor.version=$VERSION \
-    -Dmousegen.flapper.width=3 -Dmousegen.flapper=⠒⠂⠀⠐⠒⠀⠀⠒⠂⠀⠐⠒⠀⠀⠲⠀⠀⠴⠀⠠⠤⠀⠤⠄⠠⠤⠀⠤⠄⠀⠦⠀⠀⠖⠀⠀ \
+    -Dmousegen.flapper.width=3 -Dmousegen.flapper=$flapper \
     -Dhyprcursor.author=ful1e5 -Dhyprcursor.description.cleanup"='\x20\(v.*\)$'
 
 set -e
