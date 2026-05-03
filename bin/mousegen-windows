@@ -1,5 +1,5 @@
 #!/bin/sh
-VERSION=2.0.7-stanio-16-dev
+VERSION=${VERSION:-2.0.7-test}
 
 cd "$(dirname "$0")/.."
 
@@ -73,6 +73,7 @@ for color in $MOUSE_COLORS; do
   if [ -z "$pkgName" ]; then continue; fi
   echo "Bibata-Windows-$pkgName-v$VERSION.zip"
   jar cMf ../Bibata-Windows-$pkgName-v$VERSION.zip             COPYING */[MO]*-$dirName* */install-Bibata-$dirName*.inf
+  echo "Bibata-Windows-Left-handed-$pkgName-v$VERSION.zip"
   jar cMf ../Bibata-Windows-Left-handed-$pkgName-v$VERSION.zip COPYING */Left*-$dirName* */install-Bibata-Left*-$dirName*.inf
 done
 echo done.

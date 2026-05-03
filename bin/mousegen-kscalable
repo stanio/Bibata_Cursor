@@ -1,5 +1,4 @@
 #!/bin/sh
-#VERSION=2.0.7-stanio-16-dev
 
 cd "$(dirname "$0")/.."
 
