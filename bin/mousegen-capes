@@ -53,6 +53,8 @@ mousegenRender --mousecape-theme=mac-names-efill-original.json \
     --expand-fill=4 --update-existing "$@"
 
 echo
+bin/mousegen validate cape "$BUILD_DIR" > /dev/null
+
 echo "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
 . bin/package-colors.sh

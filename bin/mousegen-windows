@@ -61,6 +61,8 @@ bin/mousegen windowsInstallScripts "$BUILD_DIR/NoShadow" --config configs \
 bin/mousegen windowsInstallScripts "$BUILD_DIR/Shadow" --config configs \
 	$THEME_COLORS --var version=$VERSION --var shadow=Shadow
 
+bin/mousegen validate wincur "$BUILD_DIR" > /dev/null
+
 echo "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
 . bin/package-colors.sh

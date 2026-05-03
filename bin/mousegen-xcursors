@@ -69,6 +69,8 @@ echo "Converting cursors_scalable to hyprcursors:"
 bin/mousegen-hyprland
 
 echo
+bin/mousegen validate xcur "$BUILD_DIR" > /dev/null
+
 echo "Compressing packages... "
 cp configs/COPYING "$BUILD_DIR"
 . bin/package-colors.sh
