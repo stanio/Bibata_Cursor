@@ -35,10 +35,16 @@ set -e
 modernName='Modern-${color}-${size}-${outline}-${shadow}'
 originalName='Original-${color}-${size}-${outline}-${shadow}'
 
+leftHandedModern=
+leftHandedOriginal=
+if [ "$MOUSE_LEFTHAND" = "true" ]; then
+  leftHandedModern="--source svg/modern-right --name \${shadow:NoShadow}/Left-handed-$modernName"
+  leftHandedOriginal="--source svg/original-right --name \${shadow:NoShadow}/Left-handed-$originalName"
+fi
+
 mousegenRender --source svg/modern --name "\${shadow:NoShadow}/$modernName" \
     --source svg/original --name "\${shadow:NoShadow}/$originalName" \
-    --source svg/modern-right --name "\${shadow:NoShadow}/Left-handed-$modernName" \
-    --source svg/original-right --name "\${shadow:NoShadow}/Left-handed-$originalName" \
+    $leftHandedModern $leftHandedOriginal \
     --all-variants "$@"
 
 echo
@@ -46,20 +52,24 @@ echo "=== Thinner strokes with expanded fill"
 echo
 mousegenRender --windows-cursors=win-names-efill-modern.json \
     --source svg/modern --name "\${shadow:NoShadow}/$modernName" \
-    --source svg/modern-right --name "\${shadow:NoShadow}/Left-handed-$modernName" \
+    $leftHandedModern \
     --expand-fill=4 "$@"
 echo
 mousegenRender --windows-cursors=win-names-efill-original.json \
     --source svg/original --name "\${shadow:NoShadow}/$originalName" \
-    --source svg/original-right --name "\${shadow:NoShadow}/Left-handed-$originalName" \
+    $leftHandedOriginal \
     --expand-fill=4 "$@"
 
 # Create install scripts
 echo
+leftHanded="--var right=" # Exclude
+if [ "$MOUSE_LEFTHAND" = "true" ]; then
+  leftHanded= # Default, include
+fi
 bin/mousegen windowsInstallScripts "$BUILD_DIR/NoShadow" --config configs \
-	$THEME_COLORS --var version=$VERSION
+	$THEME_COLORS --var version=$VERSION $leftHanded
 bin/mousegen windowsInstallScripts "$BUILD_DIR/Shadow" --config configs \
-	$THEME_COLORS --var version=$VERSION --var shadow=Shadow
+	$THEME_COLORS --var version=$VERSION --var shadow=Shadow $leftHanded
 
 bin/mousegen validate wincur "$BUILD_DIR" > /dev/null
 
@@ -73,7 +83,9 @@ for color in $MOUSE_COLORS; do
   if [ -z "$pkgName" ]; then continue; fi
   echo "Bibata-Windows-$pkgName-v$VERSION.zip"
   jar cMf ../Bibata-Windows-$pkgName-v$VERSION.zip             COPYING */[MO]*-$dirName* */install-Bibata-$dirName*.inf
-  echo "Bibata-Windows-Left-handed-$pkgName-v$VERSION.zip"
-  jar cMf ../Bibata-Windows-Left-handed-$pkgName-v$VERSION.zip COPYING */Left*-$dirName* */install-Bibata-Left*-$dirName*.inf
+  if [ "$MOUSE_LEFTHAND" = "true" ]; then
+    echo "Bibata-Windows-Left-handed-$pkgName-v$VERSION.zip"
+    jar cMf ../Bibata-Windows-Left-handed-$pkgName-v$VERSION.zip COPYING */Left*-$dirName* */install-Bibata-Left*-$dirName*.inf
+  fi
 done
 echo done.

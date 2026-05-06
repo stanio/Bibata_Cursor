@@ -33,10 +33,16 @@ set -e
 modernName='Modern-${color}-${size}-${outline}-${shadow}'
 originalName='Original-${color}-${size}-${outline}-${shadow}'
 
+leftHandedModern=
+leftHandedOriginal=
+if [ "$MOUSE_LEFTHAND" = "true" ]; then
+  leftHandedModern="--source svg/modern-right --name \${shadow:NoShadow}/Bibata-Left-handed-$modernName"
+  leftHandedOriginal="--source svg/original-right --name \${shadow:NoShadow}/Bibata-Left-handed-$originalName"
+fi
+
 mousegenRender --source svg/modern --name "\${shadow:NoShadow}/Bibata-$modernName" \
     --source svg/original --name "\${shadow:NoShadow}/Bibata-$originalName" \
-    --source svg/modern-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$modernName" \
-    --source svg/original-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$originalName" \
+    $leftHandedModern $leftHandedOriginal \
     --all-variants "$@"
 
 echo
@@ -44,12 +50,12 @@ echo "=== Thinner strokes with expanded fill"
 echo
 mousegenRender --mousecape-theme=mac-names-efill-modern.json \
     --source svg/modern --name "\${shadow:NoShadow}/Bibata-$modernName" \
-    --source svg/modern-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$modernName" \
+    $leftHandedModern \
     --expand-fill=4 --update-existing "$@"
 echo
 mousegenRender --mousecape-theme=mac-names-efill-original.json \
     --source svg/original --name "\${shadow:NoShadow}/Bibata-$originalName" \
-    --source svg/original-right --name "\${shadow:NoShadow}/Bibata-Left-handed-$originalName" \
+    $leftHandedOriginal \
     --expand-fill=4 --update-existing "$@"
 
 echo
@@ -65,7 +71,9 @@ for color in $MOUSE_COLORS; do
   if [ -z "$pkgName" ]; then continue; fi
   echo "Bibata-Mousecape-$pkgName-v$VERSION.zip"
   jar cMf ../Bibata-Mousecape-$pkgName-v$VERSION.zip             COPYING */Bibata-[MO]*-$dirName*.cape
-  echo "Bibata-Mousecape-Left-handed-$pkgName-v$VERSION.zip"
-  jar cMf ../Bibata-Mousecape-Left-handed-$pkgName-v$VERSION.zip COPYING */Bibata-Left*-$dirName*.cape
+  if [ "$MOUSE_LEFTHAND" = "true" ]; then
+    echo "Bibata-Mousecape-Left-handed-$pkgName-v$VERSION.zip"
+    jar cMf ../Bibata-Mousecape-Left-handed-$pkgName-v$VERSION.zip COPYING */Bibata-Left*-$dirName*.cape
+  fi
 done
 echo done.

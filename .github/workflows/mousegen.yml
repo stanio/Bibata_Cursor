@@ -26,6 +26,9 @@ on:
         description: Mousecape cursors
         type: boolean
         default: true
+      leftHanded:
+        description: Build left-handed cursors, also
+        type: boolean
       zopfliPNG:
         description: Zopfli PNG (veery slow)
         type: boolean
@@ -36,6 +39,7 @@ jobs:
     env:
       VERSION: ${{ inputs.version }}
       MOUSE_COLORS: ${{ inputs.colors }}
+      MOUSE_LEFTHAND: ${{ inputs.leftHanded }}
       MOUSEGEN_OPTS: -Dwincur.PNGEncoder=${{ inputs.zopfliPNG && 'zopfli' || '' }}
 
     steps:

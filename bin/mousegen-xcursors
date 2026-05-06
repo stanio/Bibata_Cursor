@@ -34,10 +34,16 @@ set -e
 modernName='Modern-${color}-${size}-${outline}-${shadow}'
 originalName='Original-${color}-${size}-${outline}-${shadow}'
 
+leftHandedModern=
+leftHandedOriginal=
+if [ "$MOUSE_LEFTHAND" = "true" ]; then
+  leftHandedModern="--source svg/modern-right --name \${shadow:Shadow}/Bibata-Left-handed-$modernName"
+  leftHandedOriginal="--source svg/original-right --name \${shadow:Shadow}/Bibata-Left-handed-$originalName"
+fi
+
 mousegenRender --source svg/modern --name "\${shadow:Shadow}/Bibata-$modernName" \
     --source svg/original --name "\${shadow:Shadow}/Bibata-$originalName" \
-    --source svg/modern-right --name "\${shadow:Shadow}/Bibata-Left-handed-$modernName" \
-    --source svg/original-right --name "\${shadow:Shadow}/Bibata-Left-handed-$originalName" \
+    $leftHandedModern $leftHandedOriginal \
     --all-variants "$@"
 
 echo
@@ -45,20 +51,24 @@ echo "=== Thinner strokes with expanded fill"
 echo
 mousegenRender --linux-cursors=x11-names-efill-modern.json \
     --source svg/modern --name "\${shadow:Shadow}/Bibata-$modernName" \
-    --source svg/modern-right --name "\${shadow:Shadow}/Bibata-Left-handed-$modernName" \
+    $leftHandedModern \
     --expand-fill=4 "$@"
 echo
 mousegenRender --linux-cursors=x11-names-efill-original.json \
     --source svg/original --name "\${shadow:Shadow}/Bibata-$originalName" \
-    --source svg/original-right --name "\${shadow:Shadow}/Bibata-Left-handed-$originalName" \
+    $leftHandedOriginal \
     --expand-fill=4 "$@"
 
 # Create theme files and symlinks
 echo
+leftHanded="--var right=" # Exclude
+if [ "$MOUSE_LEFTHAND" = "true" ]; then
+  leftHanded= # Default, include
+fi
 bin/mousegen linuxThemeFiles "$BUILD_DIR/NoShadow" --config configs \
-	$THEME_COLORS --var version=$VERSION --var size= --var shadow=NoShadow
+	$THEME_COLORS --var version=$VERSION --var size= --var shadow=NoShadow $leftHanded
 bin/mousegen linuxThemeFiles "$BUILD_DIR/Shadow" --config configs \
-	$THEME_COLORS --var version=$VERSION --var size= --var shadow=
+	$THEME_COLORS --var version=$VERSION --var size= --var shadow= $leftHanded
 
 echo -n "Creating alias symlinks "
 bin/mousegen x11Symlinks -c configs "$BUILD_DIR"
@@ -81,7 +91,9 @@ for color in $MOUSE_COLORS; do
   if [ -z "$pkgName" ]; then continue; fi
   echo "Bibata-Xcursors-$pkgName-v$VERSION.tar.xz"
   tar cJf ../Bibata-Xcursors-$pkgName-v$VERSION.tar.xz             COPYING */Bibata-[MO]*-$dirName*
-  echo "Bibata-Xcursors-Left-handed-$pkgName-v$VERSION.tar.xz"
-  tar cJf ../Bibata-Xcursors-Left-handed-$pkgName-v$VERSION.tar.xz COPYING */Bibata-Left*-$dirName*  
+  if [ "$MOUSE_LEFTHAND" = "true" ]; then
+    echo "Bibata-Xcursors-Left-handed-$pkgName-v$VERSION.tar.xz"
+    tar cJf ../Bibata-Xcursors-Left-handed-$pkgName-v$VERSION.tar.xz COPYING */Bibata-Left*-$dirName*  
+  fi
 done
 echo done.

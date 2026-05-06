@@ -32,10 +32,16 @@ set -e
 modernName='Modern-${color}-${size}-${outline}-${shadow}'
 originalName='Original-${color}-${size}-${outline}-${shadow}'
 
+leftHandedModern=
+leftHandedOriginal=
+if [ "$MOUSE_LEFTHAND" = "true" ]; then
+  leftHandedModern="--source svg/modern-right --name \${shadow:Shadow}/Bibata-Left-handed-$modernName"
+  leftHandedOriginal="--source svg/original-right --name \${shadow:Shadow}/Bibata-Left-handed-$originalName"
+fi
+
 mousegenRender --source svg/modern --name "\${shadow:Shadow}/Bibata-$modernName" \
     --source svg/original --name "\${shadow:Shadow}/Bibata-$originalName" \
-    --source svg/modern-right --name "\${shadow:Shadow}/Bibata-Left-handed-$modernName" \
-    --source svg/original-right --name "\${shadow:Shadow}/Bibata-Left-handed-$originalName" \
+    $leftHandedModern $leftHandedOriginal \
     --all-variants "$@"
 
 echo
@@ -43,12 +49,12 @@ echo "=== Thinner strokes with expanded fill"
 echo
 mousegenRender --scalable-cursors=x11-names-efill-modern.json \
     --source svg/modern --name "\${shadow:Shadow}/Bibata-$modernName" \
-    --source svg/modern-right --name "\${shadow:Shadow}/Bibata-Left-handed-$modernName" \
+    $leftHandedModern \
     --expand-fill=4 "$@"
 echo
 mousegenRender --scalable-cursors=x11-names-efill-original.json \
     --source svg/original --name "\${shadow:Shadow}/Bibata-$originalName" \
-    --source svg/original-right --name "\${shadow:Shadow}/Bibata-Left-handed-$originalName" \
+    $leftHandedOriginal \
     --expand-fill=4 "$@"
 
 #echo
